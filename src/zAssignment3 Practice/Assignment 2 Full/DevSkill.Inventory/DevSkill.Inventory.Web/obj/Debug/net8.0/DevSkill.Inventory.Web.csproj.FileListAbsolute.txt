@@ -1,0 +1,1116 @@
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\appsettings.Development.json
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\appsettings.json
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.staticwebassets.runtime.json
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.exe
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.deps.json
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.runtimeconfig.json
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.pdb
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Autofac.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Azure.Core.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Azure.Identity.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Humanizer.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Build.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Mono.TextTemplating.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Common.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Configuration.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Frameworks.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.LibraryModel.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Packaging.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.ProjectModel.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Protocol.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Versioning.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.AspNetCore.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.File.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.MSSqlServer.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.CodeDom.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Convention.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Hosting.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Runtime.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.TypedParts.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Drawing.Common.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Memory.Data.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Runtime.Caching.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\af\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ar\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\az\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\bg\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\da\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\el\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fa\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\he\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hr\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hu\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hy\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\id\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\is\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ku\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\lv\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\mt\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nb\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nl\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ro\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sk\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sl\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sr\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sv\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uk\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\vi\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.csproj.AssemblyReference.cache
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.GeneratedMSBuildEditorConfig.editorconfig
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.AssemblyInfoInputs.cache
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.AssemblyInfo.cs
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.csproj.CoreCompileInputs.cache
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.MvcApplicationPartsAssemblyInfo.cs
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.MvcApplicationPartsAssemblyInfo.cache
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.RazorAssemblyInfo.cache
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.RazorAssemblyInfo.cs
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.build.json
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.development.json
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.DevSkill.Inventory.Web.Microsoft.AspNetCore.StaticWebAssets.props
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.build.DevSkill.Inventory.Web.props
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.DevSkill.Inventory.Web.props
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DevSkill.Inventory.Web.props
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.pack.json
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\bundle\DevSkill.Inventory.Web.styles.css
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\projectbundle\DevSkill.Inventory.Web.bundle.scp.css
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.AF0C6940.Up2Date
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\refint\DevSkill.Inventory.Web.dll
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.pdb
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.genruntimeconfig.cache
+E:\nafiz-aspdotnetb10-assignment2\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\ref\DevSkill.Inventory.Web.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\appsettings.Development.json
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\appsettings.json
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.staticwebassets.runtime.json
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.exe
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.deps.json
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.runtimeconfig.json
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.pdb
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Autofac.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Azure.Core.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Azure.Identity.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Humanizer.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Build.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Common.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Configuration.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Frameworks.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.LibraryModel.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Packaging.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.ProjectModel.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Protocol.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.MSSqlServer.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.CodeDom.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\af\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ar\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\az\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\bg\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\da\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\el\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fa\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\he\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hr\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hu\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hy\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\id\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\is\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ku\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\lv\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\mt\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nb\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nl\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ro\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sk\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sl\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sr\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sv\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uk\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\vi\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.csproj.AssemblyReference.cache
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.AssemblyInfoInputs.cache
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.AssemblyInfo.cs
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.csproj.CoreCompileInputs.cache
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.RazorAssemblyInfo.cache
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.RazorAssemblyInfo.cs
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.build.json
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.development.json
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.DevSkill.Inventory.Web.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.build.DevSkill.Inventory.Web.props
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.DevSkill.Inventory.Web.props
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DevSkill.Inventory.Web.props
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\bundle\DevSkill.Inventory.Web.styles.css
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\projectbundle\DevSkill.Inventory.Web.bundle.scp.css
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.AF0C6940.Up2Date
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\refint\DevSkill.Inventory.Web.dll
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.pdb
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.genruntimeconfig.cache
+D:\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\ref\DevSkill.Inventory.Web.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\appsettings.Development.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\appsettings.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\libman.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.staticwebassets.runtime.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.exe
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.deps.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.runtimeconfig.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.pdb
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Autofac.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Azure.Core.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Azure.Identity.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Humanizer.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Build.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Mono.TextTemplating.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Common.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Configuration.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Frameworks.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.LibraryModel.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Packaging.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.ProjectModel.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Protocol.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Versioning.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.AspNetCore.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.File.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.MSSqlServer.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.CodeDom.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Convention.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Hosting.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Runtime.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.TypedParts.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Drawing.Common.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Memory.Data.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Runtime.Caching.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Security.Permissions.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Windows.Extensions.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\af\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ar\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\az\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\bg\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\da\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\el\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fa\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\he\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hr\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hu\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hy\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\id\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\is\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ku\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\lv\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\mt\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nb\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nl\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ro\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sk\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sl\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sr\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sv\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uk\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\vi\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Application.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Domain.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Infrastructure.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Application.pdb
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Domain.pdb
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Infrastructure.pdb
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.csproj.AssemblyReference.cache
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.GeneratedMSBuildEditorConfig.editorconfig
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.AssemblyInfoInputs.cache
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.AssemblyInfo.cs
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.csproj.CoreCompileInputs.cache
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.MvcApplicationPartsAssemblyInfo.cs
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.MvcApplicationPartsAssemblyInfo.cache
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.RazorAssemblyInfo.cache
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.RazorAssemblyInfo.cs
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.build.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.development.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.DevSkill.Inventory.Web.Microsoft.AspNetCore.StaticWebAssets.props
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.build.DevSkill.Inventory.Web.props
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.DevSkill.Inventory.Web.props
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DevSkill.Inventory.Web.props
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.pack.json
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\bundle\DevSkill.Inventory.Web.styles.css
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\projectbundle\DevSkill.Inventory.Web.bundle.scp.css
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.AF0C6940.Up2Date
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\refint\DevSkill.Inventory.Web.dll
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.pdb
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.genruntimeconfig.cache
+E:\ASP Practice Box\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\ref\DevSkill.Inventory.Web.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\appsettings.Development.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\appsettings.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\libman.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.staticwebassets.runtime.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.exe
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.deps.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.runtimeconfig.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\DevSkill.Inventory.Web.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Autofac.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Azure.Core.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Azure.Identity.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Humanizer.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Build.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Common.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Configuration.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Frameworks.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.LibraryModel.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Packaging.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.ProjectModel.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Protocol.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.MSSqlServer.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.CodeDom.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Memory.Data.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\af\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ar\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\az\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\bg\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\da\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\el\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fa\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\he\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hr\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hu\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\hy\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\id\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\is\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ku\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\lv\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\mt\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nb\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\nl\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ro\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sk\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sl\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sr\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\sv\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uk\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\vi\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Application.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Domain.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Infrastructure.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Application.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Domain.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\Blog.Infrastructure.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.csproj.AssemblyReference.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.AssemblyInfoInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.AssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.csproj.CoreCompileInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.MvcApplicationPartsAssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.MvcApplicationPartsAssemblyInfo.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.RazorAssemblyInfo.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.RazorAssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.sourcelink.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.build.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.development.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.DevSkill.Inventory.Web.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.build.DevSkill.Inventory.Web.props
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.DevSkill.Inventory.Web.props
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DevSkill.Inventory.Web.props
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\staticwebassets.pack.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\bundle\DevSkill.Inventory.Web.styles.css
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\scopedcss\projectbundle\DevSkill.Inventory.Web.bundle.scp.css
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.AF0C6940.Up2Date
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\refint\DevSkill.Inventory.Web.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\DevSkill.Inventory.Web.genruntimeconfig.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\obj\Debug\net8.0\ref\DevSkill.Inventory.Web.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll

@@ -1,0 +1,158 @@
+
+ 1### Introduce Edit Button In The Each Row Of The Table in index.cshtml
+===================================================================================================================
+index.cshtml
+===================================================================================================================
+@model IEnumerable<NZWalks.UI.Models.DTO.RegionDTO>
+
+<h1 class="mt-3">Regions</h1>
+
+<div class="d-flex justify-content-end">
+    <a class="btn btn-secondary" asp-controller="Regions" asp-action="Add">Add Region</a>
+</div>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Code</th>
+			<th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var region in Model)
+        {
+            <tr>
+                <td>@region.Id</td>
+                <td>@region.Name</td>
+                <td>@region.Code</td>
+                <td>
+                  <a asp-controller="Route" asp-action="Edit" asp-route-id="@region.Id" class="btn btn-light">Edit</a> 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+===================================================================================================================
+
+ 2### Now We Create A GET Method in the controller
+===================================================================================================================
+RegionsController.cs
+===================================================================================================================
+[HttpGet]
+public async Task<IActionResult> Edit(Guid id)
+{
+    var client = httpClientFactory.CreateClient();
+
+    var response = await client.GetFromJsonAsync<RegionDTO>($"https://localhost:7142/api/regions/{id}");
+
+    if (response != null)
+    {
+        return View(response);
+    }
+
+    return View(null);
+}  
+===================================================================================================================
+
+
+ 3### Add a View For The Edit
+===================================================================================================================
+Edit.cshtml
+===================================================================================================================
+@model NZWalks.UI.Models.DTO.RegionDTO
+<h1 class="mt-3">Edit Region</h1>
+
+@if (Model != null)
+{
+    <form method="post">
+        <div class="mt-3">
+            <label class="form-label">Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="mt-3">
+            <label class="form-label">Code</label>
+            <input type="text" class="form-control" asp-for="Code" />
+            <span asp-validation-for="Code" class="text-danger"></span>
+        </div>
+        <div class="mt-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" asp-for="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mt-3">
+            <label class="form-label">Img URL</label>
+            <input type="text" class="form-control" asp-for="RegionImgUrl" />
+            <span asp-validation-for="RegionImgUrl" class="text-danger"></span>
+        </div>
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn alert-primary">Save</button>
+        </div>
+    </form>
+}
+
+@section Scripts {
+    <!-- Include the client-side validation scripts -->
+    <partial name="_ValidationScriptsPartial" />
+}
+===================================================================================================================
+
+ 4### As We got the record by Id to edit, now We make POST IAction Methond In the Controller
+===================================================================================================================
+RegionController.cs
+===================================================================================================================
+[HttpGet]
+public async Task<IActionResult> Edit(Guid id)
+{
+    var client = httpClientFactory.CreateClient();
+
+    var response = await client.GetFromJsonAsync<RegionDTO>($"https://localhost:7142/api/regions/{id}");
+
+    if (response != null)
+    {
+        return View(response);
+    }
+
+    return View(null);
+}
+
+[HttpPost]
+public async Task<IActionResult> Edit(RegionDTO request)
+{
+    var client = httpClientFactory.CreateClient();
+
+    var httpRequestMessage = new HttpRequestMessage()
+    {
+        Method = HttpMethod.Put,
+        RequestUri = new Uri($"https://localhost:7142/api/regions/{request.Id}"),
+        Content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json")
+    };
+    var httpResponseMessage = await client.SendAsync(httpRequestMessage);
+    httpResponseMessage.EnsureSuccessStatusCode();
+
+    var response = await httpResponseMessage.Content.ReadFromJsonAsync<RegionDTO>();
+    if (response != null) 
+    {
+        return RedirectToAction("Edit", "Regions");
+    }
+    return View();
+}
+===================================================================================================================
+
+
+
+Done
+
+
+
+
+
+
+
+
+
+

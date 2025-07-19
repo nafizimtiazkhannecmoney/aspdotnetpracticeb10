@@ -1,0 +1,268 @@
+This is called profiling
+// Get Environment Variable Info
+var envv = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+
+Configuration
+------------------------------------------------------------------------------------------------Program.cs
+#region Bootstrap Logger Configuration
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", optional: true, reloadOnChange: true)
+    .Build();
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(configuration)
+    .CreateBootstrapLogger();
+#endregion
+------------------------------------------------------------------------------------------------Program.cs
+------------------------------------------------------------------------------------------------appsettings.json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Serilog": {
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:\\Logs\\MyApp\\NEC-log-.txt",
+          "rollingInterval": "Day",
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+        }
+      }
+    ]
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "NZWalksConnectionString": "Server=DESKTOP-63UE644\\SQLEXPRESS;Database=NZWalksDb;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+}
+------------------------------------------------------------------------------------------------appsettings.json
+------------------------------------------------------------------------------------------------appsettings.Development.json
+{
+  "Serilog": {
+    "WriteTo": [
+      {
+        "Name": "Console",
+        "Args": {
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:\\Logs\\MyApp\\Development-log-.txt",
+          "rollingInterval": "Day"
+        }
+      }
+    ]
+  }
+}
+------------------------------------------------------------------------------------------------appsettings.Development.json
+------------------------------------------------------------------------------------------------appsettings.Staging.json{
+  "Serilog": {
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:\\Logs\\MyApp\\Staging-log-.txt",
+          "rollingInterval": "Day"
+        }
+      }
+    ]
+  }
+}
+------------------------------------------------------------------------------------------------appsettings.Staging.json
+------------------------------------------------------------------------------------------------appsettings.Production.json
+{
+  "Serilog": {
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:\\Logs\\MyApp\\Production-log-.txt",
+          "rollingInterval": "Day"
+        }
+      }
+    ]
+  }
+}
+------------------------------------------------------------------------------------------------appsettings.Production.json
+
+------------------------------------------------------------------------------------------------launchSettings.json
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:46794",
+      "sslPort": 44359
+    }
+  },
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5222",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7112;http://localhost:5222",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Staging": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7222;http://localhost:6222",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Staging"
+      }
+    },
+    "Production": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:8122;http://localhost:7122",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+
+------------------------------------------------------------------------------------------------launchSettings.json
+
+------------------------------------------------------------------------------------------------
+When You Don’t Need to Change launchSettings.json
+1.Deployment:
+For deployment, launchSettings.json is ignored. Instead, you configure the ASPNETCORE_ENVIRONMENT variable on the server or hosting environment.
+
+2.Single Environment:
+If you only use the Development environment locally, no changes are needed
+
+------------------------------------------------------------------------------------------------
+
+Testing Environment-Specific Behavior
+1.Local Testing:
+Use the Staging or Production profile locally by selecting it in Visual Studio or running it via the CLI.
+Check logs and behavior to ensure the application works as expected.
+
+2.Deployment Testing:
+Deploy the application to a staging or production server.
+Set the ASPNETCORE_ENVIRONMENT variable on the server to match the target environment.
+
+
+------------------------------------------------------------------------------------------------
+### Why dosent it run on production or staging?
+
+Swagger is typically enabled only in the Development environment by default. If you try to access Swagger in Staging or Production,
+it won't be available unless explicitly configured.
+------------------------------------------------------------------------------------------------
+Runs On DEVELOPMENT
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+------------------------------------------------------------------------------------------------
+RunsOn PRODUCTION
+if (app.Environment.IsProduction())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+------------------------------------------------------------------------------------------------
+Runs On STAGING
+if (app.Environment.IsStaging())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

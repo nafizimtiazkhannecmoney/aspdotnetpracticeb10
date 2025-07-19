@@ -1,0 +1,19 @@
+The Prototype Design Pattern is a creational design pattern used to create objects by cloning an existing object, 
+known as the prototype. This pattern is particularly useful when the process of creating an instance of a class is expensive or complex.
+Instead of creating new instances, you can clone the existing prototype, which simplifies the creation process and can improve performance.
+
+# Specific Interface IClonable, which returns Object, so we need to cast it
+
+Simplified Explanation
+Imagine you have a Product object with specific values for Name, Price, Color, and Description.
+ When you call the Copy method, you want to create a new Product object that has the same values for these properties as the current object.
+ Here’s how it works:
+Product currentProduct = new Product
+{
+    Name = "Laptop",
+    Price = 999.99,
+    Color = "Silver",
+    Description = "A high-performance laptop"
+};
+
+Product copiedProduct = currentProduct.Copy();

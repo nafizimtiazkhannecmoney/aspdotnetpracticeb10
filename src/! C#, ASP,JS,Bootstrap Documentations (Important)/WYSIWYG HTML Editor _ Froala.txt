@@ -1,0 +1,45 @@
+
+ 1### Froala wysisyg-editor Link: https://froala.com/wysiwyg-editor/docs/overview/install-froala-cdn/
+
+CDN
+<link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css' rel='stylesheet' type='text/css' />
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
+
+ 2### Paste The CDN to _Layout.cshtml inside the <head></head> section
+
+ 3## Now We can Use it in Add and Edit Page
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Add.cshtml (in the bottom add stcript section)
+------------------------------------------------------------------------------------------------------------------------------------
+<div class="mb3">
+    <label class="form-label">Content</label>
+    <textarea class="form-control" id="content" asp-for="Content"></textarea>
+</div>
+
+@section Scripts{
+    <script>
+        var editor = new FroalaEditor('#content');
+    </script>
+}
+------------------------------------------------------------------------------------------------------------------------------------
+
+  
+  4## Now We add the wysiwyg to Edit Page as well
+------------------------------------------------------------------------------------------------------------------------------------
+Edit.cshtml
+------------------------------------------------------------------------------------------------------------------------------------
+<div class="mb3">
+    <label class="form-label">Content</label>
+    <textarea class="form-control" id="content" asp-for="Content"></textarea>
+</div>
+@section Scripts {
+    <script>
+        var editor = new FroalaEditor('#content');
+    </script>
+}
+------------------------------------------------------------------------------------------------------------------------------------
+
+*** Now We can Use The wysisyg Editor
+ 

@@ -1,0 +1,26 @@
+Project Independent
+
+# Domain objects are called entity here, And we will also put domain object here (Domain Object = Entity)
+# DDD Domain Entity dosent work with DB, its a Business Object Oriented Class, It dosent have to be in DB
+
+*The things which are in domain, can be used in multi project.
+*And the things which are in application will be project specific.
+
+
+Domain Is the parent, 
+# Application will referance Domain or Infrastructure or Web
+# but Domain will not referance anything
+
+
+# Guid stands for Globally Unique Identifier
+
+
+
+
+
+
+
+
+
+
+

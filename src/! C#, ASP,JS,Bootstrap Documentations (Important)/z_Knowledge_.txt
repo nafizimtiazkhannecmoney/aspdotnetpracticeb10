@@ -1,0 +1,213 @@
+
+1.  HTTP Protocol
+2.  DNS
+3.  Rest Architecture
+4.  GraphQL,SOAP,gRPC
+5.  WebSockets, Webhook
+6.  Authentication: Basic, OAuth 2.0, JSON Web Tokens (JWT)
+7.  Rate Limiting: Preventing abuse by limiting the number of requests
+8.  RESTful conventions: Using HTTP methods correctly, proper resource naming
+9.  Pagination: Efficiently handling large datasets
+10. API Testing: JMeter: Used for performance and load testing
+11. Buildpacks - alternative to Docker, Devtron for managing docker 
+12. Kubernetes
+13. If data is in file, Array, List then Use IEnumerable - Loads all the data when u use it
+    If data is in Database Use IQueryable - Dosent Load the data unless convert it ToSting() or any other like to IEnumerable
+14. Viewbag and ViewData is used to pass data from controller to View
+    Use TempData when you want to pass a one-time message (e.g., “Your changes have been saved!”) across a redirect.
+15. Poco Class
+16. Central Nuget PackageManagement  CPM
+17. AWS ECS (Elastic Container Service)
+18. Use DateTimeOffset instead Datetime for UTC universal time
+19. Ai Cut Off Date = The last time the model was trained
+20. Git Add option with Tortoise Git and also Add To Ingore List
+21. what is rdp, how to use rdp
+22. CTRL + D for the same line to be created on the next line 
+23. Assembly, Type
+24. Unit Testing
+25. Kubernetes 
+
+
+
+24. API Keys, JWT Token, User Credentials, Use: Environment Variable, Serects Manager, Cloud based Secret Manager Like: 1: AWS Secrets Manager, 2: Azure Key Vault
+
+DevSkill -- 2 -- 53:47 min
+
+
+CP Topics
+Arrays and Lists: Master manipulating arrays (e.g., int, List<T>)—accessing elements, searching, sorting.
+Strings: Understand string manipulation (e.g., string, StringBuilder)—substrings, concatenation, searching.
+Conditional Statements (if, else if, else): Essential for decision-making in your code.
+Searching: Linear search, binary search (for sorted data).
+Sorting: Understand common sorting algorithms (e.g., bubble sort, insertion sort) and when to use them.
+
+
+
+10 9 8 7 6 5 4 3 2 1
+
+Example:
+
+Let's say you subscribe to a streaming service. When you sign up, you might be asked to authorize a mandate. This allows the streaming service to automatically charge your card each month for the subscription fee.
+
+In essence, a mandate in a money transaction API is a powerful tool that enables automated and recurring payments while ensuring customer consent and security.
+
+Disclaimer: This information is for general knowledge and informational purposes only and does not constitute financial, legal, or professional advice.
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJuQGV4YW1wbGUuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVhZGVyIiwiZXhwIjoxNzM4OTk3MjY5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTQyLyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcxNDIvIn0.
+0Ud1B9lR-NFoNWuHs_ZiNZLYD6ZhwIF6XTU_d3FWI00
+
+
+
+
+
+
+
+using System.Text.Json;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using NZWalks.API.CustomActionFilters;
+using NZWalks.API.Data;
+using NZWalks.API.Models.Domain;
+using NZWalks.API.Models.DTO;
+using NZWalks.API.Repositories;
+
+namespace NZWalks.API.Controllers
+{
+    //  https://localhost:portnumber/api/regions
+    [Route("api/[controller]")]
+    [ApiController]
+    //[Authorize]    // We Remove Authorize from controller level and add it to the method level
+    public class RegionsController : ControllerBase
+    {
+        private readonly NZWalksDbContext _dbContext;
+        private readonly IRegionRepository regionRepository;
+        private readonly IMapper mapper;
+        private readonly ILogger<RegionsController> logger;
+
+        public RegionsController(NZWalksDbContext dbContext, IRegionRepository regionRepository, IMapper mapper, ILogger<RegionsController> logger)
+        {
+            this._dbContext = dbContext;
+            this.regionRepository = regionRepository;
+            this.mapper = mapper;
+            this.logger = logger;
+        }
+
+        // Get All Regions
+        // GET: https://localhost:portnumber/api/regions
+        //[HttpGet("getttt")]  // This is how you name your endpoint
+        [HttpGet]
+        //[Authorize(Roles = "Reader, Writer")]
+        public async Task<IActionResult> GetAll()
+        {
+            // Get Data From Domain Model
+            //var regionsDomain = await _dbContext.Regions.ToListAsync();   // This is before using Repository pattern
+            var regionsDomain = await regionRepository.GetAllAsync();
+
+            logger.LogInformation($"Got All Regions with data: {JsonSerializer.Serialize(regionsDomain)}");
+
+            // Map Domain Model to DTO
+            var regionsDTO = mapper.Map<List<RegionDTO>>(regionsDomain);
+
+            // Return The DTO
+            return Ok(regionsDTO);
+
+        }
+
+        // Get Region By Id
+        // GET: https://localhost:portnumber/api/regions/{id}
+        [HttpGet]
+        [Route("{id:guid}")]
+        //[Authorize(Roles = "Reader, Writer")]
+        public async Task<IActionResult> GetById([FromRoute] Guid id)
+        {
+            var regionDomain =  await regionRepository.GetByIdAsync(id);
+            if (regionDomain == null)
+            {
+                return NotFound();
+            }
+            var regionsDTO = mapper.Map<RegionDTO>(regionDomain);
+
+            // Return The DT to the Client
+            return Ok(regionsDTO);
+        }
+
+        // POST To Create A New Region
+        // POST: https://localhost:portnumber/api/regions/
+        [HttpPost]
+        [ValidateModel]
+        //[Authorize(Roles = "Writer")]
+        public async Task<IActionResult> Create([FromBody] AddRegionDTO addRegionDTO)
+        {
+                // Map DTO to Domain Model
+                var regionDomain = mapper.Map<Region>(addRegionDTO);
+
+
+                regionDomain = await regionRepository.CreateAsync(regionDomain);
+
+                // Map Domain Model to DTO
+                var regionDto = mapper.Map<RegionDTO>(regionDomain);
+
+                return CreatedAtAction(nameof(GetById), new { id = regionDto.Id }, regionDto);
+
+        }
+
+        // PUT To Update Region
+        // PUT: https://localhost:portnumber/api/regions/{id}
+        [HttpPut]
+        [Route("{id:guid}")]
+        [ValidateModel]
+        //[Authorize(Roles = "Writer")]
+        public async Task<IActionResult> Update([FromRoute] Guid id, UpdateRegionDTO updateRegionDTO)
+        {
+            
+            // Map DTO to Domain Model
+            var regionDomain = mapper.Map<Region>(updateRegionDTO);
+
+                // Check If the Region Exists
+                //var regionDomain = await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id); // This is happening in Repository
+                regionDomain = await regionRepository.UpdateAsync(id, regionDomain);
+
+                if (regionDomain == null)
+                {
+                    return NotFound();
+                }
+           
+            // Map Domain Model To DTO
+            var regionDTO = mapper.Map<RegionDTO>(regionDomain);                            
+        }
+
+        // DELETE to Delete region
+        // DELETE: https://localhost:portnumber/api/regions/{id}
+        [HttpDelete]
+        [Route("{id:guid}")]
+        //[Authorize(Roles = "Writer")]
+        public async Task<IActionResult> Delete([FromRoute] Guid id)
+        {
+            // Check If The Region Exists
+            //var regionDomainModel = await _dbContext.Regions.FirstOrDefaultAsync(y => y.Id == id); // Repository is doing this 
+
+            var regionDomainModel = await regionRepository.DeleteAsync(id);
+
+            if (regionDomainModel == null) 
+            {
+                return NotFound();
+            }           
+            var regionDTO = mapper.Map<RegionDTO>(regionDomainModel);
+            return Ok(regionDTO);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

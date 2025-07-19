@@ -1,0 +1,292 @@
+Blog.Domain>>New Folder>>Repsitory Contracts
+
+# Repository Interfaces Will go in Repository Contracts Folder
+# We have to make repository for each Aggregate Root
+@ We will need to transfer ApplicationDbContext from web to Infrastructure 
+because Infrastructure cant refer from web(we wont do this for this course)
+
+#Add>New Project>>Blog.Infrastructure>>Blog.Infrastructutre
+
+# We will maintain only one DBContext in this project (and it will be in Infrastructure)
+
+
+
+#Blog.Infrastructure>> BlogDbCntext.cs (public)
+-----------------------------------BlogDbCntext.cs
+namespace Blog.Infrastructure
+{
+    public class BlogDbContext
+    {
+
+    }
+}
+----------------------------
+
+# To add DbContext we need Nuget Package <Microsoft EntityFrameworkCore.SqlServer> (In Infrastructure project)
+# Install it (vs 8.0.6)
+
+---------------------------------[BlogDbContext.cs]
+using Blog.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace Blog.Infrastructure
+{
+    public class BlogDbContext : DbContext
+    {
+        public DbSet<BlogPost>  BlogPosts { get; set; }
+    } 
+}
+____________________________
+@ We will use ApplicationDbContext for Identity and other DbContext for other Stuff
+
+
+
+# Blog.Infrastructure>>New Folder>> Repositories>>(public) BlogPostRepository.cs
+-----------------------------------------
+using Blog.Domain.RepositoryContracts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Infrastructure.Repositories
+{
+    public class BlogPostRepository : IBlogPostRepositiory
+    {
+    }
+}
+-------------------------------------------
+
+add System.Linq.Dynamic.Core
+
+# Blog.Domain>>IUnitOfWork.cs(interface)(public)(this is only one thats why its outside, but repository can be more so its inside a folder)
+---------------------------------------[IUnitOfWork.cs]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Domain
+{
+    public interface IUnitOfWork : IDisposable, IAsyncDisposable
+    {
+        void Save();
+        Task SaveAsync();
+    }
+}
+----------------------------
+
+Blog.Infrastructure>> UnitOfWork.cs
+-----------------------------------[UnitOfWork.cs]
+public abstract class UnitOfWork : IUnitOfWork
+{
+    private readonly DbContext _dbContext;
+    //protected IAdoNetUtility AdoNetUtility { get; private set; }
+
+    public UnitOfWork(DbContext dbContext)
+    {
+        _dbContext = dbContext;
+        //AdoNetUtility = new AdoNetUtility(_dbContext.Database.GetDbConnection());
+    }
+
+    public void Dispose() => _dbContext?.Dispose();
+    public ValueTask DisposeAsync() => _dbContext.DisposeAsync();
+    public void Save() => _dbContext?.SaveChanges();
+    public async Task SaveAsync() => await _dbContext.SaveChangesAsync();
+}
+-----------------------------------------------------------------------------
+
+# Blog.Infrastructure>>New Folder>> UnitOfWork>> place[UnitOfWork.cs] here
+# Blog.Infrastructure>>UnitOfWork>>BlogUnitOfWork.cs
+------------------------BlogUnitOfWork.cs
+using Blog.Domain.RepositoryContracts;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Infrastructure.UnitOfWorks
+{
+    public class BlogUnitOfWork : UnitOfWork
+    {
+        public IBlogPostRepositiory BlogPostRepositiory { get; private set; }
+        public BlogUnitOfWork(BlogDbContext dbContext, IBlogPostRepositiory blogPostRepositiory) : base(dbContext)
+        {
+            BlogPostRepositiory = blogPostRepositiory;
+        }
+    }
+}
+
+---------------------------------------------------------
+# Now We need to bind the dependency
+
+---------------------------------------------WebModule.cs
+using Autofac;
+using Blog.Application.Services;
+using Blog.Domain.RepositoryContracts;
+using Blog.Infrastructure.Repositories;
+using DevSkill.Inventory.Web.Models;
+
+namespace DevSkill.Inventory.Web
+{
+    public class WebModule : Module
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<Member>().As<IMember>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostRepository>().As<IBlogPostRepositiory>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostManagementServices>().As<IBlogPostManagementServices>()
+                 .InstancePerLifetimeScope();
+        }
+    }
+}
+-----------------------------------------------------
+--------------------------------------------BlogUnitOfWork.cs
+using Blog.Domain.RepositoryContracts;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Infrastructure.UnitOfWorks
+{
+    public class BlogUnitOfWork : UnitOfWork
+    {
+        public IBlogPostRepositiory BlogPostRepositiory { get; private set; }
+        public BlogUnitOfWork(BlogDbContext dbContext, IBlogPostRepositiory blogPostRepositiory) : base(dbContext)
+        {
+            BlogPostRepositiory = blogPostRepositiory;
+        }
+    }
+}
+------------------------------------------Domain dependencies, out of date
+
+-------------------------------------------BlogDbContext.cs
+using Blog.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace Blog.Infrastructure
+{
+    public class BlogDbContext : DbContext
+    {
+        private readonly string _connectionString;
+        private readonly string _migrationAssembly;
+
+        public BlogDbContext(string connectionString, string migrationAssembly)
+        {
+            _connectionString = connectionString;
+            _migrationAssembly = migrationAssembly;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(_connectionString,
+                    x => x.MigrationsAssembly(_migrationAssembly));
+            }
+
+            base.OnConfiguring(optionsBuilder);
+        }
+
+        public DbSet<BlogPost> BlogPosts { get; set; }
+    }
+}
+
+-------------------------------------------------------WebModule.cs
+using Autofac;
+using Blog.Application.Services;
+using Blog.Domain.RepositoryContracts;
+using Blog.Infrastructure;
+using Blog.Infrastructure.Repositories;
+using DevSkill.Inventory.Web.Models;
+
+namespace DevSkill.Inventory.Web
+{
+    public class WebModule (string connectionString, string migrationAssembly) : Module  //Syntax Primary Constructor
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<BlogDbContext>().AsSelf()
+                .WithParameter("connectionString", connectionString)
+                .WithParameter("migrationAssembly", migrationAssembly)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<Member>().As<IMember>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostRepository>()
+                .As<IBlogPostRepositiory>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostManagementServices>()
+                .As<IBlogPostManagementServices>()
+                 .InstancePerLifetimeScope();
+        }
+    }
+}
+
+
+------------------------
+# Now We have an error in Program.cs
+------------------------  Program.cs
+// Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var migrationAssembly = Assembly.GetExecutingAssembly().FullName;   //Taking migrationAssembly
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+#region Autofac Configuration
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+{
+    containerBuilder.RegisterModule(new WebModule(connectionString, migrationAssembly));
+});
+#endregion
+
+-------------------
+
+# BUILD
+UPDATE ALL NUGET FILES FROM WEB AND SLOUTION AND CEALN SLOUTION REBUILD SOLUTION
+
+
+ 
+28:00 class 14 video
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,72 @@
+[class 16_ 9:29] assignment3 is untill 31:54
+
+# Now We Go to Migration
+
+
+dotnet ef database update --project DevSkill.Inventory.Web
+dotnet ef database update --project DevSkill.Inventory.Web --context BlogDbContext
+dotnet ef migrations add UpdateUserTables --project Blog.Web --context ApplicationDbContext
+
+dotnet ef migrations add UpdateUserTables --project DevSkill.Inventory.Web --context ApplicationDbContext
+
+
+
+*********---------------------Correct Migrations--------------------------*********
+[AddlicationDbContext Migration]
+dotnet ef migrations add UpdateUserTables --project DevSkill.Inventory.Web --context ApplicationDbContext
+
+done.
+
+[ProductDbContext MIgration](specifying the path so it stays in same folder, not new one)
+dotnet ef migrations add AddProduct --project DevSkill.Inventory.Web --context ProductDbCntext -o Data/Migrations
+---------------------------------------------------------------------------------------
+# we migrated these 2 DbContexts now we will need connection string and then connect to database and then update database
+
+
+#appsettings.json
+"DefaultConnection": "Server=.\\SQLEXPRESS;Database=aspnetdevskill;User Id=aspnetb10;Password=123456;Trust Server Certificate=True",
+
+# we need to add user to Database=aspnetdevskill
+
+# Security>>Logins>>New Login>> Id:aspnetb10 pass: 123456
+
+# Security>>Logins>>aspnetb10>> Right Click>> Properties>> User Mapping>> Select the database>> Check Db Owner>> OK
+
+To check login
+Security>>Users>>aspnetb10>> Membership
+
+
+
+# Now PM> command
+[ProductDbCntext table update]
+dotnet ef database update --project DevSkill.Inventory.Web --context ProductDbCntext
+
+[ApplicationDbContext table update]
+dotnet ef database update --project DevSkill.Inventory.Web --context ApplicationDbContext
+
+# done
+
+now we can create product--------------
+
+** DONE **
+# We will only use aggregate root on DbSet<>
+
+
+
+46
+1:14
+
+17 c 26m
+assignment3 is untill 31:54
+
+
+
+
+
+
+
+
+
+
+
+

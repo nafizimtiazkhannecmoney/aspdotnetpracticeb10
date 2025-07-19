@@ -1,0 +1,293 @@
+(function ($) {
+    var loadingAllowed = true;
+
+    var CptAjaxFilter = {
+        init: function () {
+            var self = CptAjaxFilter;
+
+            self.el = {
+                wrap: $('#cpt-ajax-wrapper'),
+                moreBtn: $('.cpt-ajax-load-more'),
+                form: $('#cpt-ajax-filter-form'),
+                search: $('#cpt-ajax-search'),
+                filter: $('.cpt-ajax-filter'),
+                currentFilters: $('.cpt-ajax-current-filters')
+            };
+
+            self.config = {
+                templateItems: wp.template('cpt-ajax-items'),
+                templateCurrentFilters: wp.template('cpt-ajax-current-filters'),
+                post_type: self.el.wrap.data('post_type'),
+                posts_count: self.el.wrap.data('posts_count'),
+                tax: self.el.wrap.data('tax'),
+                page: 1,
+                posts_per_page: parseInt(self.el.wrap.data('posts_per_page')),
+                page_id: $( '#page-id' ).val()
+            };
+
+            self.initEvents();
+            self.setCurrentFilters();
+
+            if (self.config.posts_count > self.config.posts_per_page) {
+                self.el.moreBtn.show();
+            }
+
+        },
+
+        setCurrentFilters: function () {
+            var self = CptAjaxFilter;
+            var filters = self.el.form.serializeArray();
+            var data = {
+                items: []
+            };
+
+            if (filters.length) {
+
+                $.each(filters, function (index, item) {
+                    if (item.value) {
+                        if (item.name !== 'search') {
+                            item.value = $('.select-term option[value="' + item.value + '"]').text();
+                        }
+                        item.type = self.config.post_type;
+                        data.items.push(item);
+                    }
+                });
+
+                $('.cpt-ajax-current-filters').remove();
+
+                if (window.location.search) {
+                    self.el.filter.after(self.config.templateCurrentFilters(data));
+                }
+            }
+
+            self.setFilterStateClass();
+
+        },
+
+        initEvents: function () {
+            var self = CptAjaxFilter;
+
+            // Click on More Button
+            if ($("body").hasClass("page-users")) {
+                // Load More items on scroll
+                $(window).on('scroll touchend', function() {
+                    var $itemsWrap = $('.cpt-ajax-items');
+
+                    if(!$itemsWrap.length) return;
+
+                    if($(window).scrollTop() >= $('.cpt-ajax-items').offset().top + $('.cpt-ajax-items').outerHeight() - window.innerHeight) {
+                        if(loadingAllowed){
+                            self.filterItems(true);
+                            loadingAllowed = false;
+                        }
+
+                    }
+                });
+            }
+            else {
+                $(document).on('click', '.cpt-ajax-load-more', function (){
+                    var $itemsWrap = $(this).closest('.cpt-ajax-items');
+                    if (!$itemsWrap.length) return;
+                    if (loadingAllowed) {
+                        self.filterItems(true);
+                        loadingAllowed = false;
+                    }
+                    $(this).parent().remove();
+                });
+            }
+            /*self.el.moreBtn.on('click', function () {
+                self.filterItems(true);
+            });*/
+
+            // Load More items on scroll
+            // $(window).on('scroll touchend', function() {
+            //     var $itemsWrap = $('.cpt-ajax-items');
+            //
+            //     if(!$itemsWrap.length) return;
+            //
+            //     if($(window).scrollTop() >= $('.cpt-ajax-items').offset().top + $('.cpt-ajax-items').outerHeight() - window.innerHeight) {
+            //         if(loadingAllowed){
+            //             self.filterItems(true);
+            //             loadingAllowed = false;
+            //         }
+            //
+            //     }
+            // });
+
+            // Change Filter Form Selects
+            self.el.form.find('.select-term').change(function () {
+                self.setFilterStateClass();
+                self.updateQueryString();
+                self.filterItems();
+            });
+
+            // Submit Filter Form
+            self.el.form.submit(function (e) {
+                self.updateQueryString();
+                self.filterItems();
+                e.preventDefault();
+            });
+
+            // Click on Clear Filters Button
+            $(document).on('click', '.cpt-ajax-clear', function () {
+                self.resetForm();
+                self.clearQueryString();
+                self.filterItems();
+                self.setFilterStateClass();
+            });
+
+            // Click on Current Filters
+            $(document).on('click', '.current-filter-item', function () {
+                self.el.form.find('[name="' + $(this).data('name') + '"]').val('');
+
+                $(this).fadeOut(300, function () {
+                    $(this).remove();
+
+                    if ($('.current-filter-item').length === 0) {
+                        $('.cpt-ajax-clear').hide();
+                    }
+                });
+
+                self.updateQueryString();
+                self.filterItems();
+                self.setFilterStateClass();
+            });
+
+        },
+
+        setFilterStateClass: function(){
+            var self = CptAjaxFilter;
+
+            $.each(self.el.form.find('.select-term'), function (index, item) {
+                if ($(item).val() !== '' && $('.cpt-ajax-filter-term option').prop('disabled') !== true) {
+                    $(item).addClass('active');
+                } else {
+                    $(item).removeClass('active');
+                }
+            });
+        },
+
+        resetForm: function () {
+            CptAjaxFilter.el.form.find('select, input').val('');
+        },
+
+        updateQueryString: function () {
+            var filters = CptAjaxFilter.el.form.serializeArray();
+            var queryStr = '';
+
+            $.each(filters, function (index, item) {
+                if (item.value) {
+                    if (queryStr === '') {
+                        queryStr += '?';
+                    }
+
+                    queryStr += item.name + '=' + encodeURI(item.value) + '&';
+                }
+            });
+
+            queryStr = queryStr.slice(0, -1);
+
+            if (history.pushState) {
+                var newUrl = location.protocol + '//' + location.host + location.pathname + queryStr;
+                window.history.pushState({path: newUrl}, '', newUrl);
+            }
+        },
+
+        clearQueryString: function () {
+            if (history.pushState) {
+                var newUrl = location.protocol + '//' + location.host + location.pathname;
+                window.history.pushState({path: newUrl}, '', newUrl);
+            }
+
+            $('.cpt-ajax-current-filters').remove();
+        },
+
+        filterItems: function (loadMore) {
+            var self = CptAjaxFilter;
+
+            if (loadMore) {
+                self.config.page += 1;
+            } else {
+                self.config.page = 1;
+            }
+
+            var data = {
+                post_type: self.config.post_type,
+                posts_per_page: self.config.posts_per_page,
+                page: self.config.page,
+                tax: self.config.tax,
+                filters: self.el.form.serialize(),
+                page_id: self.config.page_id
+            };
+
+            self.el.moreBtn.attr('disabled', true);
+
+            if (!self.el.wrap.hasClass('loading')) {
+                self.el.wrap.addClass('loading');
+            }
+
+            self.getItems(data, function (response) {
+                // var found_items = response.data.posts_count;
+                // var total_pages = Math.ceil(parseInt(found_items) / parseInt(self.config.posts_per_page));
+
+                self.setCurrentFilters();
+
+                self.el.moreBtn.show();
+
+                loadingAllowed = true;
+
+                // Hide More button if last page
+                // if (total_pages === self.config.page || parseInt(found_items) === 0) {
+                if ( response.trim() == '<div style="display: none;" class="cpt-ajax-no-result">No Result Found</div>' ) {
+                    self.el.moreBtn.hide();
+                    loadingAllowed = false;
+                }
+
+                if (!loadMore) {
+                    self.el.wrap.find('.cpt-ajax-items').empty();
+
+                    // if (found_items === 0) {
+                    if ( response.trim() == '<div style="display: none;" class="cpt-ajax-no-result">No Result Found</div>' ) {
+                        self.el.wrap.find('.cpt-ajax-items').append('<div class="cpt-ajax-no-result">No result found, please reduce filters.</div>');
+                    }
+                }
+                // self.el.wrap.find('.cpt-ajax-items').append(self.config.templateItems(response.data));
+
+                self.el.wrap.find('.cpt-ajax-items').append( response );
+
+                self.el.wrap.find('.cpt-ajax-items').imagesLoaded().always( function() {
+                    self.el.wrap.find('.cpt-ajax-item:hidden').fadeIn(300);
+                });
+
+                self.el.moreBtn.attr('disabled', false);
+                self.el.wrap.removeClass('loading');
+            });
+        },
+
+        getItems: function (data, callback) {
+            $.ajax({
+                url: ajaxurl,
+                type: 'GET',
+                data: {
+                    action: 'cpt_filter',
+                    post_type: data.post_type,
+                    posts_per_page: data.posts_per_page,
+                    page: data.page || 1,
+                    tax: data.tax,
+                    filters: data.filters,
+                    page_id: data.page_id
+                },
+                success: function (response) {
+                    callback(response);
+                    initLightbox();
+                }
+            });
+        },
+
+    };
+
+    $(document).ready(function () {
+        CptAjaxFilter.init();
+    });
+
+}(typeof jQuery === 'function' ? jQuery : this));

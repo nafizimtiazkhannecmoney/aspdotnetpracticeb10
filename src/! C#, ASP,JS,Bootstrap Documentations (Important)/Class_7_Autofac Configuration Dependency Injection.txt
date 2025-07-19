@@ -1,0 +1,94 @@
+Autofac Is a third party liberary for dependency injection.
+But Service collection is built in.
+
+To add Autofac we need to Install the nugetpackage
+
+1#Dependencies>>Manage NuGet Packages..>>Autofac.Extensions.DependencyInjection
+* This NuGet Only works on mvc application
+* Class Liberary uses only Autofac
+* Several MOdules and RegisterTypes can be added simultaneously Here
+
+
+2#-------------------------------[Program.cs] v1 (Less Use) (Instance matching)
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());     //WE are using autofac as DI liberary
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+{
+    //containerBuilder.RegisterType<EmailSender>().As<IemailSender>()
+        //.InstancePerMatchingLifetimeScope("home");
+});
+-------------------------------[Program.cs] v2
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+{
+    //containerBuilder.RegisterType<EmailSender>().As<IemailSender>()
+        //.InstancePerLifetimeScope();
+});
+
+
+4#-------------------------------[Program.cs] v3 (Binding reference from WebModule) after and [ builder.Services.AddDatabaseDeveloperPageExceptionFilter();]
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+{
+    //containerBuilder.RegisterModule(new WebModule());
+});
+
+3#-------------------------------[WebModule.cs]
+public class WebModule : Module  //Module From Autofac NameSpace
+{
+    protected override void Load(ContainerBuilder builder)
+    {
+        builder.RegisterType<Membership>().As<IMembership>()
+            .InstancePerLifetimeScope();
+    }
+}
+5#-------------------------------[HomeController.cs]
+ public class HomeController : Controller
+ {
+     private readonly ILogger<HomeController> _logger;
+     private readonly IEmailSender _emailSender;
+     private readonly IMembership _membership;
+
+     public HomeController([FromKeyedServices("home")] IEmailSender emailSender, 
+         ILogger<HomeController> logger, IMembership membership)
+     {
+         _logger = logger;
+         _emailSender = emailSender;
+         _membership = membership;
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

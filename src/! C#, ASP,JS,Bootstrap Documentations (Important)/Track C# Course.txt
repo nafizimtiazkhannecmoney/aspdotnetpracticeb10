@@ -1,0 +1,71 @@
+Meeting 28th November 5:00PM(Group Insurance)
+
+HR Phone--> 127
+#class 11 see the interface and object creation of Iservice
+
+Sep 25_Exam1_Array_Multidimenional_Jagged
+Sep 28_CT1_ReadLine_split_operator_BitwiseOperator_Shift_uninstallSQL
+Oct 05_Ifelse_Switch_Ternary_for_while_dowhile_foreach_stringformatting
+09_OCT_CT2_UVAPlatforms_Class_problemsubmit
+#8  12_Oct_accessmodifiers_Constructor_setget_methodoverload_chaining_property_namespace
+#9  26_Oct_Destructor_ConstructorChaining_inheritance_constant_Readonly_static_abstraction
+#11 02_Nov_Interface_Virtual_Override_sealed_partialClass
+#12 13_Nov_Structure_Enum_StringBuilder_ParameterModifier
+#13 
+Exam2->(2,3,4)Data types, variable,constant,multi array, jagged array,bitwise operator, loops,
+string methods, string formatting,char methods
+
+
+10/26/2023
+Partial Class, static System.Console;, local functions, default parameter
+
+11/08/2023
+Gets the rank (number of dimensions)
+
+3:27 PM 11/13/2023
+Reference Parameters,  Out Parameters, Parameters Arrays, alias(namespace)
+
+PLICL: Premium receipt, Original Receipt, Survival Benefit,lien,maturity,policy no
+
+
+the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog
+
+
+
+Best Themes(Bangladeshi)
+1.Metlife
+2.Chartered lifebd
+3.Guardian lifel
+4.licbangladesh
+5.Protective life
+
+Foreign(Global)
+1.https://bandhanbank.com/
+2.https://www.aia.com/en
+3.https://www.chubb.com/us-en/
+4.https://www.zurich.com/
+5.https://group.pingan.com/
+6.https://www.unitedhealthgroup.com/
+7.https://www.prudential.com/
+8.https://www.guardianlife.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

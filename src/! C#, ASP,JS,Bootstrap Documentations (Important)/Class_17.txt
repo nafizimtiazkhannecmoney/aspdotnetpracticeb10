@@ -1,0 +1,281 @@
+* [NotMapped]  = This annotation won't create any column for this Name
+Crude Implementation 26:00 min
+* We will make Index page for data to show
+
+# ProductController>>Index page(Right Click Goto View)>>
+
+
+# We need a Table desing for the table from AdminLTE ----AdminLTE>>Pages>>Tables>>Data.html
+
+# Copy Line 836-1744 and Paste it to Index page (breadcrumb https://localhost:7059/admin/product/index)
+
+
+
+Index Codes
+---------------------------------------------------------------------Index.cshtml[Updated Codes]
+#[there are 2 cards, we removed first card]
+#[take Script part from Data.html, take exaqmple1 part and remove example2]
+# ADD plugins and datatable script (from data.html)
+# Change the path ../../plugins/ to ~/adminlte/plugins/
+# take Datatables styles from data.html (3 lines of styles)
+# Change the path like before
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Styles 
+{
+    <link rel="stylesheet" href="~/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+}
+
+@section Scripts 
+{
+    <script src="~/adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/adminlte/plugins/jszip/jszip.min.js"></script>
+    <script src="~/adminlte/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="~/adminlte/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="~/adminlte/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script>
+        $(function () {
+            $("#blogposts").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#blogposts_wrapper .col-md-6:eq(0)');
+            
+        });
+    </script>
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Blog Posts</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Blog Posts</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">All Available Products</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="blogposts" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Product</th>
+                                </tr>
+                            </thead>
+
+                            <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Product</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+
+
+
+----------------------------------------------------------------------END
+----------------------------------------------------------------------[_Layout.cshtml]
+[after this]
+[<!-- summernote -->
+<link rel="stylesheet" href="~/adminlte/plugins/summernote/summernote-bs4.min.css">]
+[add]
+ @await RenderSectionAsync("Styles",false);
+
+[before <!-- AdminLTE App -->]
+ @await RenderSectionAsync("Scripts",false);
+----------------------------------------------------------------------END
+
+----------------------------------------------------------------------[ProductController.cs]
+[add this JsonResult under Index action]
+
+public JsonResult GerProductJsonData(ProductListModel model)
+{
+    var result = _productManagementServices.GetProducts(model.PageIndex, model.PageSize, model.Search, 
+        model.FormatSortExpression("Title"));
+
+    var productJsonData = new
+    {
+        recordsTotal = result.total,
+        recordsFiltered = result.totalDisplay,
+        data = (from record in result.data
+                select new string[]
+                {
+                        HttpUtility.HtmlEncode(record.ProductName),
+                        record.Id.ToString()
+                }
+            ).ToArray()
+    };
+
+    return Json(productJsonData);
+}
+        
+----------------------------------------------------------------------END
+
+----------------------------------------------------------------------[]
+[We take DataTables.cs from sir repo from (its inside Domain)]
+Paste it in the Domain.
+Fix all the name spaces
+# right click on [GetProducts] and Generate Method and go to definition
+[IProductManagementServices.cs]
+
+using DevSkill.Inventory.Domain;
+using DevSkill.Inventory.Domain.Entities;
+
+namespace DevSkill.Inventory.Application.Services
+{
+    public interface IProductManagementServices
+    {
+        void CreateProduct(Product product);
+        (IList<Product> result, int total, int totalDisplay) GetProducts(int pageIndex, int pageSize, DataTablesSearch search, SortColumn[] order);
+    }
+}
+
+----------------------------------------------------------------------END
+
+# Now We create a model(Areas>>Admin>>Models>>ProductListModel.cs) and Inherit DataTables.cs to it [ProductListModel : DataTables]
+
+----------------------------------------------------------------------[ProductManagementServices.cs]
+# Now Implement the new GetProducts method here
+
+using DevSkill.Inventory.Domain;
+using DevSkill.Inventory.Domain.Entities;
+
+namespace DevSkill.Inventory.Application.Services
+{
+    public class ProductManagementServices : IProductManagementServices
+    {
+        private readonly IProductUnitOfWork _productUnitOfWork;
+
+        public ProductManagementServices(IProductUnitOfWork productUnitOfWork)
+        {
+            _productUnitOfWork = productUnitOfWork;
+        }
+        //public void CreateProduct()
+        //{
+
+        //}
+
+        public void CreateProduct(Product product)
+        {
+           _productUnitOfWork.ProductRepository.Add(product);
+            _productUnitOfWork.Save();
+        }
+
+        public (IList<Product> data, int total, int totalDisplay) GetProducts(int pageIndex, int pageSize, DataTablesSearch search, string order)
+        {
+             return _productUnitOfWork.ProductRepository.GetPagedProducts(pageIndex, pageSize, search, order);
+        }
+    }
+}
+
+# Generate GetProducts method to ProductRepository
+
+----------------------------------------------------------------------END
+
+
+# Implement [IProductRepository] interface on [ProductRepository.cs]
+
+----------------------------------------------------------------------[ProductRepository.cs]
+[change order to string][GetDynamic]
+
+namespace DevSkill.Inventory.Infrastructutre.Repositories
+{
+    public class ProductRepository : Repository<Product, Guid>, IProductRepository
+    {
+        public ProductRepository(ProductDbCntext context) : base(context)
+        {
+                
+        }
+
+        public (IList<Product> data, int total, int totalDisplay) GetPagedProducts(int pageIndex, int pageSize, DataTablesSearch search, string order)
+        {
+          return  GetDynamic(x => x.ProductName == search.Value, order, null, pageIndex, pageSize, true);
+        }
+    }
+}
+
+----------------------------------------------------------------------END
+
+
+----------------------------------------------------------------------[IProductManagementServices]
+[we change order to string]
+using DevSkill.Inventory.Domain;
+using DevSkill.Inventory.Domain.Entities;
+
+namespace DevSkill.Inventory.Application.Services
+{
+    public interface IProductManagementServices
+    {
+        void CreateProduct(Product product);
+        (IList<Product> data, int total, int totalDisplay) GetProducts(int pageIndex, int pageSize,
+            DataTablesSearch search, string order);
+    }
+}
+
+----------------------------------------------------------------------END
+
+----------------------------------------------------------------------[IProductRepository]
+[Change order to string]
+namespace DevSkill.Inventory.Domain.Repsitory_Contracts
+{
+    public interface IProductRepository : IRepositoryBase<Product, Guid>
+    {
+        public (IList<Product> data, int total, int totalDisplay) GetPagedProducts(int pageIndex, int pageSize,
+            DataTablesSearch search, string order);
+    }
+}
+
+
+----------------------------------------------------------------------END
+
+[[[[[DataTable
+Index Page(View the database data)
+Wee need a Table
+
+AdminLTE>>Pages>>Tables>>Data
+42 min
+58:30>> go to controller jsonresult
+----------------------------------------------------------------------[]
+
+----------------------------------------------------------------------END

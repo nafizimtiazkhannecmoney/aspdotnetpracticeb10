@@ -1,0 +1,56 @@
+
+# Add Extension: Microsoft RDLC Report Designer by Microsoft
+# Then We can View .rdlc files
+
+# Nuget: AspNetCore.Reporting by amh 1979
+
+
+PROCESS
+
+1.Create Controller
+2.Create A RdlcReport Form another DataClass
+3.Move The .rdlc to Your Current Project From DataClass
+4.Add a dataset to the report Design View (Get The data fromDB and name the dataset)
+5.Match The .rdlc file and dataset name from controller
+
+
+
+Add Nuget : Microsoft.ReportingServices.ReportViewerControl.WebForms
+Microsoft.Reporting.NETCore
+System.Drawing.Common
+
+
+Design The Table For Input STR_monthly_report
+Columns (Every Data is In string)
+Id -- Guid
+OneA -- NUllable
+OneB -- NUllable
+TwoA -- NUllable
+TwoB -- NUllable
+Three -- NUllable
+Four  -- NUllable
+Five  -- NUllable 
+SixA  -- NUllable
+SixB  -- NUllable
+SixC  -- NUllable
+Seven -- NUllable
+Eight -- NUllable
+Nine  -- NUllable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

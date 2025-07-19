@@ -1,0 +1,231 @@
+
+1### Nuget Packages Needed
+---For ConsoleLog-----
+Serilog
+Serilog.AspNetCore
+Serilog.Sinks.Console
+----------------------
+
+---For TextLog-----
+Serilog
+Serilog.AspNetCore
+Serilog.Sinks.File
+----------------------
+
+### Console Logger
+
+2### Logger Configuration in Program.cs
+----------------------------------------------------------------------------------------------------------------------
+Program.cs
+----------------------------------------------------------------------------------------------------------------------
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+// Adding Serilog Console Logger
+var logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .MinimumLevel.Information()
+    .CreateLogger();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger); 
+----------------------------------------------------------------------------------------------------------------------
+
+3### Now Inject Logger in RegionsController
+----------------------------------------------------------------------------------------------------------------------
+RegionsController
+----------------------------------------------------------------------------------------------------------------------
+public class RegionsController : ControllerBase
+{
+    private readonly NZWalksDbContext _dbContext;
+    private readonly IRegionRepository regionRepository;
+    private readonly IMapper mapper;
+    private readonly ILogger<RegionsController> logger;
+
+    public RegionsController(NZWalksDbContext dbContext, IRegionRepository regionRepository, IMapper mapper, ILogger<RegionsController> logger)
+    {
+        this._dbContext = dbContext;
+        this.regionRepository = regionRepository;
+        this.mapper = mapper;
+        this.logger = logger;
+    }
+            logger.LogInformation("Getting All Regions");
+            logger.LogWarning("This is a warning log");
+            logger.LogError("This is an error log");
+
+ public async Task<IActionResult> GetAll()
+ {
+     try
+     {
+         throw new Exception("This is a test exception");
+         // Get Data From Domain Model
+         //var regionsDomain = await _dbContext.Regions.ToListAsync();   // This is before using Repository pattern
+         var regionsDomain = await regionRepository.GetAllAsync();
+
+         logger.LogInformation($"Got All Regions with data: {JsonSerializer.Serialize(regionsDomain)}");
+         //// Map Domain Model To DTO
+         //var regionsDTO = new List<RegionDTO>();
+         //foreach (var region in regionsDomain)
+         //{
+         //    regionsDTO.Add(new RegionDTO
+         //    {
+         //        Id = region.Id,
+         //        Code = region.Code,
+         //        Name = region.Name,
+         //        RegionImgUrl = region.RegionImgUrl,
+         //    });
+         //}
+
+         // Map Domain Model to DTO
+         var regionsDTO = mapper.Map<List<RegionDTO>>(regionsDomain);
+
+         // Return The DTO
+         return Ok(regionsDTO);
+     }
+     catch (Exception ex)
+     {
+         logger.LogError(ex, ex.Message);
+         throw;
+     }
+     
+ }
+----------------------------------------------------------------------------------------------------------------------
+
+
+### Now We Log Information to a Text File
+
+### Install The nuget Serilog.Sinks.File
+
+4###  Configure File logger or text logger in Program.cs
+      Create A folder Named |Logs|
+  
+----------------------------------------------------------------------------------------------------------------------
+Program.cs
+----------------------------------------------------------------------------------------------------------------------
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+// Adding Serilog Console Logger
+var logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/NZWalks.txt", rollingInterval: RollingInterval.Minute)
+    .MinimumLevel.Warning()
+    .CreateLogger();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
+----------------------------------------------------------------------------------------------------------------------
+
+
+### Now We Implement Global Exception Handling
+
+5### Make a Folder in the Project --> Middlewares
+ and make a class inside it ExceptionHandlerMiddleware.cs
+----------------------------------------------------------------------------------------------------------------------
+ExceptionHandlerMiddleware.cs
+----------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Middlewares
+{
+    public class ExceptionHandlerMiddleware
+    {
+        private readonly ILogger<ExceptionHandlerMiddleware> logger;
+        private readonly RequestDelegate next;
+
+        public ExceptionHandlerMiddleware(ILogger<ExceptionHandlerMiddleware> logger,
+            RequestDelegate next)
+        {
+            this.logger = logger;
+            this.next = next;
+        }
+
+        public async Task InvokeAsync(HttpContext httpContext)
+        {
+            // We will mimic the try catch block here
+            try
+            {
+                await next(httpContext);
+            }
+            catch (Exception ex)
+            {
+                var errorId = Guid.NewGuid();
+
+                // Log This Exception
+                logger.LogError(ex, $"{errorId}: {ex.Message}");
+
+                // Return a custom error message
+                httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                httpContext.Response.ContentType = "application/json";
+
+                var error = new
+                {
+                    Id = errorId,
+                    ErrorMessage = "An error occurred. Please try again later."
+                };
+
+                await httpContext.Response.WriteAsJsonAsync(error);
+            }
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+
+6### Now We Add This Middleware In the Program.cs
+----------------------------------------------------------------------------------------------------------------------
+Program.cs (Make Sure to use Proper Using for ExceptionHandlerMiddleware)
+----------------------------------------------------------------------------------------------------------------------
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+// Adding Exception Handler Middleware
+app.UseMiddleware<ExceptionHandlerMiddleware>();
+----------------------------------------------------------------------------------------------------------------------
+
+Done 
+ If we need to test it then use this inside a controller 
+--> 
+	// Mimic An exception
+ 	throw new Exception("This is an exception");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

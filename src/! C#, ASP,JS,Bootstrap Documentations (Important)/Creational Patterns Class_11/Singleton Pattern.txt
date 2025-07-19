@@ -1,0 +1,8 @@
+We dont wat multiple instances of the same object. Suppose we are using database class
+# So we can make the constructor private, thus we cannot make instances
+# We need an instance to work
+# We can make a get property but we can also make getinstance() functions.
+# If it is uninitialited then it is initialized and if it is initialized then we return the 
+  instance 
+
+# So now If we make 2 instance we will see that both of them holds the same value

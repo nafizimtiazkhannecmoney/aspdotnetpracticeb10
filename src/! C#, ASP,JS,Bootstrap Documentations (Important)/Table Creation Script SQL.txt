@@ -1,0 +1,20 @@
+Id	uniqueidentifier	NULL	NO
+Code	nvarchar	-1	NO
+Name	nvarchar	-1	NO
+RegionImgUrl	nvarchar	-1	YES
+
+
+---------------------------------------------
+SELECT 
+    COLUMN_NAME,
+    DATA_TYPE,
+    CHARACTER_MAXIMUM_LENGTH,
+    IS_NULLABLE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'regions'
+
+
+
+
+
+

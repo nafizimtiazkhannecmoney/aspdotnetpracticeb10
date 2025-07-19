@@ -1,0 +1,15 @@
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\bin\Debug\net8.0\Recursion.exe
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\bin\Debug\net8.0\Recursion.deps.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\bin\Debug\net8.0\Recursion.runtimeconfig.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\bin\Debug\net8.0\Recursion.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\bin\Debug\net8.0\Recursion.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\Recursion.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\Recursion.AssemblyInfoInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\Recursion.AssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\Recursion.csproj.CoreCompileInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\Recursion.sourcelink.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\Recursion.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\refint\Recursion.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\Recursion.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\Recursion.genruntimeconfig.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\Recursion\obj\Debug\net8.0\ref\Recursion.dll

@@ -1,0 +1,456 @@
+Starts--9:16--Ado.Net Utility
+# Done updatingh library adoutility / sqlutility/ Iswlutility 28:28
+
+
+
+#Infrastructure>>UnitOfworks>>UnitofWork.cs
+----------------------------------------------------------------------------[UnitofWork.cs]START
+#Uncomments 2 lines of ADO.NET codes
+//protected IAdoNetUtility AdoNetUtility { get; private set; }
+//AdoNetUtility = new AdoNetUtility(_dbContext.Database.GetDbConnection());
+----------------------------------------------------------------------------[UnitofWork.cs]END
+
+
+# Change the name IAdoNetUtility to ISqLUtility, copy this from sir repo and paste it in project in Domain
+----------------------------------------------------------------------------[ISqlUtility]START
+namespace DevSkill.Inventory.Domain
+{
+    public interface ISqlUtility
+    {
+        Task<TReturn> ExecuteScalarAsync<TReturn>(string storedProcedureName, IDictionary<string, object> parameters = null);
+        IDictionary<string, object> ExecuteStoredProcedure(string storedProcedureName, IDictionary<string, object> parameters = null, IDictionary<string, Type> outParameters = null);
+        Task<IDictionary<string, object>> ExecuteStoredProcedureAsync(string storedProcedureName, IDictionary<string, object> parameters = null, IDictionary<string, Type> outParameters = null);
+        Task<(IList<TReturn> result, IDictionary<string, object> outValues)> QueryWithStoredProcedureAsync<TReturn>(string storedProcedureName, IDictionary<string, object> parameters = null, IDictionary<string, Type> outParameters = null) where TReturn : class, new();
+    }
+}
+----------------------------------------------------------------------------[ISqlUtility]END
+
+# Copy Sql utility from sir repo, Infrastructure SqlUtility.cs| And paste it in our project in Infrastructure
+# public class SqlUtility : ISqlUtility  [Change the Interface name here]  Time--13.54
+# Remode Db transaction 17 min
+
+
+# Now build Solution
+
+
+
+----------------------------------------------------------------------------[UnitOfWork.cs]START
+using DevSkill.Inventory.Domain;
+using DevSkill.Inventory.Domain.RepositoryContracts;
+//using FirstDemo.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DevSkill.Inventory.Infrastructure.UnitOfWorks
+{
+    public abstract class UnitOfWork : IUnitOfWork
+    {
+        private readonly DbContext _dbContext;
+        protected ISqlUtility SqlUtility { get; private set; }
+
+        public UnitOfWork(DbContext dbContext)
+        {
+            _dbContext = dbContext;
+            SqlUtility = new SqlUtility(_dbContext.Database.GetDbConnection());
+        }
+
+        public void Dispose() => _dbContext?.Dispose();
+        public ValueTask DisposeAsync() => _dbContext.DisposeAsync();
+        public void Save() => _dbContext?.SaveChanges();
+        public async Task SaveAsync() => await _dbContext.SaveChangesAsync();
+    }
+}
+
+----------------------------------------------------------------------------[UnitOfWork.cs]END
+# Area>>Admin>>ProductController.cs
+
+# We make Another IAction method like GerProductJsonData, which is GerProductJsonDataSP, also change method name GetProducts to GetProductsSP
+
+----------------------------------------------------------------------------[ProductController.cs]START
+# Action name changed. method name SP changed
+# Written a new method signature in IProductManagementServices of GetProductsSP
+[HttpPost]   // For SP
+public JsonResult GerProductJsonDataSP([FromBody] ProductListModel model)
+{
+    var result = _productManagementServices.GetProductsSP(model.PageIndex, model.PageSize, model.Search,
+        model.FormatSortExpression("ProductName", "Id"));
+
+    var productJsonData = new
+    {
+        recordsTotal = result.total,
+        recordsFiltered = result.totalDisplay,
+        data = (from record in result.data
+                select new string[]
+                {
+                        HttpUtility.HtmlEncode(record.ProductName),
+                        record.Id.ToString()
+                }
+            ).ToArray()
+    };
+
+    return Json(productJsonData);
+}
+
+----------------------------------------------------------------------------[ProductController.cs]END
+
+
+----------------------------------------------------------------------------[IProductManagementServices]START
+using DevSkill.Inventory.Domain;
+using DevSkill.Inventory.Domain.Entities;
+
+namespace DevSkill.Inventory.Application.Services
+{
+    public interface IProductManagementServices
+    {
+        void CreateProduct(Product product);
+        void DeleteProduct(Guid id);
+        Product GetProduct(Guid id);
+        (IList<Product> data, int total, int totalDisplay) GetProducts(int pageIndex, int pageSize,
+            DataTablesSearch search, string? order);
+
+        (IList<Product> data, int total, int totalDisplay) GetProductsSP(int pageIndex, int pageSize,
+            DataTablesSearch search, string? order);
+        void UpdateProduct(Product product);
+    }
+}
+----------------------------------------------------------------------------[IProductManagementServices]END
+
+# We make another Index Action in Product Controller as IndexSP()
+----------------------------------------------------------------------------[ProductController.cs]START
+public IActionResult IndexSP()
+{
+    return View();
+}
+----------------------------------------------------------------------------[ProductController.cs]END
+
+### Implement GetProducts method in ProductManagementServices.cs
+ public (IList<Product> data, int total, int totalDisplay) GetProducts(int pageIndex,
+     int pageSize, DataTablesSearch search, string? order)
+ {
+    return _productUnitOfWork.ProductRepository.GetPagedProducts(pageIndex, pageSize, search, order);
+ }
+
+ public (IList<Product> data, int total, int totalDisplay) GetProductsSP(int pageIndex,
+     int pageSize, DataTablesSearch search, string? order)
+ {
+     return _productUnitOfWork.ProductRepository.GetPagedProducts(pageIndex, pageSize, search, order);
+ }
+
+
+# Make Signature of GetPagedProductsUsingSP()
+----------------------------------------------------------------------------[IProductUnitOfWork.cs]START
+namespace DevSkill.Inventory.Application
+{
+    public interface IProductUnitOfWork : IUnitOfWork
+    {
+        public IProductRepository ProductRepository { get; }
+        public (IList<Product> data, int total, int totalDisplay) GetPagedProductsUsingSP();
+    }
+}
+----------------------------------------------------------------------------[IProductUnitOfWork.cs]END
+
+# Now We Implement this Signature in ProductUnitOfWork>> Implement INterface 
+(Chnage all parameter if error then fix parameters in the Interfaces) 
+
+
+
+#
+----------------------------------------------------------------------------[ProductUnitOfWork]START
+namespace DevSkill.Inventory.Infrastructure.UnitOfWorks
+{
+    public class ProductUnitOfWork : UnitOfWork, IProductUnitOfWork
+    {
+        public IProductRepository ProductRepository { get; private set; }
+
+       // public IProductRepository productRepository => throw new NotImplementedException();           //Extra----------
+
+        public ProductUnitOfWork(ProductDbCntext dbContext, 
+            IProductRepository productRepository) : base(dbContext)
+        {
+            ProductRepository = productRepository;
+        }
+
+        public async Task<(IList<Product> data, int total, int totalDisplay)> GetPagedProductsUsingSPAsync(int pageIndex,
+            int pageSize, DataTablesSearch search, string? order)
+        {
+            var procedureName = "";
+
+            var result = await SqlUtility.QueryWithStoredProcedureAsync<Product>(procedureName, 
+                new Dictionary<string, object>
+                {
+                    { "PageIndex", pageIndex },
+                    { "PageSize", pageSize },
+                    { "OrderBy", order },
+                    { "ProductName", search.Value }
+                },
+                new Dictionary<string, Type>
+                {
+                    { "Total", typeof(int) },
+                    { "TotalDisplay", typeof(int) }
+                });
+            return (result.result, (int)result.outValues["Total"], (int)result.outValues["TotalDisplay"]);
+        }
+    }
+}
+
+----------------------------------------------------------------------------[ProductUnitOfWork]END
+
+# Go to IProductUnitOfWork and make the method and task, and change the name to SPAsync
+
+----------------------------------------------------------------------------[IProductUnitOfWork]START
+namespace DevSkill.Inventory.Application
+{
+    public interface IProductUnitOfWork : IUnitOfWork
+    {
+        public IProductRepository ProductRepository { get; }
+        public Task<(IList<Product> data, int total, int totalDisplay)> GetPagedProductsUsingSPAsync(int pageIndex,
+            int pageSize, DataTablesSearch search, string? order);
+    }
+}
+----------------------------------------------------------------------------[IProductUnitOfWork]END
+
+
+
+
+----------------------------------------------------------------------------[ProductManagementServices]START
+using DevSkill.Inventory.Domain;
+using DevSkill.Inventory.Domain.Entities;
+
+namespace DevSkill.Inventory.Application.Services
+{
+    public class ProductManagementServices : IProductManagementServices
+    {
+        private readonly IProductUnitOfWork _productUnitOfWork;
+
+        public ProductManagementServices(IProductUnitOfWork productUnitOfWork)
+        {
+            _productUnitOfWork = productUnitOfWork;
+        }
+        //public void CreateProduct()
+        //{
+
+        //}
+
+        public void CreateProduct(Product product)
+        {
+            if (!_productUnitOfWork.ProductRepository.IsTitleDuplicate(product.ProductName))
+            {
+                _productUnitOfWork.ProductRepository.Add(product);
+                _productUnitOfWork.Save();
+            }
+        }
+
+        public void DeleteProduct(Guid id)
+        {
+            _productUnitOfWork.ProductRepository.Remove(id);
+            _productUnitOfWork.Save();
+        }
+
+        public Product GetProduct(Guid id)
+        {
+            return _productUnitOfWork.ProductRepository.GetById(id);
+        }
+
+        public (IList<Product> data, int total, int totalDisplay) GetProducts(int pageIndex,
+            int pageSize, DataTablesSearch search, string? order)
+        {
+           return _productUnitOfWork.ProductRepository.GetPagedProducts(pageIndex, pageSize, search, order);
+        }
+
+        public async Task<(IList<Product> data, int total, int totalDisplay)> GetProductsSP(int pageIndex,
+            int pageSize, DataTablesSearch search, string? order)
+        {
+            return await _productUnitOfWork.GetPagedProductsUsingSPAsync(pageIndex, pageSize, search, order);
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            if (!_productUnitOfWork.ProductRepository.IsTitleDuplicate(product.ProductName, product.Id))
+            {
+                _productUnitOfWork.ProductRepository.Edit(product);
+                _productUnitOfWork.Save();
+            }
+            else
+                throw new InvalidOperationException("ProductName Should be unique");
+        }
+    }
+}
+
+----------------------------------------------------------------------------[ProductManagementServices]END
+
+# Go to definition of IProductManagementServices and make the signature Task there
+
+----------------------------------------------------------------------------[IProductManagementServices]START
+using DevSkill.Inventory.Domain;
+using DevSkill.Inventory.Domain.Entities;
+
+namespace DevSkill.Inventory.Application.Services
+{
+    public interface IProductManagementServices
+    {
+        void CreateProduct(Product product);
+        void DeleteProduct(Guid id);
+        Product GetProduct(Guid id);
+        (IList<Product> data, int total, int totalDisplay) GetProducts(int pageIndex, int pageSize,
+            DataTablesSearch search, string? order);
+
+        Task<(IList<Product> data, int total, int totalDisplay)> GetProductsSP(int pageIndex, int pageSize,
+            DataTablesSearch search, string? order);
+        void UpdateProduct(Product product);
+    }
+}
+----------------------------------------------------------------------------[IProductManagementServices]END
+
+
+
+
+
+
+----------------------------------------------------------------------------[IProductUnitOfWork]START
+# Omit the public
+namespace DevSkill.Inventory.Application
+{
+    public interface IProductUnitOfWork : IUnitOfWork
+    {
+         IProductRepository ProductRepository { get; }
+         Task<(IList<Product> data, int total, int totalDisplay)> GetPagedProductsUsingSPAsync(int pageIndex,
+            int pageSize, DataTablesSearch search, string? order);
+    }
+}
+----------------------------------------------------------------------------[IProductUnitOfWork]END
+
+# We are done here and we go to ProductController and we have 3 errors
+
+----------------------------------------------------------------------------[ProductController]START
+[HttpPost]   // For SP
+public async Task<JsonResult> GerProductJsonDataSP([FromBody] ProductListModel model)
+{
+    var result = await _productManagementServices.GetProductsSP(model.PageIndex, model.PageSize, model.Search,
+        model.FormatSortExpression("ProductName", "Id"));
+
+    var productJsonData = new
+    {
+        recordsTotal = result.total,
+        recordsFiltered = result.totalDisplay,
+        data = (from record in result.data
+                select new string[]
+                {
+                        HttpUtility.HtmlEncode(record.ProductName),
+                        record.Id.ToString()
+                }
+            ).ToArray()
+    };
+
+    return Json(productJsonData);
+}
+----------------------------------------------------------------------------[ProductController]END
+
+
+
+# Make A view for the IndexSP(), Copy all from Index diew and paste it to IndexSP
+# Only changethe url to 
+[url: "/Admin/Product/GerProductJsonDataSP",]
+
+
+# We missed the procedure name in ProductUnitOfWork, take the SP name from sql and paste it to [var procedureName = "GetProducts";]
+
+# Now we add more fields In Index
+
+----------------------------------------------------------------------------[Index.cshtml]START
+<table id="blogposts" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Product Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Product Date</th>
+            <th>Action</th>
+        </tr>
+    </tfoot>
+</table>
+----------------------------------------------------------------------------[Index.cshtml]END
+
+
+# Now In Conrtoller
+----------------------------------------------------------------------------[ProductController.cs]START
+[HttpPost]
+public JsonResult GerProductJsonData([FromBody] ProductListModel model)
+{
+    var result = _productManagementServices.GetProducts(model.PageIndex, model.PageSize, model.Search, 
+        model.FormatSortExpression("ProductName", "Id"));
+
+    var productJsonData = new
+    {
+        recordsTotal = result.total,
+        recordsFiltered = result.totalDisplay,
+        data = (from record in result.data
+                select new string[]
+                {
+                        HttpUtility.HtmlEncode(record.ProductName),
+                        HttpUtility.HtmlEncode(record.Description),
+                        HttpUtility.HtmlEncode(record.Category?.Name),
+                        record.ProductCreateDate.ToString(),
+                        record.Id.ToString()
+                }
+            ).ToArray()
+    };
+
+    return Json(productJsonData);
+}
+----------------------------------------------------------------------------[ProductController.cs]END
+
+# Now We need DTO in Domain>>Dtos(New Folder)>>ProductDto.cs
+
+----------------------------------------------------------------------------[ProductDto.cs]START
+namespace DevSkill.Inventory.Domain.Dtos
+{
+    public class ProductDto
+    {
+        public Guid Id { get; set; }
+        public string ProductName { get; set; }  //Title
+        public string Description { get; set; }  //Body 
+        public DateTime ProductCreateDate { get; set; }  //PostDate
+
+        public string CategoryName { get; set; }
+    }
+}
+----------------------------------------------------------------------------[ProductDto.cs]END
+
+# Time 1:34:45 --- Start from here<<<<<<< now we add the same thing in GetBlogPostJsonDataSp
+
+
+----------------------------------------------------------------------------[]START
+----------------------------------------------------------------------------[]END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

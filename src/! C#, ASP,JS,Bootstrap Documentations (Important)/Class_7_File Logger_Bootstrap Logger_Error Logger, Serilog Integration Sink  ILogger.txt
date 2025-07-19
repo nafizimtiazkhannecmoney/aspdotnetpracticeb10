@@ -1,0 +1,249 @@
+Class:7
+When we put the software on server then we dont see the errors(Because We cant Use Compiler there), Like when the user is going through errors.
+Also it can be used in develeopment by devs, as there could be some time that we wont see the
+errors in visual studio.That's why we use error Logger
+
+## Nuget For File Logger: Serilog.AspNetCore (File Sing is already inside this package)
+## Serilog has 2 parts of configuration, First is BootstrapLogger
+## BootStrapLogger Writes Instant Log(normal logger cant find the erron when the site starts)
+## Debug is the lowest Minimum level  
+## Other levels: Debug, Warning, Error, Fatal
+## BootStrap Logger Is for Program.cs
+## General Logger Is for Controller and the level after
+
+* Bootstrap logger is for Starting logs
+* Serilog general is for the other types, like controller error logs
+
+* Error Logger are of many types
+* File Logger (Writes log(or errors) in file) (by default it is configured)
+  NuGet-Serilog.Sinks.File(not needed right now)
+  Write Serilog events to text files in plain JSON format
+* Database Logger (If we have more than one server, then we use DB logger, the loggs are stored in one DB, as there are many      servers but only one DB)(not configured by default)(needs additional NuGet)(need to add a table in DB)
+  NuGet-Serilog.Sinks.MSSqlServer
+  A serilog sink that writes events to MSSQL server and Azure SQL
+* Email Logger(critical error, We need to be informed in urgent basis, as we wont be checking File logs and DB logs every time,
+  if some errors are urgent then we must use email logger(Ex payment error is important))(not configured by default)
+  (needs additional NuGet)
+
+1# Dependencies>>Manage NuGet packages..>>Serilog.AspNetCore
+
+2# We will store Logger config in appsettings.json
+
+# Serilog is configured by 2 Steps
+      #Bootstrap Logger(It wors instantly, site chalu howar somoy kono error hole eta dhorte parbe)
+       (Bootstrap means Start | Initiate | Initialization) 
+      #Serilog General (To see errors in Controller)  
+
+3#-------------------------------------[appsettings.json]    [before "AllowedHosts": "*"]
+,
+  "Serilog": {
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Logs/web-log-.log",
+          "rollingInterval": "Day"
+        }
+      }
+    ]
+  }
+
+4#-------------------------------------[Program.cs] reading the appsettings.json for Bootstrap Logger, As it cant read from below, so it reads from it manually
+[after the using statements]
+
+#region Bootstrap Logger Configuration
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+Log.Logger = new LoggerConfiguration()
+            .ReadFrom.Configuration(configuration)
+            .CreateBootstrapLogger();
+#endregion
+
+5#-------------------------------------[Program.cs] then all the remaining codes will be inside try catch (without bootstap Logger)
+
+try
+{
+    Log.Information("Application Starting...");
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    #region Serilog General Configuration
+    builder.Host.UseSerilog((ctx, lc) => lc
+        .MinimumLevel.Debug()
+        .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+        .Enrich.FromLogContext()
+        .ReadFrom.Configuration(builder.Configuration));
+    #endregion
+
+    // Add services to the container.
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(connectionString));
+    builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+    #region Autofac Configuration
+    builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+    builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+    {
+        containerBuilder.RegisterModule(new WebModule());
+    });
+    #endregion
+
+    builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+    builder.Services.AddControllersWithViews();
+
+    builder.Services.AddKeyedScoped<IEmailSender, EmailSender>("home");
+    builder.Services.AddKeyedScoped<IEmailSender, HtmlEmailSender>("another");
+
+    var app = builder.Build();
+
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseMigrationsEndPoint();
+    }
+    else
+    {
+        app.UseExceptionHandler("/Home/Error");
+        // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+        app.UseHsts();
+    }
+
+    app.UseHttpsRedirection();
+    app.UseStaticFiles();
+
+    app.UseRouting();
+
+    app.UseAuthorization();
+
+    app.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+    app.MapRazorPages();
+
+    app.Run();
+}
+catch(Exception ex)
+{
+    Log.Fatal(ex, "Failed to start application.");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
+6#-------------------------------------Serilog General Configuration
+6#-------------------------------------[Program.cs] after var builder is being created
+    var builder = WebApplication.CreateBuilder(args);
+
+    #region Serilog General Configuration
+    builder.Host.UseSerilog((ctx, lc) => lc
+        .MinimumLevel.Debug()
+        .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+        .Enrich.FromLogContext()
+        .ReadFrom.Configuration(builder.Configuration));
+    #endregion
+7#-------------------------------------[HomeController.cs]
+public IActionResult Index()
+{
+    var model = new IndexModel();
+    model.Name = "Hello World";
+
+    _logger.LogInformation("I am in index");
+
+    return View(model);
+}
+
+
+
+--------------after try
+ Log.Information("Application Starting...");
+--------------
+
+
+
+EXAMPLES
+--------------------------------------------------------------------------------------------------------------------------------------------------
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "Serilog": {
+        "WriteTo": [
+            {
+                "Name": "File",
+                "Args": {
+                    "path": "Logs/web-log-.log",
+                    "rollingInterval": "Day", // One Log File for Each Day
+                    "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+                }
+            }
+        ]
+    },
+    "AllowedHosts": "*",
+    "ConnectionStrings": {
+        "NZWalksConnectionString": "Server=DESKTOP-63UE644\\SQLEXPRESS;Database=NZWalksDb;Trusted_Connection=True;TrustServerCertificate=True"
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------
+"path": "C:\\Logs\\MyApp\\log-{Date}.txt" // Use date for dynamic file names
+"rollingInterval": "Day" // Daily rotation
+"rollingInterval": "Hour" // Hourly rotation
+"rollingInterval": "Minute" // Minutely rotation
+"rollingInterval": "Month" // Monthly rotation
+"rollingInterval": "SizeLimitBytes" // Rotate when file size exceeds a limit (combine with `fileSizeLimitBytes`)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Placeholders:
+{Timestamp}: Timestamp of the log event.
+{Level:u3}: Log level (e.g., Debug, Information, Warning, Error).
+{Message}: The log message itself.
+{NewLine}: Inserts a newline character.
+{Exception}: Includes exception details (if any).
+Formatting Options:
+{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz}: Formats the timestamp with milliseconds and timezone.
+{Level:u3}: Displays the level in uppercase (e.g., DEBUG, INFO).
+{Message:lj}: Justifies the message to the left.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+"MinimumLevel": "Information" // Only log events at Information level and above
+Other levels: Debug, Warning, Error, Fatal
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

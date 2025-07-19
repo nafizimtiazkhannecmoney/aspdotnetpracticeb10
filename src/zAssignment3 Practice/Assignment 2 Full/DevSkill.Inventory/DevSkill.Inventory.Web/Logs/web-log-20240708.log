@@ -1,0 +1,44 @@
+2024-07-08 16:50:25.060 +06:00 [INF] Application Starting...
+2024-07-08 16:50:25.448 +06:00 [FTL] Failed to start application.
+System.ArgumentException: The type 'Blog.Infrastructure.UnitOfWorks.BlogUnitOfWork' is not assignable to service 'Blog.Application.IBlogUnitOfWork'.
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration(Guid id, RegistrationData data, IInstanceActivator activator, IResolvePipelineBuilder pipelineBuilder, Service[] services, IComponentRegistration target)
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration[TLimit,TActivatorData,TSingleRegistrationStyle](IRegistrationBuilder`3 builder)
+   at Autofac.Builder.RegistrationBuilder.RegisterSingleComponent[TLimit,TActivatorData,TSingleRegistrationStyle](IComponentRegistryBuilder cr, IRegistrationBuilder`3 builder)
+   at Autofac.RegistrationExtensions.<>c__DisplayClass39_0`1.<RegisterType>b__0(IComponentRegistryBuilder cr)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.UpdateRegistry(IComponentRegistryBuilder componentRegistry)
+   at Autofac.Module.Configure(IComponentRegistryBuilder componentRegistry)
+   at Autofac.Core.Registration.ModuleRegistrar.<.ctor>b__1_0(IComponentRegistryBuilder reg)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProviderFactory.CreateServiceProvider(ContainerBuilder containerBuilder)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\Program.cs:line 63
+2024-07-08 16:54:09.939 +06:00 [INF] Application Starting...
+2024-07-08 16:54:10.037 +06:00 [FTL] Failed to start application.
+System.ArgumentException: The type 'Blog.Infrastructure.UnitOfWorks.BlogUnitOfWork' is not assignable to service 'Blog.Application.IBlogUnitOfWork'.
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration(Guid id, RegistrationData data, IInstanceActivator activator, IResolvePipelineBuilder pipelineBuilder, Service[] services, IComponentRegistration target)
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration[TLimit,TActivatorData,TSingleRegistrationStyle](IRegistrationBuilder`3 builder)
+   at Autofac.Builder.RegistrationBuilder.RegisterSingleComponent[TLimit,TActivatorData,TSingleRegistrationStyle](IComponentRegistryBuilder cr, IRegistrationBuilder`3 builder)
+   at Autofac.RegistrationExtensions.<>c__DisplayClass39_0`1.<RegisterType>b__0(IComponentRegistryBuilder cr)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.UpdateRegistry(IComponentRegistryBuilder componentRegistry)
+   at Autofac.Module.Configure(IComponentRegistryBuilder componentRegistry)
+   at Autofac.Core.Registration.ModuleRegistrar.<.ctor>b__1_0(IComponentRegistryBuilder reg)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProviderFactory.CreateServiceProvider(ContainerBuilder containerBuilder)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\Program.cs:line 63
+2024-07-08 17:35:59.209 +06:00 [INF] Application Starting...
+2024-07-08 17:35:59.937 +06:00 [FTL] Failed to start application.
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\ASPdotNet Practice\aspdotnetpracticeb10\src\zAssignment3 Practice\Assignment 2 Full\DevSkill.Inventory\DevSkill.Inventory.Web\Program.cs:line 63

@@ -1,0 +1,6 @@
+CReate Category And Crud Finish
+DatTime-DatePicker
+TinyMCE--9:11
+MakeUtility for category which gives list --16:31
+Automapper--24:00/OR u can use Mapster
+AutomapperProfile(WebProfile)--30:38

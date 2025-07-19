@@ -1,0 +1,57 @@
+1# Nuget>>Serilog.Sinks.MSSqlServer 
+
+2# ----------appsettings.json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=PLICL60\\SQLEXPRESS;Database=asptest1;Trusted_Connection=True;MultipleActiveResultSets=true",
+    "LogConnection": "Server=PLICL60\\SQLEXPRESS;Database=asptest1;Trusted_Connection=True;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Serilog": {
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Logs/web-log-.log",
+          "rollingInterval": "Day"
+        }
+      },
+      {
+        "Name": "MSSqlServer",
+        "Args": {
+          "connectionString": "LogConnection",
+          "tableName": "Logs",
+          "autoCreateSqlTable": true
+        }
+      }
+    ]
+  },
+  "AllowedHosts": "*"
+}
+---------------------------------------[program.cs]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+1. Percent Analycis
+2. Module list Update
+3. Hr leave attndance meeting
+4. Content
+
+
+
+https://juliocasal.com/blog/How-To-Become-A-Senior-Dotnet-Backend-Developer
+ASP Knoledge band Senior
+1. Design pronciples, Design Patterns
+2. Clowd Computing and Azure, AWS
+3. DevOps PRactices & CI/CD Pipeline
+4. Microservices & Contenarization
+

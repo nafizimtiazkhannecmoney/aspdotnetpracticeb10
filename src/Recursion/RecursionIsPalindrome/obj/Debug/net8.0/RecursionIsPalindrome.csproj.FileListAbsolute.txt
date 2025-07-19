@@ -1,0 +1,15 @@
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\bin\Debug\net8.0\RecursionIsPalindrome.exe
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\bin\Debug\net8.0\RecursionIsPalindrome.deps.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\bin\Debug\net8.0\RecursionIsPalindrome.runtimeconfig.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\bin\Debug\net8.0\RecursionIsPalindrome.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\bin\Debug\net8.0\RecursionIsPalindrome.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\RecursionIsPalindrome.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\RecursionIsPalindrome.AssemblyInfoInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\RecursionIsPalindrome.AssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\RecursionIsPalindrome.csproj.CoreCompileInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\RecursionIsPalindrome.sourcelink.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\RecursionIsPalindrome.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\refint\RecursionIsPalindrome.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\RecursionIsPalindrome.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\RecursionIsPalindrome.genruntimeconfig.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionIsPalindrome\obj\Debug\net8.0\ref\RecursionIsPalindrome.dll

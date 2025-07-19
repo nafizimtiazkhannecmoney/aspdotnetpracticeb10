@@ -1,0 +1,102 @@
+3:30-- Email Integration       **smtp-email protocol, http-web protocol, tcp = relaible(in importanc communication) and udp = unreliable(on video) connection
+Register Async
+
+
+
+----------------------------------------------------------------------------------------[START,AccountController]
+[HttpPost, ValidateAntiForgeryToken, AllowAnonymous]
+public async Task<IActionResult> RegisterAsync(RegistrationModel model)
+{
+    model.ReturnUrl ??= Url.Content("~/");
+    model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+    if (ModelState.IsValid)
+    {
+        var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+        var result = await _userManager.CreateAsync(user, model.Password);
+        if (result.Succeeded)
+        {
+            _logger.LogInformation("User created a new account with password.");
+            
+            var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            var callbackUrl = Url.Action("ConfirmEmail",
+                "Account",
+                values: new { area = "", userId = user.Id, code = code, returnUrl = model.ReturnUrl },
+                protocol: Request.Scheme);
+            /*
+            await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+            */
+----------------------------------------------------------------------------------------[END]
+#Install Nuget --MailKit By-Jeffrey Stedfast
+
+Make IEmailUtility and EmailUtility
+
+#Goto Mailkit Documentation- copy the code and paste it to Emailutility sendEmail
+# INstall Mailkit on Infrastructure
+# Using MimeKit 
+
+# Make SmtpSettings in Domain
+# Make Enum in Domain SmtpEncryptionType
+# Remove using System.Net.Mail; we dnt want the dotnet one
+# Use this "using MailKit.Net.Smtp;"
+# configure smtpSettings inside appsettings.json
+
+
+----------------------------------------------------------------------------------------[START.appsettings.json]
+ "SmtpSettings": {
+   "FromName": "",
+   "FromEmail": "",
+   "Host": "",
+   "Port": "",
+   "UserName": "",
+   "Password": "",
+   "SmtpEncryption": ""
+ },
+----------------------------------------------------------------------------------------[END]
+# mailtrap.io
+
+# Now take Credentials from My Inbox on mailtrap and paste them to appsettings.json
+
+----------------------------------------------------------------------------------------[START]
+"SmtpSettings": {
+  "FromName": "Nafiz Imtiaz Khan",
+  "FromEmail": "nafiz.ba.pakizatvl@gmail.com",
+  "Host": "sandbox.smtp.mailtrap.io",
+  "Port": 587,
+  "UserName": "d0bac06c7bfb90",
+  "Password": "4963212a2a4958",
+  "SmtpEncryption": "TLS"
+},
+----------------------------------------------------------------------------------------[END]
+# Add this in Program.cs
+ builder.Services.AddControllersWithViews();
+ builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
+
+# Program.cs --> 
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+
+1:33
+
+# we make extension method
+take this (cut)
+ builder.Services
+     .AddIdentity<ApplicationUser, ApplicationRole>()
+     .AddEntityFrameworkStores<ApplicationDbContext>()
+     .AddUserManager<ApplicationUserManager>()
+     .AddRoleManager<ApplicationRoleManager>()
+     .AddSignInManager<ApplicationSignInManager>()
+     .AddDefaultTokenProviders();
+
+to-->ServiceCollectionExtensions
+
+do this extension method
+
+
+
+----------------------------------------------------------------------------------------[START]
+----------------------------------------------------------------------------------------[END]
+----------------------------------------------------------------------------------------[START]
+----------------------------------------------------------------------------------------[END]

@@ -1,0 +1,80 @@
+System.ComponentModel.DataAnnotations
+Data Annotation >> Model State
+# After Using DataAnnotations then We can Use ModelState to validate our Model
+# We Can Check The Validations In the Controller
+# Put Validations in AddDTO and UpdateDTO
+----------------------------------------------------------------------------------------
+using System.ComponentModel.DataAnnotations;
+
+namespace NZWalks.API.Models.DTO
+{
+    public class AddRegionDTO
+    {
+        [Required]
+        [MinLength(3, ErrorMessage = "Code Has To Be Minimum of 3 Letters")]
+        [MaxLength(3, ErrorMessage = "Code Has To Be Maximum of 3 Letters")]
+        public string Code { get; set; }
+
+        [Required]
+        [MaxLength(100, ErrorMessage = "Name Has To Be Maximum Of 100 Letters")]
+        public string Name { get; set; }
+        public string? RegionImgUrl { get; set; }
+    }
+}
+
+---------------------------------------------------------------------------------------- 
+# Inside Controller
+
+if (ModelState.IsValid)
+{
+    ..logic code  
+}
+else 
+{ 
+    return BadRequest(ModelState); 
+}
+----------------------------------------------------------------------------------------
+namespace NZWalks.API.Models.DTO
+{
+    public class AddWalkDTO
+    {
+        [Required]
+        [MaxLength(100)]
+        public string Name { get; set; }
+
+        [Required]
+        [MaxLength(1000)]
+        public string Description { get; set; }
+
+        [Required]
+        [Range(0, 50)]
+        public double LengthInKm { get; set; }
+        public string? WalkImgUrl { get; set; }
+
+        [Required]
+        public Guid DifficultyId { get; set; }
+        [Required]
+        public Guid RegionId { get; set; }
+    }
+}
+
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

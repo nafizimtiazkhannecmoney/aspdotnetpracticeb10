@@ -1,0 +1,41 @@
+----------------------------------------------------------------------------------------------------------
+<<Array Is Palindrome>>
+string str = "11211";
+int len = str.Length;
+bool isPalindrome = true;
+
+for(int i = 0; i < len / 2; i++) {
+    if(str[i] != str[len - 1 - i]) {
+        isPalindrome = false;
+        break;
+    }
+}
+Console.WriteLine(isPalindrome ? "The string is a palindrome." : "No, it's not a palindrome. Gotcha non-palindrome!");
+----------------------------------------------------------------------------------------------------------
+<<Sort Array In C# Without Using Inbuilt Function>>
+int[] intArray = new int[] {2,9,4,3,5,1,7 };  
+            int temp = 0;  
+  
+            for (int i = 0; i <= intArray.Length-1; i++)  
+            {  
+                for (int j = i+1; j < intArray.Length; j++)  
+                {  
+                    if (intArray[i] > intArray[j])  
+                    {  
+                        temp = intArray[i];  
+                        intArray[i] = intArray[j];  
+                        intArray[j] = temp;  
+                    }  
+                }  
+            }  
+            Console.WriteLine("Array sort in asscending order");  
+            foreach (var item in intArray)  
+            {  
+                Console.WriteLine(item);  
+            }  
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------

@@ -1,0 +1,216 @@
+Topics: Class Starts from 21, Create List view, Index View show products or blog posts, session,temp data, viewbag, viewbag
+toaster with temp data, bootstrap js toaster library or js
+We didnt connect to data table.
+
+# We need to update the datatble javascript of Areas>>Admin>>Views>>Product>>Index
+
+//# Add [Httppost] to ProductController>> GerProductJsonData action
+
+-----------------------------------------------------------------[Areas>>Admin>>Views>>Product>>Index.cshtml]
+[Add this script in this page]
+<script>
+    $(function () {
+        $("#blogposts").DataTable({
+            processing: true,
+            serverSide: true,
+            responsive: true,
+            lengthChange: false,
+            autoWidth: false,
+            // lengthMenu: [
+            //     [10, 25, 50, -1],
+            //     [10, 25, 50, 'All']
+            // ],
+            ajax: {
+                url: "/Admin/Product/GerProductJsonData",
+                type: "GET",
+                contentType: "application/json", //must be added
+                dataType: "json", //better to add, not mandatory
+                // data: function (d) {
+                //     d.SearchItem = {
+                //     };
+                //     return JSON.stringify(d);
+                // },
+            },
+            //dom: 'Bfrtip',
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#blogposts_wrapper .col-md-6:eq(0)');
+    });
+</script>
+
+# Error Order Property Null
+
+-----------------------------------------------------------------END
+
+-----------------------------------------------------------------[DataTables.cs]
+[Always use string.Empty not " "]
+public string? FormatSortExpression(params string[] columns)
+{
+    StringBuilder columnBuilder = new StringBuilder();
+
+    for(int i = 0; i < Order.Length; i++)
+    {
+        columnBuilder.Append(columns[Order[i].Column])
+        .Append(" ")
+        .Append(Order[i].Dir);
+        
+        if(i < Order.Length - 1)
+            columnBuilder.Append(", ");
+    }
+    var orderString = columnBuilder.ToString();
+    return orderString == string.Empty ? null : orderString;
+}
+
+
+-----------------------------------------------------------------END
+
+# Goto ProductController.cs and GerProductJsonData>>GetProducts>> Go to definition and make the order nullable [string? order]
+# Goto ProductController.cs and GerProductJsonData>>GetProducts>> Go to implementation and make the order nullable [string? order]
+# GetPagedProducts>>Go to definition and make the order nullable [string? order]
+# ProductManagementServices.cs>>GetProducts>>GetPagedProducts>>Go to definition [string? order]
+# ProductRepositort.cs>>GetPagedProducts [string? order]>>GetDynamic Go to definition [string? orderBy = null,]
+# Infrastructure>>Repositories>>IRepository>>(IList<TEntity> data, int total, int totalDisplay) GetDynamic [string? orderBy]
+# Now Build
+
+
+-----------------------------------------------------------------[ProductRepository.cs]
+
+using DevSkill.Inventory.Domain;
+using DevSkill.Inventory.Domain.Entities;
+using DevSkill.Inventory.Domain.Repsitory_Contracts;
+using DevSkill.Inventory.Infrastructure.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DevSkill.Inventory.Infrastructutre.Repositories
+{
+    public class ProductRepository : Repository<Product, Guid>, IProductRepository
+    {
+        public ProductRepository(ProductDbCntext context) : base(context)
+        {
+                
+        }
+
+        public (IList<Product> data, int total, int totalDisplay) GetPagedProducts(int pageIndex, int pageSize,
+            DataTablesSearch search, string? order)
+        {
+            if (string.IsNullOrWhiteSpace(search.Value))
+                return GetDynamic(null , order, null, pageIndex, pageSize, true);
+            else 
+                return  GetDynamic(x => x.ProductName == search.Value, order, null, pageIndex, pageSize, true);
+        }
+    }
+}
+
+
+
+-----------------------------------------------------------------END
+
+# Take Response Partial from Sir repo Index
+ <partial name="_ResponsePartial" />
+# And Paste it to the (above)table tag in our project Index page
+
+# Copy _ResponsePartial.cshtml from sir repo Shared and paste it to our project shared folder
+
+-----------------------------------------------------------------[_ResponsePartial.cshtml]
+@using DevSkill.Inventory.Infrastructure
+
+@if(TempData.Peek<ResponseModel>("ResponseMessage") != null)
+{
+    var response = TempData.Get<ResponseModel>("ResponseMessage");
+    <div class="alert alert-@(response.Type.ToString().ToLower())" role="alert">
+        @response.Message
+    </div>
+}
+-----------------------------------------------------------------END
+
+# Now We need a model(ResponseModel),we will take it from Area>>Admin>>Models>>ResponseModel.cs (Sir Repo) 
+which we will put in Infrastructure our project.
+
+-----------------------------------------------------------------[ResponseModel.cs]
+namespace DevSkill.Inventory.Web.Areas.Admin.Models
+{
+    public enum ResponseTypes
+    {
+        Success,
+        Danger
+    }
+
+    public class ResponseModel
+    {
+        public string? Message { get; set; }
+        public ResponseTypes Type { get; set; }
+    }
+}
+
+-----------------------------------------------------------------END
+# We take TempDataExtensions.cs fro m sir repor Infrastructure and paste it to our repo Infrastructure(This is a asp feature)
+-----------------------------------------------------------------[TempDataExtensions.cs]
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using System.Text.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DevSkill.Inventory.Infrastructure
+{
+    public static class TempDataExtensions
+    {
+        public static void Put<T>(this ITempDataDictionary tempData, string key, T value) where T : class
+        {
+            tempData[key] = JsonSerializer.Serialize(value);
+        }
+
+        public static T Get<T>(this ITempDataDictionary tempData, string key) where T : class
+        {
+            object o;
+            tempData.TryGetValue(key, out o);
+            return o == null ? null : JsonSerializer.Deserialize<T>((string)o);
+        }
+
+        public static T Peek<T>(this ITempDataDictionary tempData, string key) where T : class
+        {
+            object o = tempData.Peek(key);
+            return o == null ? null : JsonSerializer.Deserialize<T>((string)o);
+        }
+    }
+}
+
+-----------------------------------------------------------------END
+
+# take Microsoft.AspNetCore.Identity.UI from sir repo Infrastructure and install thi nuget to our repo
+
+
+
+
+-----------------------------------------------------------------[ProductController.cs]
+# In [HttpPost] create action before return and after createproduct(product)
+# add namespace [using DevSkill.Inventory.Infrastructure;]
+
+ TempData.Put("ResponseMessage", new ResponseModel
+ {
+     Message = "Inventory Item created successfuly",
+     Type = ResponseTypes.Success
+ });
+
+
+-----------------------------------------------------------------END
+-----------------------------------------------------------------[ProductController.cs]
+[Inject logger] [ do try catch in alert message]
+
+-----------------------------------------------------------------END
+
+
+
+2:56---100 Percent
+3:01---80
+3:09---70
+3:16---60
+3:35---50
+4:43---10
+3:45---40
+4:18---20

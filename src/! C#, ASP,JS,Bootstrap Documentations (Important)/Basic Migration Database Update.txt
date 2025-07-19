@@ -1,0 +1,4 @@
+# Migrations- MIgrate the tables
+
+Add-Migration "Name Of Migration"
+Update-Database

@@ -1,0 +1,310 @@
+
+
+1### Create Image Domain Model in Domain Folder
+
+-------------------------------------------------------------------------------------------------------------------------------
+Imgae.cs
+-------------------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Models.Domain
+{
+    public class Image
+    {
+        public Guid Id { get; set; }
+
+        [NotMapped]
+        public IFormFile File { get; set; }
+
+        public string FileName { get; set; }
+        public string? FileDescription { get; set; }
+        public string FileExtension { get; set; }
+        public long FileSizeInBytes { get; set; }
+        public string FilePath { get; set; }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+2### We Include the image table name property in The NZWalksDbContext
+public DbSet<Image> Images { get; set; }
+
+3### Now We Do Migration and Database Update
+-------------------------------------------------------------------------------------------------------------------------------
+Migration & Databse Update
+-------------------------------------------------------------------------------------------------------------------------------
+Add-Migration "Adding Images Table" -Context "NZWalksDbContext"
+Update-Database -Context "NZWalksDbContext"
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+4### Add NEw (API)Controller -- ImagesController.cs
+-------------------------------------------------------------------------------------------------------------------------------
+ImageUploadRequestDTO
+-------------------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Models.DTO
+{
+    public class ImageUploadRequestDTO
+    {
+        [Required]
+        public IFormFile File { get; set; }
+        [Required]
+        public string FileName { get; set; }
+        public string? FileDescription { get; set; }  // ? means it can be null, Not a required field
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+ImagesController.cs
+-------------------------------------------------------------------------------------------------------------------------------
+public class ImagesController : ControllerBase
+{
+    // POST api/images/Upload
+    [HttpPost]
+    [Route("Upload")]
+    public async Task<IActionResult> Upload([FromForm] ImageUploadRequestDTO request)   // formform is used to get the file from the form
+    {
+        ValidateImageUpload(request);
+
+        if (ModelState.IsValid)
+        {
+            // User Repository to upload the image
+        }
+
+        return BadRequest(ModelState);
+    }
+
+    private void ValidateImageUpload(ImageUploadRequestDTO request)
+    {
+        var allowedExtensions = new string[] { ".jpg", ".jpeg", ".png" };
+        if (!allowedExtensions.Contains(Path.GetExtension(request.File.FileName)))
+        {
+            ModelState.AddModelError("file", "Unsupported File Entension");
+        }
+        if (request.File.Length > 10485760)
+        {
+            ModelState.AddModelError("file", "File size should not exceed 10MB");  
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+5### Now We make Image Repository
+-------------------------------------------------------------------------------------------------------------------------------
+ImagesController.cs
+-------------------------------------------------------------------------------------------------------------------------------
+ public class ImagesController : ControllerBase
+ {
+     // POST api/images/Upload
+     [HttpPost]
+     [Route("Upload")]
+     public async Task<IActionResult> Upload([FromForm] ImageUploadRequestDTO request)   // formform is used to get the file from the form
+     {
+         ValidateImageUpload(request);
+
+         if (ModelState.IsValid)
+         {
+             // Convert DTO to Domain Model
+             var imageDomainMoldel = new Image
+             {
+                 File = request.File,
+                 FileExtension = Path.GetExtension(request.File.FileName),
+                 FileSizeInBytes = request.File.Length,
+                 FileName = request.FileName,
+                 FileDescription = request.FileDescription
+             };
+
+
+             // User Repository to upload the image
+         }
+
+         return BadRequest(ModelState);
+     }
+
+     private void ValidateImageUpload(ImageUploadRequestDTO request)
+     {
+         var allowedExtensions = new string[] { ".jpg", ".jpeg", ".png" };
+         if (!allowedExtensions.Contains(Path.GetExtension(request.File.FileName)))
+         {
+             ModelState.AddModelError("file", "Unsupported File Entension");
+         }
+         if (request.File.Length > 10485760)
+         {
+             ModelState.AddModelError("file", "File size should not exceed 10MB");  
+         }
+     }
+ }
+-------------------------------------------------------------------------------------------------------------------------------
+
+6 ### Make Repository
+-------------------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Repositories
+{
+    public interface IImgageRepository
+    {
+        Task<Image> Upload(Image image);
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+ LoalImageRepository : IImgageRepository
+-------------------------------------------------------------------------------------------------------------------------------
+public class LoalImageRepository : IImgageRepository
+{
+    public Task<Image> Upload(Image image)
+    {
+        throw new NotImplementedException();
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+7### Make Images Folder
+
+8### Inject AddHttpContextAccessor() (register the service in program.cs) & Inject IWebHostEnvironment in LoalImageRepository (inject in controller, no need to register) 
+ & Inject NZWalksDbContext,
+-------------------------------------------------------------------------------------------------------------------------------
+Program.cs
+-------------------------------------------------------------------------------------------------------------------------------
+builder.Services.AddControllers();
+builder.Services.AddHttpContextAccessor(); // Injecting HttpContextAccessor
+-------------------------------------------------------------------------------------------------------------------------------
+ 
+-------------------------------------------------------------------------------------------------------------------------------
+LoalImageRepository : IImgageRepository
+-------------------------------------------------------------------------------------------------------------------------------
+public class LoalImageRepository : IImgageRepository
+{
+    private readonly IWebHostEnvironment webHostEnvironment;
+    private readonly IHttpContextAccessor httpContextAccessor;
+    private readonly NZWalksDbContext dbContext;
+
+    public LoalImageRepository(IWebHostEnvironment webHostEnvironment, IHttpContextAccessor httpContextAccessor, NZWalksDbContext dbContext)
+    {
+        this.webHostEnvironment = webHostEnvironment;
+        this.httpContextAccessor = httpContextAccessor;
+        this.dbContext = dbContext;
+    }
+    public async Task<Image> Upload(Image image)
+    {
+        var localFilePath = Path.Combine(webHostEnvironment.ContentRootPath, "Images",
+    		$"{image.FileName}{image.FileExtension}");
+
+        // Upload Image To Local File System
+        using var fileStream = new FileStream(localFilePath, FileMode.Create);
+        await image.File.CopyToAsync(fileStream);
+
+        //https://localhost:7142/Images/imeg.jpeg
+        var urlFilePath = $"{httpContextAccessor.HttpContext.Request.Scheme}://{httpContextAccessor.HttpContext.Request.Host}{httpContextAccessor.HttpContext.Request.PathBase}/Images/{image.FileName}{image.FileExtension}";
+        
+        image.FilePath = urlFilePath;
+
+        // Add Image to the Image Table
+        await dbContext.Images.AddAsync(image);
+        await dbContext.SaveChangesAsync();
+
+        return image;
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+9### Now We Inject this repository in Program.cs, to be able to use it in the ImagesController
+-------------------------------------------------------------------------------------------------------------------------------
+Program.cs
+-------------------------------------------------------------------------------------------------------------------------------
+builder.Services.AddScoped<IRegionRepository, SQLRegionRepository>();         // Registering Repo, Dependency Injection for Region Repository
+builder.Services.AddScoped<IWalkRepository, SQLWalkRepository>();             // Registering Repo, Dependency Injection for Walk Repository
+builder.Services.AddScoped<ITokenRepository, TokenRepository>();             // Registering Repo, Dependency Injection for Token Repository
+builder.Services.AddScoped<IImgageRepository, LoalImageRepository>();        // Registering Repo, Dependency Injection for Image Repository
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+10### Inject it in The Images Controller
+-------------------------------------------------------------------------------------------------------------------------------
+ImagesController
+-------------------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ImagesController : ControllerBase
+    {
+        private readonly IImgageRepository imgageRepository;
+
+        public ImagesController(IImgageRepository imgageRepository)
+        {
+            this.imgageRepository = imgageRepository;
+        }
+        // POST api/images/Upload
+        [HttpPost]
+        [Route("Upload")]
+        public async Task<IActionResult> Upload([FromForm] ImageUploadRequestDTO request)   // fromform is used to get the file from the form
+        {
+            ValidateImageUpload(request);
+
+            if (ModelState.IsValid)
+            {
+                // Convert DTO to Domain Model
+                var imageDomainMoldel = new Image
+                {
+                    File = request.File,
+                    FileExtension = Path.GetExtension(request.File.FileName),
+                    FileSizeInBytes = request.File.Length,
+                    FileName = request.FileName,
+                    FileDescription = request.FileDescription
+                };
+                
+                // User Repository to upload the image
+                await imgageRepository.Upload(imageDomainMoldel);
+                return Ok(imageDomainMoldel);
+            }
+
+            return BadRequest(ModelState);
+        }
+
+        private void ValidateImageUpload(ImageUploadRequestDTO request)
+        {
+            var allowedExtensions = new string[] { ".jpg", ".jpeg", ".png" };
+            if (!allowedExtensions.Contains(Path.GetExtension(request.File.FileName)))
+            {
+                ModelState.AddModelError("file", "Unsupported File Entension");
+            }
+            if (request.File.Length > 10485760)
+            {
+                ModelState.AddModelError("file", "File size should not exceed 10MB");  
+            }
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+
+11### Serve Static Files(By default ASP.NET Unable to serve static files,files like image-css-html)
+ So We Inject a new Middleware in the Program.cs (app.UseStaticFiles();)
+-------------------------------------------------------------------------------------------------------------------------------
+Program.cs
+-------------------------------------------------------------------------------------------------------------------------------
+app.UseAuthentication();  // Adding Authentication In the Pipeline
+app.UseAuthorization();
+
+// Adding Static Files Middleware
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Images")),
+    RequestPath = "/Images"
+}); 
+
+app.MapControllers();
+
+app.Run();
+-------------------------------------------------------------------------------------------------------------------------------
+
+Done--
+
+
+
+
+
+
+
+
+
+

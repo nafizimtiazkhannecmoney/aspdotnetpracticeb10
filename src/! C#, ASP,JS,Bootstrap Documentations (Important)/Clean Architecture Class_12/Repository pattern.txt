@@ -1,0 +1,39 @@
+public interface Repository<T>
+{
+  List<T> readAll();
+  T read(Criteria criteria);
+  T create(T entity);
+  T update(T entity);
+  T delete(T entity); 
+}
+
+
+
+Every Aggregate root will have a Repository (Blog Post will have a repository, but not for Comment)
+
+C#, DbContext -> we made course and set the course as DBset but we didnot set topic to DBset,
+the topic was under course and we took the course but we didnot enter topic.
+
+
+So DBContext follows Repository Pattern.
+DBSet follows Repository Pattern
+
+------------------
+Common Methods in a Repository
+A typical repository interface includes basic CRUD (Create, Read, Update, Delete) 
+operations and sometimes additional methods for specific queries. Below are the commonly
+ used methods in a repository pattern:
+1. Add:
+Adds a new entity to the repository.
+2. Remove:
+Removes an existing entity from the repository.
+3. GetById:
+Retrieves an entity by its primary key.
+4. GetAll:
+Retrieves all entities.
+5. Find:
+Finds entities based on a specified condition.
+6. Update:
+Updates an existing entity in the repository.
+
+

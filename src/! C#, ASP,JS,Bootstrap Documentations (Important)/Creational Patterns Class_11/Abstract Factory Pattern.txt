@@ -1,0 +1,3 @@
+The Abstract Factory pattern provides an interface for creating families of related or dependent objects
+ without specifying their concrete classes. This is useful for creating complex objects that require multiple parts, 
+such as UI components or database access layers.

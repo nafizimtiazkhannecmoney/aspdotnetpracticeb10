@@ -1,0 +1,16 @@
+
+
+1. Singletone Class
+2. Encapsulation
+3. Abstraction
+4 Interface-Extensibility, (implicit,explicit)
+  Implementation Hiding,  
+  Accessing Objects using the interfaces, 
+  Loose Coupling.(abstraction & interface same)
+5. Generics
+6. AnonymoustypeObject/Type
+7. Arithmetic series coding
+8. Jquery UI
+9. ValidateAntiForgeryToken(CSRF attak)
+
+sql datareader, sql dataadapter

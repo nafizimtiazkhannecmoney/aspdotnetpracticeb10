@@ -1,0 +1,71 @@
+# Automapper:map Between DTOs and Domain Models and Vice-Versa (Object to Object Mapping)
+
+# C# Interactive : Guid.NewGuid()
+
+# Automapper Nuget Package: Automapper
+
+# Create mapping Profile >> Mappings(Folder)>>AutoMapperProfiles.cs : Profile
+
+
+
+### EXAMPLE
+public class AutoMapperProfiles : Profile
+{
+    public AutoMapperProfiles()
+    {
+        CreateMap<UserDTO, UserDomain>()
+            .ForMember(x => x.Name, opt => opt.MapFrom(x => x.UserName))
+            .ReverseMap();
+    }
+}
+
+public class UserDTO
+{
+    public string UserName { get; set; }
+}
+
+public class UserDomain
+{
+    public string Name { get; set; }
+}
+-------------------------------------------------------------
+
+# Register the Automapper In Program.cs
+# Inject the Automapper In the Controller
+
+private readonly IMapper mapper;
+public RegionsController(NZWalksDbContext dbContext, IRegionRepository regionRepository, IMapper mapper)
+{
+    this._dbContext = dbContext;
+    this.regionRepository = regionRepository;
+    this.mapper = mapper;
+}
+-------------------------------------------------------------
+
+ // Map Domain Model to DTO
+ var regionsDTO = mapper.Map<List<RegionDTO>>(regionsDomain);   // Destination:RegionDTO, Source:regionsDomain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

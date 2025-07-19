@@ -1,0 +1,15 @@
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\bin\Debug\net8.0\EnumerableTest.exe
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\bin\Debug\net8.0\EnumerableTest.deps.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\bin\Debug\net8.0\EnumerableTest.runtimeconfig.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\bin\Debug\net8.0\EnumerableTest.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\bin\Debug\net8.0\EnumerableTest.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.AssemblyInfoInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.AssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.csproj.CoreCompileInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.sourcelink.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\refint\EnumerableTest.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.genruntimeconfig.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\ref\EnumerableTest.dll

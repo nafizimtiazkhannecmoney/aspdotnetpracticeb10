@@ -1,0 +1,15 @@
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\bin\Debug\net8.0\RecursionReverseString.exe
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\bin\Debug\net8.0\RecursionReverseString.deps.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\bin\Debug\net8.0\RecursionReverseString.runtimeconfig.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\bin\Debug\net8.0\RecursionReverseString.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\bin\Debug\net8.0\RecursionReverseString.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\RecursionReverseString.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\RecursionReverseString.AssemblyInfoInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\RecursionReverseString.AssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\RecursionReverseString.csproj.CoreCompileInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\RecursionReverseString.sourcelink.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\RecursionReverseString.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\refint\RecursionReverseString.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\RecursionReverseString.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\RecursionReverseString.genruntimeconfig.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionReverseString\obj\Debug\net8.0\ref\RecursionReverseString.dll

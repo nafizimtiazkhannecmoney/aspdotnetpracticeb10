@@ -1,0 +1,190 @@
+// First, create a model class
+public class Employee
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public decimal Salary { get; set; }
+}
+
+// Create a service class for database operations
+public class EmployeeService
+{
+    private readonly string _connectionString;
+
+    public EmployeeService(IConfiguration configuration)
+    {
+        _connectionString = configuration.GetConnectionString("DefaultConnection");
+    }
+
+    // CREATE operation
+    public async Task<int> CreateEmployee(Employee employee)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = @"INSERT INTO Employees (Name, Email, Salary) 
+                           VALUES (@Name, @Email, @Salary);
+                           SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Name", employee.Name);
+            command.Parameters.AddWithValue("@Email", employee.Email);
+            command.Parameters.AddWithValue("@Salary", employee.Salary);
+
+            await connection.OpenAsync();
+            var result = await command.ExecuteScalarAsync();
+            return Convert.ToInt32(result);
+        }
+    }
+
+    // READ operation (Get All)
+    public async Task<List<Employee>> GetAllEmployees()
+    {
+        List<Employee> employees = new List<Employee>();
+
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT Id, Name, Email, Salary FROM Employees";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            await connection.OpenAsync();
+            using (SqlDataReader reader = await command.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    Employee employee = new Employee
+                    {
+                        Id = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Email = reader.GetString(2),
+                        Salary = reader.GetDecimal(3)
+                    };
+                    employees.Add(employee);
+                }
+            }
+        }
+
+        return employees;
+    }
+
+    // READ operation (Get By Id)
+    public async Task<Employee> GetEmployeeById(int id)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT Id, Name, Email, Salary FROM Employees WHERE Id = @Id";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", id);
+
+            await connection.OpenAsync();
+            using (SqlDataReader reader = await command.ExecuteReaderAsync())
+            {
+                if (await reader.ReadAsync())
+                {
+                    return new Employee
+                    {
+                        Id = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Email = reader.GetString(2),
+                        Salary = reader.GetDecimal(3)
+                    };
+                }
+            }
+        }
+
+        return null;
+    }
+
+    // UPDATE operation
+    public async Task<bool> UpdateEmployee(Employee employee)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = @"UPDATE Employees 
+                           SET Name = @Name, Email = @Email, Salary = @Salary 
+                           WHERE Id = @Id";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", employee.Id);
+            command.Parameters.AddWithValue("@Name", employee.Name);
+            command.Parameters.AddWithValue("@Email", employee.Email);
+            command.Parameters.AddWithValue("@Salary", employee.Salary);
+
+            await connection.OpenAsync();
+            int rowsAffected = await command.ExecuteNonQueryAsync();
+            return rowsAffected > 0;
+        }
+    }
+
+    // DELETE operation
+    public async Task<bool> DeleteEmployee(int id)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "DELETE FROM Employees WHERE Id = @Id";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", id);
+
+            await connection.OpenAsync();
+            int rowsAffected = await command.ExecuteNonQueryAsync();
+            return rowsAffected > 0;
+        }
+    }
+}
+
+// Controller to handle HTTP requests
+[ApiController]
+[Route("api/[controller]")]
+public class EmployeesController : ControllerBase
+{
+    private readonly EmployeeService _employeeService;
+
+    public EmployeesController(EmployeeService employeeService)
+    {
+        _employeeService = employeeService;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<List<Employee>>> GetAll()
+    {
+        var employees = await _employeeService.GetAllEmployees();
+        return Ok(employees);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Employee>> GetById(int id)
+    {
+        var employee = await _employeeService.GetEmployeeById(id);
+        if (employee == null)
+            return NotFound();
+        return Ok(employee);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<int>> Create(Employee employee)
+    {
+        var id = await _employeeService.CreateEmployee(employee);
+        return Ok(id);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult> Update(int id, Employee employee)
+    {
+        if (id != employee.Id)
+            return BadRequest();
+
+        var success = await _employeeService.UpdateEmployee(employee);
+        if (!success)
+            return NotFound();
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete(int id)
+    {
+        var success = await _employeeService.DeleteEmployee(id);
+        if (!success)
+            return NotFound();
+        return NoContent();
+    }
+}

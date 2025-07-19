@@ -1,0 +1,64 @@
+>>>>>>>>>>>>>>>>>>If you want different table names<<<<<<<<<<<<<<<<<<
+protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+
+   //Configure default schema
+   modelBuilder.HasDefaultSchema("Admin");
+
+   //Map entity to table
+   modelBuilder.Entity<Student>().ToTable("StudentData");
+   modelBuilder.Entity<Course>().ToTable("CourseDetail");
+   modelBuilder.Entity<Enrollment>().ToTable("EnrollmentInfo");
+}
+
+
+
+>>>>>>Configure Column<<<<<<<<
+In Entity Framework, by default Code First will create a column for a property with the same name,
+ order, and datatype. But you can also override this convention, as shown in the following code.
+
+protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+
+   //Configure default schema
+   modelBuilder.HasDefaultSchema("Admin");
+
+   //Configure EnrollmentDate Column
+   modelBuilder.Entity<Student>().Property(p ⇒ p.EnrollmentDate)
+	
+   .HasColumnName("EnDate")
+   .HasColumnType("DateTime")
+   .HasColumnOrder(2);
+}
+
+
+
+
+>>>>>>>>>Configure MaxLength Property<<<<<<<<<
+In the following example, the Course Title property should be no longer than 24 characters.
+ When the user specifies value longer than 24 characters, then the user will get a 
+DbEntityValidationException exception.
+
+protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+   //Configure default schema
+   modelBuilder.HasDefaultSchema("Admin");
+   modelBuilder.Entity<Course>().Property(p ⇒ p.Title).HasMaxLength(24);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

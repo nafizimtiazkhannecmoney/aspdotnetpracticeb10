@@ -1,0 +1,39 @@
+IEmailSender.cs
+EmailSender.cs
+HtmlEmailSender.cs
+IMembership.cs
+Membership.cs
+---------------------------------[Program.cs]
+//Service Collection
+builder.Services.AddKeyedScoped<IEmailSender, EmailSender>("home");
+builder.Services.AddKeyedScoped<IEmailSender, HtmlEmailSender>("another");
+builder.Services.AddScoped<IMembership, Membership>();
+---------------------------------[HomeController.cs]
+public class HomeController : Controller
+{
+    private readonly ILogger<HomeController> _logger;
+    private readonly IEmailSender _emailSender;
+    private readonly IMembership _membership;
+
+    public HomeController(ILogger<HomeController> logger, [FromKeyedServices("home")] IEmailSender emailSender, IMembership membership)
+    {
+        _logger = logger;
+        _emailSender = emailSender;
+        _membership = membership;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

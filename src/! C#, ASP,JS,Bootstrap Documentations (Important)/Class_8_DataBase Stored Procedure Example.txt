@@ -1,0 +1,122 @@
+#  Create uniqueidentifier SELECT NEWID()
+#  sp_helptext <sp name> | This will show to content written in that sp
+#  Quantity - isnull(b.EquiCount, 0) as Quantity [returns 0 if b.EquiCount isnull]
+*  Table Recreation, Tools>>Options>Designers>>Table and DAtabase Designes>>[Uncheck] Prevent saving changes that require table re-creation
+*  Remove error>>Edit>>Intelisence>>Refresh Local Cache. Then it will remove error , red curly
+*  Connect with machine SQLEXPRESS>>Create Database>>Aspnetb10
+*  Aspnetb10>>Programmability>>Stored Procedures>>RightClick>>Stored Procedure
+*  Set The type of Id as uniqueidentifier (We wont use int as Id anymore)   |uniqueidentifier| 
+*  Refresh After Creating stored procedure
+*  To edit stored procedure, right click on it an Modify
+*  CREATE OR ALTER, Thakle Alter hoy and na thakle Create hoy
+*  Right Click on stored procedure>>Execute Stored Procedure add value
+*  Create uniqueidentifier //select newid();
+*  Run SP by // EXEC <sp name>, <parameter>
+*  [dbo] is like NameSpaces on DB angle
+*  [] is escape character
+*  declare @count int 
+*  Return is not mandatory for Stored Procedure
+*  Function Always Returns
+*  Stored Procedure can call function but function cant call stored procedure 
+
+1#-----------------------[Database]
+
+CREATE PROCEDURE TestProcedure
+	@Name nvarchar(50) = '',
+        @Age int
+AS
+BEGIN
+
+	select * From Procedure;
+END
+GO
+
+2#-----------------------[Database]
+ALTER PROCEDURE [dbo].[TestProcedure]
+	@Name nvarchar(50) = '',
+	@Age int
+AS
+BEGIN
+
+	select * From Persons;
+END
+-----------------------------EXECUTE 
+* After adding values to table EXECUTE STORED PROCEDURE
+* We take value of Age as 43
+3#-----------------------[Database]
+
+EXEC	[dbo].[TestProcedure]
+		@Age = 43
+
+
+
+GO
+3#-----------------------[TestProcedure]
+ALTER PROCEDURE [dbo].[TestProcedure]
+	@Name nvarchar(50) = '',
+	@Age int
+AS
+BEGIN
+
+	select * From Persons where age = @Age;
+END
+-----------------------------EXECUTE
+-----------------------------[TestProcedure]
+ALTER PROCEDURE [dbo].[TestProcedure]
+	@Name nvarchar(50) = '',
+	@Age int
+AS
+BEGIN
+    declare @count int;
+	select @count = count(*) from Persons where age = @age;
+	return @count;
+END
+------------------------------[Execute procedure]
+declare @returnVal int;
+EXEC   @returnVal =	[dbo].[TestProcedure]
+		@Age = 33
+
+select @returnVal;
+
+GO
+------------------------------[TestProcedure]Return na koreo result ana jabe
+ALTER PROCEDURE [dbo].[TestProcedure]
+	@Name nvarchar(50) = '',
+	@Age int
+AS
+BEGIN
+    
+	select * from Persons where age = @Age;
+	
+END
+------------------------------[Execute Procedure] without return
+declare @returnVal int;
+EXEC   	[dbo].[TestProcedure]
+		@Age = 33
+
+
+
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

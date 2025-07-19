@@ -1,0 +1,34 @@
+_______________________
+Unit Of Work
+registerNew(Object)
+registerDirty(Object)
+registerClean(Object)
+RegisterDeleted(Object)
+commit
+rollback
+----------------------
+Unit Of Work
+we can put repository instead of these functions
+because repository has create update delete
+----------------------------------------
+# DbSet is just like this, it has create update delete and save changes
+
+# So DbContext uses unito of work and Repository patern combinedly
+
+
+
+# It maintains Transactions (DataBase Transaction)
+
+The Unit of Work (UoW) pattern in ASP.NET is a design pattern that manages database transactions 
+to ensure data consistency and integrity. It keeps track of changes to entities and coordinates 
+the writing out of these changes as a single transaction.
+
+Why Use Unit of Work?
+Consistency: Ensures that a series of operations are either all committed or all rolled back.
+Performance: Reduces the number of database calls by batching operations.
+Maintainability: Encapsulates database operations, making code more modular and testable.
+
+Key Components
+Unit of Work Interface (IUnitOfWork): Defines the contract for the Unit of Work.
+Unit of Work Implementation (UnitOfWork): Implements the IUnitOfWork interface.
+Repositories: Handle data access for specific entities.

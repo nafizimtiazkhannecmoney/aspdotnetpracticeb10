@@ -1,0 +1,15 @@
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\bin\Debug\net8.0\JsonFormattingAssignment.exe
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\bin\Debug\net8.0\JsonFormattingAssignment.deps.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\bin\Debug\net8.0\JsonFormattingAssignment.runtimeconfig.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\bin\Debug\net8.0\JsonFormattingAssignment.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\bin\Debug\net8.0\JsonFormattingAssignment.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\JsonFormattingAssignment.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\JsonFormattingAssignment.AssemblyInfoInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\JsonFormattingAssignment.AssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\JsonFormattingAssignment.csproj.CoreCompileInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\JsonFormattingAssignment.sourcelink.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\JsonFormattingAssignment.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\refint\JsonFormattingAssignment.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\JsonFormattingAssignment.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\JsonFormattingAssignment.genruntimeconfig.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\JsonFormattingAssignment\obj\Debug\net8.0\ref\JsonFormattingAssignment.dll

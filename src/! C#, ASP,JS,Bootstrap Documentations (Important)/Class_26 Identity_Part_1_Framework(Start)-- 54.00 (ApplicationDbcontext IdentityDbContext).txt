@@ -1,0 +1,346 @@
+Talk about Final Project-- From Start
+Core Features of Project (Zoho)--14:00
+Class starts at-- :
+Software concept--40:20
+Identity Framework-- 54:00 (ApplicationDbcontext: IdentityDbContext) Actually starts from -- 1:02:23
+
+Lets start to make The identity(MOdify)
+# Blog.web project>>RightClick>>Add>>New Scaforlded Item>>Identyty>>Identyty>>ADD
+Tick: Account\Login & Account\Register
+DbContext Class: ApplicationDbContext>>Add
+## We add this to edit login and register page which is done in razor
+
+# INfrastructure>>New Folder>>Identity
+# Take ApplicationUser.cs from Sir Repo(Infrastructure>>Membership) and paste it to Identity(Fix Namespace(namespace DevSkill.Inventory.Infrastructure.Identity))
+# Install NUget Microsoft.AspNetCore.Identity and Microsoft.AspNetCore.Identity UI
+# delete from dbo.AspNetUsers, if there is any data in the table
+
+# NOw Take ApplicationRole.cs from sir repo and paste it(Delete all the constructors inside of it, if any)
+# NOw Take ApplicationRoleClaim.cs from sir repo and paste it
+# NOw Take ApplicationUserClaim.cs from sir repo and paste it
+# NOw Take ApplicationUserLogin.cs from sir repo and paste it
+# NOw Take ApplicationUserRole.cs from sir repo and paste it
+# NOw Take ApplicationUserToken.cs from sir repo and paste it   
+# NOw Take ApplicationRoleManager.cs from sir repo and paste it  
+# NOw Take ApplicationSignInManager.cs from sir repo and paste it  ApplicationUserManager.cs
+# NOw Take ApplicationUserManager.cs from sir repo and paste it
+##>>Build
+
+
+
+
+## In the place of [builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ApplicationDbContext>();] add the following
+----------------------------------------------------------------------------------------[Program.cs][Start]
+
+builder.Services
+        .AddIdentity<ApplicationUser, ApplicationRole>()
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddUserManager<ApplicationUserManager>()
+        .AddRoleManager<ApplicationRoleManager>()
+        .AddSignInManager<ApplicationSignInManager>()
+        .AddDefaultTokenProviders();
+
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+  [the code should be here]
+
+builder.Services.AddControllersWithViews();
+----------------------------------------------------------------------------------------[End]
+#>>Build
+
+
+# Add These 
+----------------------------------------------------------------------------------------[ApplicationDbContext][Start]
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser,
+        ApplicationRole, Guid,
+        ApplicationUserClaim, ApplicationUserRole,
+        ApplicationUserLogin, ApplicationRoleClaim,
+        ApplicationUserToken>
+----------------------------------------------------------------------------------------[End]
+#>>Build
+
+
+# Now We will migrate
+dotnet ef migrations add CreateCustomIdentityObjects --project DevSkill.Inventory.Web --context ApplicationDbContext
+#>>Build>>> 
+
+
+##In CreateCustomIdentityObjects UP method, Drop foreign keys then Add Foreign Keys
+##In CreateCustomIdentityObjects Down method Drop foreign keys then Add Foreign Keys
+
+
+----------------------------------------------------------------------------------------[migration folder CreateCustomIdentityObjects][Start]
+using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace Blog.Web.Migrations.ApplicationDb
+{
+    /// <inheritdoc />
+    public partial class CreateCustomIdentityObjects : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserTokens_AspNetUsers_UserId",
+                table: "AspNetUserTokens");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserRoles_AspNetUsers_UserId",
+                table: "AspNetUserRoles");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserLogins_AspNetUsers_UserId",
+                table: "AspNetUserLogins");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserClaims_AspNetUsers_UserId",
+                table: "AspNetUserClaims");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
+                table: "AspNetUserRoles");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
+                table: "AspNetRoleClaims");
+            migrationBuilder.DropPrimaryKey(name: "PK_AspNetUsers", table: "AspNetUsers");
+            migrationBuilder.DropPrimaryKey(name: "PK_AspNetUserTokens", table: "AspNetUserTokens");
+            migrationBuilder.DropPrimaryKey(name: "PK_AspNetUserRoles", table: "AspNetUserRoles");
+            migrationBuilder.DropPrimaryKey(name: "PK_AspNetRoles", table: "AspNetRoles");
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "UserId",
+                table: "AspNetUserTokens",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "Id",
+                table: "AspNetUsers",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AddColumn<string>(
+                name: "FirstName",
+                table: "AspNetUsers",
+                type: "nvarchar(max)",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "LastName",
+                table: "AspNetUsers",
+                type: "nvarchar(max)",
+                nullable: true);
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "RoleId",
+                table: "AspNetUserRoles",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "UserId",
+                table: "AspNetUserRoles",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "UserId",
+                table: "AspNetUserLogins",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "UserId",
+                table: "AspNetUserClaims",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "Id",
+                table: "AspNetRoles",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AlterColumn<Guid>(
+                name: "RoleId",
+                table: "AspNetRoleClaims",
+                type: "uniqueidentifier",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AddPrimaryKey(name: "PK_AspNetRoles", table: "AspNetRoles", column: "Id");
+            migrationBuilder.AddPrimaryKey(name: "PK_AspNetUserRoles", table: "AspNetUserRoles", columns: new[] { "UserId", "RoleId" });
+            migrationBuilder.AddPrimaryKey(name: "PK_AspNetUserTokens", table: "AspNetUserTokens", columns: new[] { "UserId", "LoginProvider", "Name" });
+            migrationBuilder.AddPrimaryKey(name: "PK_AspNetUsers", table: "AspNetUsers", column: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
+                table: "AspNetRoleClaims", column: "RoleId", principalTable: "AspNetRoles", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
+                table: "AspNetUserRoles", column: "RoleId", principalTable: "AspNetRoles", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserClaims_AspNetUsers_UserId",
+                table: "AspNetUserClaims", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserLogins_AspNetUsers_UserId",
+                table: "AspNetUserLogins", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserRoles_AspNetUsers_UserId",
+                table: "AspNetUserRoles", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserTokens_AspNetUsers_UserId",
+                table: "AspNetUserTokens", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserTokens_AspNetUsers_UserId",
+               table: "AspNetUserTokens");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserRoles_AspNetUsers_UserId",
+                table: "AspNetUserRoles");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserLogins_AspNetUsers_UserId",
+                table: "AspNetUserLogins");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserClaims_AspNetUsers_UserId",
+                table: "AspNetUserClaims");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
+                table: "AspNetUserRoles");
+            migrationBuilder.DropForeignKey(name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
+                table: "AspNetRoleClaims");
+            migrationBuilder.DropPrimaryKey(name: "PK_AspNetUsers", table: "AspNetUsers");
+            migrationBuilder.DropPrimaryKey(name: "PK_AspNetUserTokens", table: "AspNetUserTokens");
+            migrationBuilder.DropPrimaryKey(name: "PK_AspNetUserRoles", table: "AspNetUserRoles");
+            migrationBuilder.DropPrimaryKey(name: "PK_AspNetRoles", table: "AspNetRoles");
+
+            migrationBuilder.DropColumn(
+                name: "FirstName",
+                table: "AspNetUsers");
+
+            migrationBuilder.DropColumn(
+                name: "LastName",
+                table: "AspNetUsers");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "UserId",
+                table: "AspNetUserTokens",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Id",
+                table: "AspNetUsers",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "RoleId",
+                table: "AspNetUserRoles",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "UserId",
+                table: "AspNetUserRoles",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "UserId",
+                table: "AspNetUserLogins",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "UserId",
+                table: "AspNetUserClaims",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Id",
+                table: "AspNetRoles",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "RoleId",
+                table: "AspNetRoleClaims",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(Guid),
+                oldType: "uniqueidentifier");
+
+            migrationBuilder.AddPrimaryKey(name: "PK_AspNetRoles", table: "AspNetRoles", column: "Id");
+            migrationBuilder.AddPrimaryKey(name: "PK_AspNetUserRoles", table: "AspNetUserRoles", columns: new[] { "UserId", "RoleId" });
+            migrationBuilder.AddPrimaryKey(name: "PK_AspNetUserTokens", table: "AspNetUserTokens", columns: new[] { "UserId", "LoginProvider", "Name" });
+            migrationBuilder.AddPrimaryKey(name: "PK_AspNetUsers", table: "AspNetUsers", column: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
+                table: "AspNetRoleClaims", column: "RoleId", principalTable: "AspNetRoles", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
+                table: "AspNetUserRoles", column: "RoleId", principalTable: "AspNetRoles", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserClaims_AspNetUsers_UserId",
+                table: "AspNetUserClaims", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserLogins_AspNetUsers_UserId",
+                table: "AspNetUserLogins", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserRoles_AspNetUsers_UserId",
+                table: "AspNetUserRoles", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+            migrationBuilder.AddForeignKey(name: "FK_AspNetUserTokens_AspNetUsers_UserId",
+                table: "AspNetUserTokens", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+        }
+    }
+}
+
+
+----------------------------------------------------------------------------------------[migration folder CreateCustomIdentityObjects][End]
+>>Build
+
+
+## Now Database Update
+dotnet ef database update --project DevSkill.Inventory.Web --context ApplicationDbContext
+done
+
+##Build
+
+## Sir has error
+
+## To fix 
+comment this line in Program.cs
+//app.MapRazorPages();
+
+
+
+
+
+
+----------------------------------------------------------------------------------------[Start]
+----------------------------------------------------------------------------------------[End]
+----------------------------------------------------------------------------------------[Start]
+----------------------------------------------------------------------------------------[End]
+----------------------------------------------------------------------------------------[Start]
+----------------------------------------------------------------------------------------[End]
+----------------------------------------------------------------------------------------[Start]
+----------------------------------------------------------------------------------------[End]
+----------------------------------------------------------------------------------------[Start]
+----------------------------------------------------------------------------------------[End]
+----------------------------------------------------------------------------------------[Start]
+----------------------------------------------------------------------------------------[End]
+----------------------------------------------------------------------------------------[Start]
+----------------------------------------------------------------------------------------[End]

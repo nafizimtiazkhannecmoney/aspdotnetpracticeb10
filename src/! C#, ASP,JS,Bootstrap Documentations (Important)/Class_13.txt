@@ -1,0 +1,455 @@
+ #Areas>>Admin>>Controllers>>Add>>Controller>>MVC Controller-Empty>>BlogPostController.cs
+
+---------------------------------------------[BlogPostController.cs]
+
+using Microsoft.AspNetCore.Mvc;
+
+namespace DevSkill.Inventory.Web.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    public class BlogPostController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
+}
+
+# Right click IActionResult Index()>>Add View>>Razor View(not Empty)>>Add
+
+---------------------------------------------[BlogPostController.cs]
+
+namespace DevSkill.Inventory.Web.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    public class BlogPostController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+    }
+}
+----------------------
+# Right click IActionResult Create()>>Add View>>Razor View(not Empty)>>Add
+
+------------------[_Layout.cshtml] line 253
+  </a>
+  <ul class="nav nav-treeview">
+      <li class="nav-item">
+          <a href="pages/layout/top-nav.html" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>All Posts</p>
+          </a>
+      </li>
+      <li class="nav-item">
+          <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Create New</p>
+          </a>
+      </li>
+
+#----------------------[_Layout.cshtml] line 249-270
+
+ <li class="nav-item">
+     <a href="#" class="nav-link">
+         <i class="nav-icon fas fa-copy"></i>
+         <p>
+             Blog Posts
+             <i class="fas fa-angle-left right"></i>
+             <span class="badge badge-info right">6</span>
+         </p>
+     </a>
+     <ul class="nav nav-treeview">
+         <li class="nav-item">
+             <a asp-action="Index" asp-controller="BlogPost" asp-area="Admin" class="nav-link">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>All Posts</p>
+             </a>
+         </li>
+         <li class="nav-item">
+             <a asp-action="Create" asp-controller="BlogPost" asp-area="Admin" class="nav-link">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>Create New</p>
+             </a>
+         </li>
+        
+     </ul>
+ </li>
+
+# Model>>Add>> Class>> BlogPostCreateModel.cs
+
+# goto admin lte>> pages > Forms> General> Quick Example  1:04:04
+
+we need to take all codes from content wraper(Content Header(Page Header), Main Content)
+to maintain structure for the @RenderBody()
+
+# And Paste it to Create.html page  (On top of <h1>)
+
+we will remove the right column.
+
+col md 6 >> col
+# add model @model BlogPostCreateModel
+# asp-for="Title"
+# <input type="text" asp-for="Title"
+
+#-------------------------------[BlogPostCreateModel.cs]
+
+namespace DevSkill.Inventory.Web.Areas.Admin.Models
+{
+    public class BlogPostCreateModel
+    {
+        public string Title { get; set; }
+    }
+}
+#-------------------------------[Create.cshtml]
+@model BlogPostCreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Create New Post</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Blog Posts</a></li>
+              <li class="breadcrumb-item active">Create New</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Write a Post</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form asp-antiforgery="true" asp-area="Admin" asp-controller="BlogPost" asp-action="Create" method="post">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label asp-for="Title">Title</label>
+                    <input type="text" asp-for="Title" class="form-control" >
+                  </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!--/.col (left) -->
+
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+
+
+#----------------------------------------[BlogPostController.cs]
+using DevSkill.Inventory.Web.Areas.Admin.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace DevSkill.Inventory.Web.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    public class BlogPostController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Create(BlogPostCreateModel model)
+        {
+            if (ModelState.IsValid) 
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+    }
+}
+#---------------------------------------------------------------------------[BlogPostController.cs] Adding Dependency
+
+using Blog.Application.Services;
+using DevSkill.Inventory.Web.Areas.Admin.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace DevSkill.Inventory.Web.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    public class BlogPostController : Controller
+    {
+        private readonly BlogPostManagementServices _blogPostManagementServices;
+        public BlogPostController(BlogPostManagementServices blogPostManagementServices)
+        {
+            _blogPostManagementServices = blogPostManagementServices;
+        }
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Create(BlogPostCreateModel model)
+        {
+            if (ModelState.IsValid) 
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+    }
+}
+
+#-----------------------------------------------------------[WebModule.cs]
+using Autofac;
+using Blog.Application.Services;
+using DevSkill.Inventory.Web.Models;
+
+namespace DevSkill.Inventory.Web
+{
+    public class WebModule : Module
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<Member>().As<IMember>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostManagementServices>().AsSelf()
+                 .InstancePerLifetimeScope();
+        }
+    }
+}
+
+#------------------------------------------[BlogPostManagementServices.cs]
+__Refractorings>Extract Interface_____
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Application.Services
+{
+    public class BlogPostManagementServices
+    {
+        public void CreateBlogPost()
+        {
+
+        }
+    }
+}
+#-----------------------------------[WebModule.cs]
+using Autofac;
+using Blog.Application.Services;
+using DevSkill.Inventory.Web.Models;
+
+namespace DevSkill.Inventory.Web
+{
+    public class WebModule : Module
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<Member>().As<IMember>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostManagementServices>().As<IBlogPostManagementServices>()
+                 .InstancePerLifetimeScope();
+        }
+    }
+}
+#--------------------------------------[BlogPostController.cs]
+__IBlogPostManagementServices________________ (we use Interface for dependency Injection)
+
+using Blog.Application.Services;
+using DevSkill.Inventory.Web.Areas.Admin.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace DevSkill.Inventory.Web.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    public class BlogPostController : Controller
+    {
+        private readonly IBlogPostManagementServices _blogPostManagementServices;
+        public BlogPostController(IBlogPostManagementServices blogPostManagementServices)
+        {
+            _blogPostManagementServices = blogPostManagementServices;
+        }
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Create(BlogPostCreateModel model)
+        {
+            if (ModelState.IsValid) 
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+    }
+}
+---------------------------------[BlogPost.cs]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+namespace Blog.Domain.Entities
+{
+    public class BlogPost
+    {
+        public string Title { get; set; }
+        public List<Comment> Comments { get; set; }
+
+        public BlogPost() 
+        {
+
+        }
+    }
+}
+------------------------------------[Comment]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Domain.Entities
+{
+    public class Comment 
+    {
+    }
+}
+
+
+--------------------------------------------[IBlogPostManagementServices.cs]
+____Add reference of Domain in Application__________
+
+using Blog.Domain.Entities;
+
+namespace Blog.Application.Services
+{
+    public interface IBlogPostManagementServices
+    {
+        void CreateBlogPost(BlogPost blogPost);
+    }
+}
+
+-------------------------------------------[BlogPostManagementServices.cs]   (Implement Interface)
+using Blog.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Application.Services
+{
+    public class BlogPostManagementServices : IBlogPostManagementServices
+    {
+        public void CreateBlogPost(BlogPost blogPost)
+        {
+
+        }
+    }
+}
+
+--------------------------------------[BlogPostController.cs]
+using Blog.Domain.Entities;
+using Blog.Application.Services;
+using DevSkill.Inventory.Web.Areas.Admin.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace DevSkill.Inventory.Web.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    public class BlogPostController : Controller
+    {
+        private readonly IBlogPostManagementServices _blogPostManagementServices;
+        public BlogPostController(IBlogPostManagementServices blogPostManagementServices)
+        {
+            _blogPostManagementServices = blogPostManagementServices;
+        }
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Create(BlogPostCreateModel model)
+        {
+            if (ModelState.IsValid) 
+            {
+                var blog = new BlogPost { Title = model.Title };
+                _blogPostManagementServices.CreateBlogPost(blog);
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+    }
+}
+
+
+### We added a dependency injection for a service[BlogPostManagementServices.cs]
+
+
+
+
+
+
+
+
+
+
+

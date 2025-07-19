@@ -1,0 +1,94 @@
+# Create uniqueidentifier SELECT NEWID()
+* We Cant variablize Table and Order By in SQL, We cant send order by parameter value and pass it to order by in sql
+* We cant use variable in the name of Table and order by
+* So to take the input of order by, we neew to string catinate
+* String catinate is prone to SQL Injection
+-----------------------------Example
+CREATE PROCEDURE GetPersons
+    @Name nvarchar(50) = null,
+    @order nvarchar(50)
+AS
+BEGIN 
+      declare @sql nvarchar(1000);
+      select * from Persons where [name] = @Name order by @order;    // We cant do that
+
+
+      declare @sql nvarchar(1000)                                    // Insted we do this, we do string catinate, 
+      set @sql = 'select * from Persons where [name] = @valueOfName order by' + @order;  //@valueOfName is Placeholder
+
+      declare @parameters nvarchar(500);
+      set @parameters = '@valueOfName nvarchar(50)';      // Think of it like it is the parameter for the string
+
+      exec sp_executesql @sql, @parameters,      // sp_executesql is a builtin Stored Procedure
+           @Name                                 // Because we want to pass @Name to @valueOfName
+
+END
+GO
+-----------------------------[GetPersons] we write this in new SP
+ alter PROCEDURE GetPersons
+	@Name nvarchar(50)= null,
+	@order nvarchar(50)
+AS
+BEGIN
+	declare @sql nvarchar(1000);
+	set @sql = 'select * from Persons where [name] = @valueOfName order by ' + @order;
+
+	declare @parameters nvarchar(500);
+	set @parameters = '@valueOfName nvarchar(50)';
+
+	exec sp_executesql @sql, @parameters,
+	@Name
+END
+GO
+-----------------------------Execute
+-----------------------------Executed SP CODE
+USE [asptest1]
+GO
+
+DECLARE	@return_value int
+
+EXEC	@return_value = [dbo].[GetPersons]
+		@Name = N'Hasan',
+		@order = N'Age'                  // asc | desc  , N'Age desc'  
+
+SELECT	'Return Value' = @return_value
+
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

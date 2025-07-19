@@ -1,0 +1,173 @@
+AdminLTE.IO
+
+1# adminlte.io>>download>>(AdminLTE v3.2.0)>>Source code(zip)
+
+2# Areas>>Add>>Area>>MVC Area(Add it)>>Area Name: Admin(Add it)    +
+
+3# Copy these From ScaffoldingReadMe
+            name : "areas",
+            pattern : "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+
+4#----------------------[Program.cs]--Before>>app.MapControllerRoute( default
+
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+------------------------------------------------         +
+* Area route should be above default route, This order is Important or 
+  it will go to default Rout without even checking area route
+
+5# Areas>>Admin>>Controllers>>Add>>Controller>>MVC Controller-Empty(Add it)>>DashboardController.cs(Add it)
+
+6#----------------------------------------------[DashboardController.cs]   +
+using Microsoft.AspNetCore.Mvc;
+
+namespace DevSkill.Inventory.Web.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    public class DashboardController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
+}
+-------------------------------------------        +
+7# Add view for the Index by Right clicking on the Index() function
+   Add View>>Razor View(Add it)(not the empty one)>>View name :Index, Template: Empty(without model), tick Use a layout page
+   Then Press add.   
+
+8# We dont have shared here so we will copy _ViewImports.cshtml and _ViewStart.cshtml from the main view    +
+   to Areas>>Admin>>Views>>  
+9#-------------------------------[_ViewImports.cshtml]
+Now make a class on model[DashboardModel.cs] so we can see how the namespace is being created, so that we can find all the models
+now we use this name space in [_ViewImports.cshtml]. heres the code. 
+
+@using DevSkill.Inventory.Web
+@using DevSkill.Inventory.Web.Models
+@using DevSkill.Inventory.Web.Areas.Admin.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+10# ------------------------------[_ViewStart.cshtml]    (already done)
+@{
+    Layout = "_Layout";
+}
+
+11# Make a Shared forlder in Areas>>Admin>>Views>>Shared
+
+12# Shared>>Right Click>>Add>View>>Razor View(Add it)(not the empt one)>>View Name: _Layout (Add it) 
+Tick Use a layout page 
+
+13# ---------------------------------[_ViewStart.cshtml]   ~ +
+@{
+    Layout = "_Layout";
+}
+------------------------------------------
+
+14# 1.Extract AdminLTE 3.2.0
+    2.wwwroot>>Add Folder>>New Folder>>Folder Name: adminlte>> Now paste files from AdminLTE>>dist
+    which are |css|img|js| , paste these 3 in adminlte folder
+    3.Also Copy plugins file into the adminlte folder(same as above)                  +
+
+15# Now copy codes of index.html page from adminLTE folder and paste it to _Layout (Replace all)
+    take all the things inside content wrapper (Content Header | Main Content) (cut it from the page)   [Line 851]
+    * then write @RenderBody() there.
+
+16# The code we cut, we will paste it in Admin>>Views>>Dashboard>>Index.cshtml   (<h1>Index</h1> replace this)
+
+17# Now We fix the path   (~/ means wwwroot folder)
+    We go to _Layout file
+    1. We wont change the https paths
+    2. We will change plugins and Dist paths
+
+ So Find And Replace (ctrl+H)
+ 1. [plugins/] and replace it to [~/adminlte/plugins/]        (Replace All, Current Document)   20     [HIlight plugins then ctrl+h]
+ 2. [dist/]    and teplace it to [~/adminlte/]        (Replace All, Current Document)   10
+
+    We go to Index.html file (The new one)
+ 1. [plugins/] and replace it to [~/adminlte/plugins/]        (Replace All, Current Document)   0
+ 2. [dist/]    and teplace it to [~/adminlte/]        (Replace All, Current Document)    10
+
+
+---now run---
+
+route  == /admin/dashboard/index
+https://localhost:7054/admin/dashboard/index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

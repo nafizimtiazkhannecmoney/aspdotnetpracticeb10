@@ -1,0 +1,43 @@
+#Subhanallahi Wa Bihamdihi Subhanallahil Azeem   
+#Subhanallah al Azeem
+#Subhan Allahi Wabi Hamdi hi Subhanallahil Azeem
+
+Zohor: 1:01 PM
+Asar:  4:46 PM
+5 meeting minors
+SELECT JOINING GROUPBY
+
+Devskill class 2--1:38
+
+Devskill
+Class 4 --- 44:00
+
+Support
+১ ঘন্টা ৫৮ মিনিট	বুধ     ২০ মার্চ   রাত ১০:০০
+০ ঘন্টা ৫২ মিনিট	সোম ১৮ মার্চ   রাত ১০:০০  done
+০ ঘন্টা ৩৭ মিনিট	বৃহ    ১৪ মার্চ    রাত ১০:০০  done Database
+১ ঘন্টা ৩৫ মিনিট	বুধ    ১৩ মার্চ    রাত ১০:০০  done Delegates
+১ ঘন্টা ১৯ মিনিট	সোম ১১  মার্চ   রাত ১০:০০  done Connection adapter
+১ ঘন্টা ১১ মিনিট	বৃহ    ৭    মার্চ   রাত ১০:০০  done
+১ ঘন্টা ২৯ মিনিট	বুধ    ৬    মার্চ   রাত ১০:০০  done LINQ
+
+
+Class
+Controller Action Selection২ ঘন্টা ৩ মিনিট	শনি ২৩ মার্চ রাত ১০:০০
+Controller Responsibility  ২ ঘন্টা ১২ মিনিট	শুক্র ২২ মার্চ রাত ১০:০০ [Done] api start, data show from db
+View Responsibility        ২ ঘন্টা ৮ মিনিট	রবি ১০ মার্চ রাত ৯:০০ [Done] (login alert, login failed alert)
+২ ঘন্টা ১৬ মিনিট	শনি ৯ মার্চ রাত          ৯:০০    59:54
+১ ঘন্টা ৫৮ মিনিট	শনি ২ মার্চ রাত          ৯:০০ (1:05:30) 1:26:21 (Partial page, modal) Done
+২ ঘন্টা ১৫ মিনিট	শুক্র ১ মার্চ রাত         ৯:০০ Done
+১ ঘন্টা ৫৭ মিনিট	সোম ২৬ ফেব্রু রাত  ৯:০০ Done
+২ ঘন্টা ৩৫ মিনিট	শুক্র ২৩ ফেব্রু রাত   ৯:০০ Done
+
+
+
+
+
+
+
+
+
+

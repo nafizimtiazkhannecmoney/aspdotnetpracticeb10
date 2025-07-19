@@ -1,0 +1,143 @@
+var onboardScripts = function( $ ) {
+	var step    = 1,
+		loading = false;
+
+	const _init = function() {
+		_formHandler();
+		_tabsHandler();
+	};
+
+	const _formHandler = function() {
+		$( '.onboard-step' )
+			.on( 'click', '.onboard-prev', function() {
+				step--;
+
+				_loadStep( step );
+			} );
+
+		$( '.onboard-step' )
+			.on( 'click', '.onboard-next', function() {
+				step++;
+
+				_loadStep();
+			} );
+
+		$( '.onboard-step' )
+			.on( 'click', '.onboard-skip', function() {
+				step++;
+
+				_loadStep();
+			} );
+
+		$( '.onboard-step' )
+			.on( 'submit', 'form', function( e ) {
+				e.preventDefault();
+
+				_submitForm( $( this ) );
+			} );
+	};
+
+	const _tabsHandler = function() {
+		console.log( 'tab handler' );
+
+		$( '.onboard-step' )
+			.on( 'click', '.onboard-tab', function() {
+				$( '.onboard-tab, .onboard-tab-content' )
+					.removeClass( 'active' );
+
+				$( this )
+					.addClass( 'active' );
+
+				$( '#' + $( this ).data( 'tab' ) )
+					.addClass( 'active' );
+			} );
+	};
+
+	const _submitForm = function( $form ) {
+		loading = true;
+
+		$( '.onboard-submit' )
+			.addClass( 'disabled' )
+			.prop( 'disabled', true );
+
+		$( '.onboard-step' )
+			.addClass( 'disabled' );
+
+		if ( $( '#onboard-opt-in-consent' ).checked ) {
+			$( '#onboard-opt-in-consent--hidden' ).disabled = true;
+		}
+
+		$request = $.ajax( {
+			type: $form.attr( 'method' ),
+			url: $form.attr( 'action' ),
+			data: $form.serialize(),
+			dataType: 'jsonp',
+		} );
+
+		$request
+			.always( function( data ) {
+				console.log( data );
+
+				loading = false;
+
+				step++;
+
+				_loadStep( step );
+			} );
+	};
+
+	const _loadStep = function() {
+		const $stepContainer = $( '.onboard-step' );
+		const email          = $( '#onboard-email' ).val();
+
+		$( '.onboard-submit' )
+			.addClass( 'disabled' )
+			.prop( 'disabled', true );
+
+		$( '.onboard-step' )
+			.addClass( 'disabled' );
+
+		loading = true;
+
+		$request = $.ajax( {
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action : 'onboard_screen',
+				step   : step,
+				email  : email,
+			},
+		} );
+
+		$request
+			.done( function( data ) {
+				if ( data.trim() ) {
+					$stepContainer.html( data );
+				} else {
+					$stepContainer.html( 'Could not load content.' );
+				}
+
+				$( '.onboard-submit' )
+					.removeClass( 'disabled' )
+					.prop( 'disabled', false );
+
+
+				$( '.onboard-step' )
+					.removeClass( 'disabled' );
+
+				loading = false;
+			} );
+
+		$request
+			.fail(function() {
+				$stepContainer.html( 'Could not load content.' );
+
+				loading = false;
+			} );
+	};
+
+	$( document )
+		.ready( function() {
+			_init();
+		} );
+}( typeof jQuery === 'function' ? jQuery : this );

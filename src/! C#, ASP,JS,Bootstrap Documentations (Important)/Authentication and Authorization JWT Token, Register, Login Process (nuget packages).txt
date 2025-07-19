@@ -1,0 +1,503 @@
+   ---Steps---
+1.Install packages for JWT.
+2.Configure settings in appsettings.json.
+3.Set up authentication in Program.cs.
+4.Create a login endpoint to generate tokens.
+5.Add [Authorize] to protect endpoints.
+
+
+1## For Authentication We Need Nuget Packages
+	
+	Microsoft.AspNetCore.Authentication.JwtBearer
+	Microsoft.IdentityModel.Tokens
+	System.IdentityModel.Tokens.Jwt
+	Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+2### Need Some Variables In appsettings.json for JWT Settings (the key is random by me)(setting up rules)
+-------------------------------------------------------------------------------------------------------------------------------------
+value for Issuer(Application URL): Right Click On project>>Properties>>Debug>>General>>Open Debug Launch Profile UI>> APP URL(Take The Https)
+ {
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+    "AllowedHosts": "*",
+    "ConnectionStrings": {
+        "NZWalksConnectionString": "Server=DESKTOP-63UE644\\SQLEXPRESS;Database=NZWalksDb;Trusted_Connection=True;TrustServerCertificate=True"
+    },
+    "Jwt": {
+        "Key": "bbbbHHHHOOWEWEWW908ddfdfdfdfnkkkkkkkllsdffdfdfdfdfd",
+        "Issuer": "https://localhost:7142/",
+        "Audience": "https://localhost:7142/"
+    }
+} 
+-------------------------------------------------------------------------------------------------------------------------------------
+3## Now We Have To add authentication in Program.cs (add this service in the middleware)
+-------------------------------------------------------------------------------------------------------------------------------------
+Program.cs // add this service before -> var app = builder.Build();
+-------------------------------------------------------------------------------------------------------------------------------------
+// Adding Authentication Service
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    });
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthentication();  // Adding Authentication In the Pipeline
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+-------------------------------------------------------------------------------------------------------------------------------------
+4### Now We will introduce Authentication to controllers & so it will Block UnAuthenticated Users
+-------------------------------------------------------------------------------------------------------------------------------------
+RegionsController.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+//  https://localhost:portnumber/api/regions
+[Route("api/[controller]")]
+[ApiController]
+[Authorize]
+public class RegionsController : ControllerBase
+{
+    private readonly NZWalksDbContext _dbContext;
+    private readonly IRegionRepository regionRepository;
+    private readonly IMapper mapper;
+-------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
+### By Adding [Authorize] on the whole controller we can block UnAuthenticated Users
+-------------------------------------------------------------------------------------------------------------------------------------
+ //  https://localhost:portnumber/api/regions
+ [Route("api/[controller]")]
+ [ApiController]
+ [Authorize]
+ public class RegionsController : ControllerBase
+ {
+     private readonly NZWalksDbContext _dbContext;
+     private readonly IRegionRepository regionRepository;
+     private readonly IMapper mapper;
+-------------------------------------------------------------------------------------------------------------------------------------
+
+### Now We Will Setup Identity In Our API
+
+5## Add a New ConnectionString to appsettings.json for Identity
+	Create new Conenction String
+	Create new DbContext With Roles (Seed Data)
+	Inject DbContext and Identity (ASP.NET Core Identity)
+	Run EF Core Migrations
+
+### If We have multiple DbContext then we need to make the DbContexts Generic
+
+6### Add New ConnectionString For Auth
+-------------------------------------------------------------------------------------------------------------------------------------
+appsettings.json
+-------------------------------------------------------------------------------------------------------------------------------------
+ "AllowedHosts": "*",
+ "ConnectionStrings": {
+     "NZWalksConnectionString": "Server=DESKTOP-63UE644\\SQLEXPRESS;Database=NZWalksDb;Trusted_Connection=True;TrustServerCertificate=True",
+     "NZWalksAuthConnectionString": "Server=DESKTOP-63UE644\\SQLEXPRESS;Database=NZWalksAuthDb;Trusted_Connection=True;TrustServerCertificate=True"
+ },
+-------------------------------------------------------------------------------------------------------------------------------------
+
+7### Add New Connection String For handling authentication Table like User  Roles
+-------------------------------------------------------------------------------------------------------------------------------------
+public class NZWalksAuthDbContext : IdentityDbContext
+-------------------------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Data
+{
+    public class NZWalksAuthDbContext : IdentityDbContext
+    {
+        public NZWalksAuthDbContext(DbContextOptions<NZWalksAuthDbContext> options) : base(options)
+        {
+
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+NZWalksDbContext : DbContext
+-------------------------------------------------------------------------------------------------------------------------------------
+ public NZWalksDbContext(DbContextOptions<NZWalksDbContext> options) : base(options)
+ {
+     
+ }
+-------------------------------------------------------------------------------------------------------------------------------------
+
+8### Register The New Connection String In Program.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+Program.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+builder.Services.AddDbContext<NZWalksDbContext>(options => 
+options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksConnectionString")));
+
+builder.Services.AddDbContext<NZWalksAuthDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("NZWalksAuthConnectionString")));
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
+9### Now We Seed Data in NZWalksAuthDbContext 
+-------------------------------------------------------------------------------------------------------------------------------------
+ protected override void OnModelCreating(ModelBuilder builder)
+ {
+     base.OnModelCreating(builder);
+
+     var readerRoleId = "3a04693f-e7e5-48e1-a71e-53951e413209";
+     var writerRoelId = "3f590896-3b2f-4003-999e-172507691b38";
+
+     var roles = new List<IdentityRole>
+     {
+         new IdentityRole
+         {
+             Id = readerRoleId,
+             ConcurrencyStamp = readerRoleId,
+             Name = "Reader",
+             NormalizedName = "Reader".ToUpper()
+         },
+         new IdentityRole
+         {
+             Id = writerRoelId,
+             ConcurrencyStamp = writerRoelId,
+             Name = "Writer",
+             NormalizedName = "Writer".ToUpper()
+         }
+     };
+     builder.Entity<IdentityRole>().HasData(roles); 
+ }
+-------------------------------------------------------------------------------------------------------------------------------------
+
+10### Now We Do Database Migration And Database Update
+
+PM> Add-Migration "Creating Auth Database" -Context "NZWalksAuthDbContext"
+PM> Update-Database -Context "NZWalksAuthDbContext"
+
+11### Now We Need To Inject Identity In Program.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+Program.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+// Injecting Identy Service
+builder.Services.AddIdentityCore<IdentityUser>()
+    .AddRoles<IdentityRole>()
+    .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("NZWalks")
+    .AddEntityFrameworkStores<NZWalksAuthDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+});
+
+// Adding Authentication Service
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+-------------------------------------------------------------------------------------------------------------------------------------
+
+12### Add A Controller(API Controller Empty) AuthController.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+RegisterRequestDTO
+-------------------------------------------------------------------------------------------------------------------------------------
+public class RegisterRequestDTO
+{
+    [Required]
+    [DataType(DataType.EmailAddress)]
+    public string Username { get; set; }
+    [Required]
+    [DataType(DataType.Password)]
+    public string Password { get; set; }
+    public string[] Roles { get; set; }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+AuthController.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AuthController : ControllerBase
+    {
+        private readonly UserManager<IdentityUser> userManager;
+
+        public AuthController(UserManager<IdentityUser> userManager)
+        {
+            this.userManager = userManager;
+        }
+
+        [HttpPost]
+        [Route("Register")]
+        public async Task<IActionResult> Register([FromBody] RegisterRequestDTO registerRequestDTO)
+        {
+            var identityUser = new IdentityUser
+            {
+                UserName = registerRequestDTO.Username,
+                Email = registerRequestDTO.Username
+            };
+            var identityResult = await userManager.CreateAsync(identityUser, registerRequestDTO.Password);
+
+            if (identityResult.Succeeded) 
+            {
+                // Add Roles to This User
+                if (registerRequestDTO.Roles != null && registerRequestDTO.Roles.Any()) 
+                {
+                    identityResult = await userManager.AddToRolesAsync(identityUser, registerRequestDTO.Roles);
+                    if (identityResult.Succeeded)
+                    {
+                        return Ok("User Was Registered! Please LogIn");
+                    }
+                }
+            }
+            return BadRequest("Something Went Wrong");
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+--Register Functionality Done
+
+--Now We Do Login
+
+13### Add LoginRequestDto.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+LoginRequestDto.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Models.DTO
+{
+    public class LoginRequestDto
+    {
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        public string Username { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
+AuthController.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+//POST: api/auth/Login
+[HttpPost]
+[Route("Login")]
+public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequestDto)
+{
+    var user = await userManager.FindByEmailAsync(loginRequestDto.Username);
+
+    if (user != null)
+    {
+        var checkPasswordResult = await userManager.CheckPasswordAsync(user, loginRequestDto.Password);
+        if (checkPasswordResult)
+        {
+            // create token(later we will create it)
+
+            return Ok();
+        }
+    }
+    return BadRequest("Invalid Username or Password");
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+
+### Register and Login Done
+
+14### Now We Create JWT Token (We Create Repository For JWT Token)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+ITokenRepository.cs (Interface)
+-------------------------------------------------------------------------------------------------------------------------------------
+    public interface ITokenRepository
+    {
+        string CreateJWTToken(IdentityUser user, List<string> roles);
+    }
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
+TokenRepository :ITokenRepository (Token Creation repository)
+-------------------------------------------------------------------------------------------------------------------------------------
+public class TokenRepository : ITokenRepository
+{
+    private readonly IConfiguration configuration;
+
+    public TokenRepository(IConfiguration configuration)
+    {
+        this.configuration = configuration;
+    }
+    public string CreateJWTToken(IdentityUser user, List<string> roles)
+    {
+        // Create Claims
+        var claims = new List<Claim>();
+
+        claims.Add(new Claim(ClaimTypes.Email, user.Email));  // Claim type= email, value= user.Email
+
+        foreach (var role in roles)
+        {
+            claims.Add(new Claim(ClaimTypes.Role, role));  // Claim type= role, value= role // In the claims collection we add a claim for each role the user has
+        }
+
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"])); // Creating a new instance of SymmetricSecurityKey and passing the key from the configuration
+        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256); // Creating a new instance of SigningCredentials and passing the key and the algorithm
+
+        // Create Token
+        var token = new JwtSecurityToken(
+            configuration["Jwt:Issuer"],
+            configuration["Jwt:Audience"],
+            claims,
+            expires: DateTime.Now.AddMinutes(15),
+            signingCredentials: credentials);
+        
+        // Return Token
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+
+15### Inject TokenRepository And Create Token, inject it in Program.cs
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Program.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+builder.Services.AddScoped<IRegionRepository, SQLRegionRepository>();         // Registering Repo, Dependency Injection for Region Repository
+builder.Services.AddScoped<IWalkRepository, SQLWalkRepository>();             // Registering Repo, Dependency Injection for Walk Repository
+builder.Services.AddScoped<ITokenRepository, TokenRepository>();             // Registering Repo, Dependency Injection for Token Repository
+-------------------------------------------------------------------------------------------------------------------------------------
+
+16## Now We Inject it to the controller
+-------------------------------------------------------------------------------------------------------------------------------------
+AuthController.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+namespace NZWalks.API.Models.DTO
+{
+    public class LoginResponseDto
+    {
+        public string jwtToken { get; set; }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
+        private readonly UserManager<IdentityUser> userManager;
+
+        public readonly ITokenRepository TokenRepository;
+
+        public AuthController(UserManager<IdentityUser> userManager, ITokenRepository tokenRepository)
+        {
+            this.userManager = userManager;
+            TokenRepository = tokenRepository;
+        }
+//POST: api/auth/Login
+[HttpPost]
+[Route("Login")]
+public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequestDto)
+{
+    var user = await userManager.FindByEmailAsync(loginRequestDto.Username);
+
+    if (user != null)
+    {
+        var checkPasswordResult = await userManager.CheckPasswordAsync(user, loginRequestDto.Password);
+        if (checkPasswordResult)
+        {
+            // Get Roles For This User
+            var roles = await userManager.GetRolesAsync(user);
+           
+            if(roles != null)
+            {
+                // create token
+                var jwtToken = TokenRepository.CreateJWTToken(user, roles.ToList());
+                var responce = new LoginResponseDto
+                {
+                    jwtToken = jwtToken
+                };
+                return Ok(responce);
+            }
+        }
+    }
+    return BadRequest("Invalid Username or Password");
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+
+### Now We can use this token to access authorized Regions Controller (Like Get All Regions)
+
+16### Now We make Role Based Authorization
+
+ 1.We Remove [Authorize] from controller level and add it to the method level
+ 2.Add The  [Authorize] to all Action Methods inside the controller
+ 3.Assing Readers to GetAll() & GetById() 		 -- [Authorize(Roles = "Reader, Writer")]
+ 4.Assing Writerd to Update(), Create(), Delete() 	 -- [Authorize(Roles = "Writer")]
+ 5.Now We have set role based Authorization
+
+
+17### Now We Add Authorization Feature Into Swagger
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Program.cs
+-------------------------------------------------------------------------------------------------------------------------------------
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+
+// Add Authorization feature in swagger
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "NZ Walks API", Version = "v1" });
+    options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = JwtBearerDefaults.AuthenticationScheme,
+    });
+
+    options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = JwtBearerDefaults.AuthenticationScheme
+                },
+                Scheme = "Oauth2",
+                Name = JwtBearerDefaults.AuthenticationScheme,
+                In = Microsoft.OpenApi.Models.ParameterLocation.Header
+            },
+            new List<string>()
+        }
+    });
+});
+-------------------------------------------------------------------------------------------------------------------------------------
+
+ ### Done Adding Authorization Feature Into Swagger
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+https://localhost:7142/api/Regions/cfa06ed2-bf65-4b65-93ed-c9d286ddb0de
+
+
+401 -- Unauthorized ()
+403 -- Forbidden (Not authorized to view this resource, but u are a valid user)

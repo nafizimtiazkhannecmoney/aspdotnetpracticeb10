@@ -1,0 +1,53 @@
+
+
+# In VS Code, install this plugin:
+  Live Sass Compiler
+  by
+  Ritwick Dey, Glenn Marks
+1# In Visual Studio
+  Extensions>>Manage Extensions>Search "web compiler" by jason Moore(Download)
+  
+2# Restart Visual Studio 
+
+3# Create a SCSS file inside wwwroot. Then add in SCSS>>new item>>installed
+   SCSS Style Sheet(SASS)[demo.scss]
+
+4# Write css inside demo.scss. Rightclick on demo.scss>>web compiler>>Compile file(cuz extension)
+   if we see the dropdown then we will find the generated demo.css file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

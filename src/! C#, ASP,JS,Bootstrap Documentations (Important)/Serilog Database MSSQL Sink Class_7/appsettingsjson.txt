@@ -1,0 +1,45 @@
+* change the serilog connection, dnt touch the default connection
+
+
+ "addStandardColumns": [ "Id", "Message", "MessageTemplate", "Level", "TimeStamp", "Exception", "Properties", "LogEvent" ]
+
+-------------------------------------------------------------------------
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=aspnet-DependencyInjectionPractice1-9de3fafc-c6ff-47dd-9f4b-69533ba0da83;Trusted_Connection=True;MultipleActiveResultSets=true",
+    "SerilogConnection": "Server=(localdb)\\mssqllocaldb;Database=SerilogLogs;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Serilog": {
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Logs/web-log-.log",
+          "rollingInterval": "Day"
+        }
+      },
+      {
+        "Name": "MSSqlServer",
+        "Args": {
+          "connectionString": "SerilogConnection",
+          "tableName": "Logs",
+          "autoCreateSqlTable": true,
+          "columnOptionsSection": {
+            "addStandardColumns": [ "LogEvent" ],
+            "removeStandardColumns": [ "MessageTemplate" ]
+          }
+        }
+      }
+    ]
+  },
+  "AllowedHosts": "*"
+}
+
+
+

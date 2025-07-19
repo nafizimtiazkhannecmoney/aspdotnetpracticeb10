@@ -1,0 +1,310 @@
+ Windows + V Clipboard
+All The Commands Are here
+With Examples
+=============================
+https://www.sql-practice.com/
+=============================
+
+---------------------------------------------------------------------------------------------------------------
+--SELECT Column Example--
+SELECT * FROM tablename;
+SELECT first_name, last_name FROM patients;
+---------------------------------------------------------------------------------------------------------------
+--INSERT INTO Example--
+-- Insert a record
+INSERT INTO patients (first_name, last_name, gender, birth_date, city, province_id, allergies, weight, height)
+    VALUES ('John', 'Smith', 'M', '1994-02-21', 'Hamilton','ON', NULL, 132, 182);
+-- Insert a record
+INSERT INTO patients (first_name, last_name, gender)
+    VALUES ('Jane', 'Doe','F');
+-- Select the most recent record by id to display it.
+select * from patients
+	where patient_id = (select max(patient_id) from patients);
+---------------------------------------------------------------------------------------------------------------
+--SQL DELETE Example--
+DELETE FROM patients WHERE first_name = 'Paul';
+
+-- There are no longer any patients named 'Paul' in the database
+select * from patients where first_name = 'Paul'
+---------------------------------------------------------------------------------------------------------------
+--UPDATE Statement--
+UPDATE patients
+SET
+  first_name = 'John',
+  weight = 120
+WHERE patient_id = 1;
+
+-- display the patient we just updated
+select * from patients where patient_id = 1
+---------------------------------------------------------------------------------------------------------------
+--WHERE Clause--
+SELECT * FROM patients
+  WHERE patient_id >= 5;
+SELECT * FROM patients
+  WHERE patient_id <> 5;
+  -- No patient_id 5 row
+---------------------------------------------------------------------------------------------------------------
+--Like--
+SELECT * FROM patients
+  WHERE first_name LIKE 'a%';
+  -- First names starting with 'a'.
+--Return all customers from a city that contains the letter 'L':
+SELECT * FROM Customers
+WHERE city LIKE '%L%';
+--Return all customers that starts with 'La':
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'La%';
+--Return all customers that ends with 'a':
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%a';
+--Return all customers that starts with "b" and ends with "s":
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'b%s';
+--Return all customers that contains the phrase 'or'
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%or%';
+---------------------------------------------------------------------------------------------------------------
+--AND Example--
+SELECT * FROM patients
+WHERE first_name='John' AND city='Toronto';
+---------------------------------------------------------------------------------------------------------------
+--OR Example--
+SELECT * FROM patients
+WHERE city='Hamilton' OR city='Toronto';
+---------------------------------------------------------------------------------------------------------------
+--NOT Example--
+WHERE province_id = 'ON';
+---------------------------------------------------------------------------------------------------------------
+--ORDER BY--
+SELECT * FROM patients
+    ORDER BY first_name DESC;
+SELECT * FROM patients
+    ORDER BY first_name, last_name;
+SELECT * FROM patients
+    ORDER BY first_name ASC, last_name DESC;
+---------------------------------------------------------------------------------------------------------------
+--LIKE Operator--
+LIKE Operator	                Description
+WHERE first_name LIKE 'a%'	Finds any values that start with "a"
+WHERE first_name LIKE '%a'	Finds any values that end with "a"
+WHERE first_name LIKE '%or%'	Finds any values that have "or" in any position
+WHERE first_name LIKE '_r%'	Finds any values that have "r" in the second position
+WHERE first_name LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length
+WHERE first_name LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+WHERE first_name LIKE 'a%o'	Finds any values that start with "a" and ends with "o"
+---------------------------------------------------------------------------------------------------------------
+--IN Syntax--
+--The IN operator is a shorthand for multiple OR conditions.
+SELECT * FROM patients
+WHERE province_id IN ('SK', 'AB', 'MB');
+---------------------------------------------------------------------------------------------------------------
+--BETWEEN Operator--
+SELECT * FROM patients
+  WHERE weight BETWEEN 100 AND 120
+  AND province_id NOT IN ('ON', 'SK', 'AB');
+---------------------------------------------------------------------------------------------------------------
+--JOIN--
+--we can create the following SQL statement (that contains an INNER JOIN), 
+--that selects records that have matching values in both tables
+SELECT
+	*
+FROM patients p
+  JOIN admissions a ON a.patient_id = p.patient_id
+select * from province_names pa join patients pr on pa.province_id = pr.province_id
+where first_name = 'Jen'
+
+SELECT EmployeeName, DepartmentName, LocationName
+FROM Employees
+INNER JOIN Departments ON Employees.DepartmentID = Departments.DepartmentID
+INNER JOIN Locations ON Departments.LocationID = Locations.LocationID;
+---------------------------------------------------------------------------------------------------------------
+--UNION Syntax--
+SELECT first_name FROM patients
+    UNION 
+SELECT first_name FROM doctors
+    ORDER BY first_name;
+---------------------------------------------------------------------------------------------------------------
+--GROUP BY--
+SELECT COUNT(*), province_id
+  FROM patients
+  GROUP BY province_id
+  ORDER BY COUNT(*) DESC;
+---------------------------------------------------------------------------------------------------------------
+--HAVING Syntax--
+The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+SELECT COUNT(*), first_name
+  FROM patients
+  GROUP BY first_name
+  HAVING count(*) > 30;
+---------------------------------------------------------------------------------------------------------------
+--CASE--
+CASE
+      WHEN condition1 THEN result1
+      WHEN condition2 THEN result2
+      WHEN conditionN THEN resultN
+      ELSE result
+  END;
+
+SELECT patient_id, height,
+  CASE
+      WHEN height > 175 THEN 'height is greater than 175'
+      WHEN height = 175 THEN 'height is 175'
+      ELSE 'height is under 175'
+  END AS height_group
+  FROM patients;
+
+ID      Height  height_group
+1	156	height is under 175
+2	185	height is greater than 175
+3	194	height is greater than 175
+4	191	height is greater than 175
+5	47	height is under 175
+6	43	height is under 175
+7	180	height is greater than 175
+8	174	height is under 175
+9	173	height is under 175
+10	157	height is under 175
+---------------------------------------------------------------------------------------------------------------
+--DISTINCT--
+SELECT DISTINCT first_name FROM patients;
+---------------------------------------------------------------------------------------------------------------
+--SQL COUNT() Function--
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+
+--The following SQL statement finds the number of patients that weight over 120Kg:
+SELECT COUNT(*) FROM patients 
+WHERE weight > 120;
+select count(*) as NamesstartsandendswithA 
+from patients where first_name like 'a%a';
+---------------------------------------------------------------------------------------------------------------
+--AVG() Function--
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT AVG(weight) FROM patients;
+>>76.77682119205298
+---------------------------------------------------------------------------------------------------------------
+--SUM() Function--
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT SUM(weight) FROM patients; 
+>>347799
+---------------------------------------------------------------------------------------------------------------
+--MAX() Function--
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MAX(weight) FROM patients;
+SELECT MIN(weight) FROM patients;
+---------------------------------------------------------------------------------------------------------------
+--SQL Window Functions--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>Practice
+select * from employees e join departments d
+on d.departmentid = e.departmentid;
+
+select * from students join courses
+on students.courseid = courses.courseid;
+
+select * from orders join customers 
+on orders.customerid = customers.customerid
+
+select * from products join categories 
+on products.categoryid = categories.categoryid
+
+select * from sales s join  employees e
+on s.employeeid = e.employeeid
+
+select * from books b join authors a on 
+b.authorid = a.authorid
+
+select * from flights f join airlines a
+on f.airlineid = a.airlineid
+
+select * from employees e join managers m
+on e.managerid = m.managerid
+
+select * from doctors d join patients p
+on d.doctorid= p.doctorid
+
+select *
+from invoices i
+join customers c
+on i.customerid = c.customerid
+
+select CourseName,InstructorNamme
+FROM Courses c
+INNER JOIN Instructors i
+ON c.InstructorID = i.InstructorID  
+
+SELECT CarModel, OwnerName
+FROM Cars
+INNER JOIN Owners
+ON Cars.OwnerID = Ownerss.OwnerID
+
+SELECT OrderDate, ShipperName
+FROM Orders
+INNER JOIN Sippers 
+ON Orders.ShipperID = Shippers.ShipperID
+
+SELECT StudentName, TeacherName
+FROM Students
+INNER JOIN Teachers
+ON Students.TeacherID = Teachers.TeacherID
+
+SELECT MovieTitle, DirectorName
+FROM Movies
+INNER JOIN Directors
+ON Movies.DirectorID= Directors.DirectorID
+
+SELECT StudentName, CourseName
+FROM Enrollments
+INNER JOIN Courses
+ON Enrollments.CourseID = Courses.CourseID
+INNER JOIN Students
+ON Enrollments.StudentID = Students.StudentID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

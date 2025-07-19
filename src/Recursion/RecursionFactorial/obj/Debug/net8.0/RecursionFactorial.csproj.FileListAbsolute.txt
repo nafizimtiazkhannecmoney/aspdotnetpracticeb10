@@ -1,0 +1,15 @@
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\bin\Debug\net8.0\RecursionFactorial.exe
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\bin\Debug\net8.0\RecursionFactorial.deps.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\bin\Debug\net8.0\RecursionFactorial.runtimeconfig.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\bin\Debug\net8.0\RecursionFactorial.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\bin\Debug\net8.0\RecursionFactorial.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\RecursionFactorial.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\RecursionFactorial.AssemblyInfoInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\RecursionFactorial.AssemblyInfo.cs
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\RecursionFactorial.csproj.CoreCompileInputs.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\RecursionFactorial.sourcelink.json
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\RecursionFactorial.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\refint\RecursionFactorial.dll
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\RecursionFactorial.pdb
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\RecursionFactorial.genruntimeconfig.cache
+D:\ASPdotNet Practice\aspdotnetpracticeb10\src\RecursionFactorial\obj\Debug\net8.0\ref\RecursionFactorial.dll

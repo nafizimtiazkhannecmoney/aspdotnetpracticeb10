@@ -1,0 +1,23 @@
+Project Demo Review untill 1:12:10
+# Make MemberController
+Make Iaction CreateRole()
+Make MOdel-- RoleCreateModel(in area - admin- model)
+Make view for CreateRole
+
+
+Role based Done
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+1:26:59  Done ...

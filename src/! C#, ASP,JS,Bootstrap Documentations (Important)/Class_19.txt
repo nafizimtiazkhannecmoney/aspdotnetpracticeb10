@@ -1,0 +1,77 @@
+Class_19: Problem solving of DataTables, 
+14:38: Now we can sort columns on the data table
+56:00  Pull Request
+Fixed buttons in DataTables
+
+
+---------------------------------------------------------------[ProductController.cs]Start
+# Added FromBody, HttpPost, Added Column "Id"
+ [HttpPost]
+ public JsonResult GerProductJsonData([FromBody] ProductListModel model)
+ {
+     var result = _productManagementServices.GetProducts(model.PageIndex, model.PageSize, model.Search, 
+         model.FormatSortExpression("ProductName", "Id"));
+
+     var productJsonData = new
+     {
+         recordsTotal = result.total,
+         recordsFiltered = result.totalDisplay,
+         data = (from record in result.data
+                 select new string[]
+                 {
+                         HttpUtility.HtmlEncode(record.ProductName),
+                         record.Id.ToString()
+                 }
+             ).ToArray()
+     };
+
+     return Json(productJsonData);
+ }
+---------------------------------------------------------------[ProductController.cs]END
+
+
+---------------------------------------------------------------[Areas-Admin-Views-Product-Index.cshtml]Start
+<script>
+    $(function () {
+        $("#blogposts").DataTable({
+            processing: true,
+            serverSide: true,
+            responsive: true,
+            lengthChange: true,
+            autoWidth: false,
+            lengthMenu: [
+                [10, 25, 50, -1],
+                [10, 25, 50, 'All']
+            ],
+            ajax: {
+                url: "/Admin/Product/GerProductJsonData",
+                type: "POST",
+                contentType: "application/json", //must be added
+                dataType: "json", //better to add, not mandatory
+                data: function (d) {
+                     d.SearchItem = {
+                     };
+                     return JSON.stringify(d);
+                 },
+            },
+            //dom: 'Bfrtip',
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#blogposts_wrapper .col-md-6:eq(0)');
+    });
+</script>
+---------------------------------------------------------------[Areas-Admin-Views-Product-Index.cshtml]END
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------[]Start
+---------------------------------------------------------------[]END

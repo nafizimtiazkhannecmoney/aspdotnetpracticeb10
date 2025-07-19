@@ -1,0 +1,23 @@
+
+      #  Table Recreation, Tools>>Options>Designers>>Table and DAtabase Designes>>[Uncheck] Prevent saving changes that require            table re-creation
+      # Transpiling is a term for taking a source code written in one language and transform/translate it into another language.
+Class 5 ->#POCO_Plain old CLR OBJECT, which classes are made by us and not dependent on other    
+       classes(not on framework classes),Controller and DBcontext is not POCO, beacause they   
+       inherit from framework classes
+      # Use HSTS--OWASP, HTTP Strict Transport Security(HSTS) Enforces security to the page
+      # OWASP- Web security guideline provider
+      # Anonymous Object
+      # Regular Expression(regexr.com)
+      # submit form_make another IAction in [HttpPost] (Postback)
+      # ValidateAntiForgeryToken- Security(CSRF Attak)
+      # Service Collection_Use LifeTimeScoped(Use it to middle point)
+      # DI, Transient, Scoped, Singletone(Cant create more than 1 Instance)
+      # Model Classes needs Transient, for fresh instance, As It can hold Old Data
+Class 7
+      # Add Serilog|Bootstrap Logger| Sink in the begining of the project
+     
+# wwwroot folder contents are called assets
+# Internal API, we can only access it from the same app [CORS]
+
+
+class 8 - 57:49 Done

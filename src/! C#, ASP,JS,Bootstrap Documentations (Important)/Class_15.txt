@@ -1,0 +1,443 @@
+# Remove IMembership from web module
+# Remove Membership from HomeController
+# Delete Member, IMember from Models
+
+
+# Devskill.Application>>IBlogUnitOfWork.cs(public)>>
+
+---------------------------------[IBlogUnitOfWork]
+using Blog.Domain;
+using Blog.Domain.RepositoryContracts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Application
+{
+    public interface IBlogUnitOfWork : IUnitOfWork
+    {
+        public IBlogPostRepositiory BlogPostRepositiory { get;}
+    }
+}
+------------------------------------------[BlogPostManagementServices]
+using Blog.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Application.Services
+{
+    public class BlogPostManagementServices : IBlogPostManagementServices
+    {
+        private readonly IBlogUnitOfWork _blogUnitOfWork;
+
+        public BlogPostManagementServices(IBlogUnitOfWork blogUnitOfWork)
+        {
+                _blogUnitOfWork = blogUnitOfWork;
+        }
+        public void CreateBlogPost(BlogPost blogPost)
+        {
+
+        }
+    }
+}
+-------------------   ```````````````+++++++++++++++++++
+# Copy Repository.cs from Blog.Infrastructures>Repositories and paste it to DaveSkill.Inventory >>Repository
+# Change namespace if theres any
+# Install Nuget >>System.Linq.Dynamic.Core
+
+# Blog.Domain>>Entities>>Add interface IEntity.cs(public)
+-------------------------------IEntity.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Domain.Entities
+{
+     public interface IEntity<T> where T : IComparable
+    {
+        public T Id { get; set; }
+    }
+}
+----------------------------------------------------
+# Now we will add IEntity to BlogPost, and Implement interface
+---------------------------------------------BlogPost.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+namespace Blog.Domain.Entities
+{
+    public class BlogPost : IEntity<Guid>
+    {
+        public Guid Id { get; set; }
+        public string Title { get; set; }
+        public List<Comment> Comments { get; set; }
+        
+
+        public BlogPost() 
+        {
+
+        }
+    }
+}
+-----------------------------------[Comment]
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Domain.Entities
+{
+    public class Comment : IEntity<Guid>
+    {
+        public Guid Id { get; set; }
+    }
+}
+---------------------------------
+---------------------------------------[BlogPostRepository]
+using Blog.Domain.Entities;
+using Blog.Domain.RepositoryContracts;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Infrastructure.Repositories
+{
+    public class BlogPostRepository : Repository<BlogPost, Guid>, IBlogPostRepositiory
+    {
+        public BlogPostRepository(BlogDbContext context) : base(context)
+        {
+        }
+    }
+}
+---------------------------------
+
+# Paste IRepositoryBase.cs from Blog to >> Devskill.Domain>>Repository Contracts
+-----------------------IBlogPostRepositiory
+using Blog.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Domain.RepositoryContracts
+{
+    public interface IBlogPostRepositiory : IRepositoryBase<BlogPost, Guid>
+    {
+    }
+}
+--------------------------
+# Copy IRepository.cs from blog to Infrastructure>>Repositories>>
+
+# DONE NOW BUILD SOLUTION
+
+
+------------------------BlogPostManagementServices.cs
+using Blog.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Application.Services
+{
+    public class BlogPostManagementServices : IBlogPostManagementServices
+    {
+        private readonly IBlogUnitOfWork _blogUnitOfWork;
+
+        public BlogPostManagementServices(IBlogUnitOfWork blogUnitOfWork)
+        {
+                _blogUnitOfWork = blogUnitOfWork;
+        }
+        public void CreateBlogPost(BlogPost blogPost)
+        {
+            _blogUnitOfWork.BlogPostRepositiory.Add(blogPost);
+            _blogUnitOfWork.Save();
+        }
+    }
+}
+----------------------BlogPostController.cs
+
+ if (ModelState.IsValid) 
+ {
+     var blog = new BlogPost { Id = Guid.NewGuid(), Title = model.Title };
+     _blogPostManagementServices.CreateBlogPost(blog);
+     return RedirectToAction("Index");
+ }
+------------------------------
+--------------------------------Remove Comment
+-----------------------------BlogPost.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+namespace Blog.Domain.Entities
+{
+    public class BlogPost : IEntity<Guid>
+    {
+        public Guid Id { get; set; }
+        public string Title { get; set; }
+       
+        
+
+        public BlogPost() 
+        {
+
+        }
+    }
+}
+------------------------WebModule.cs
+using Autofac;
+using Blog.Application;
+using Blog.Application.Services;
+using Blog.Domain.RepositoryContracts;
+using Blog.Infrastructure;
+using Blog.Infrastructure.Repositories;
+using Blog.Infrastructure.UnitOfWorks;
+using DevSkill.Inventory.Web.Models;
+
+namespace DevSkill.Inventory.Web
+{
+    public class WebModule (string connectionString, string migrationAssembly) : Module  //Syntax Primary Constructor
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<BlogDbContext>().AsSelf()
+                .WithParameter("connectionString", connectionString)
+                .WithParameter("migrationAssembly", migrationAssembly)
+                .InstancePerLifetimeScope();
+
+
+            builder.RegisterType<BlogPostRepository>()
+                .As<IBlogPostRepositiory>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogUnitOfWork>()
+                .As<IBlogUnitOfWork>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostManagementServices>()
+                .As<IBlogPostManagementServices>()
+                 .InstancePerLifetimeScope();
+        }
+    }
+}
+
+----------------------------
+
+# In Program.cs add BlogDbContext, as like ApplicationDbContext
+-------------------------------Program.cs
+
+    // Add services to the container.
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+    var migrationAssembly = Assembly.GetExecutingAssembly().FullName;   //Taking migrationAssembly
+
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(connectionString));
+
+    builder.Services.AddDbContext<BlogDbContext>(options =>
+        options.UseSqlServer(connectionString,(x)=> x.MigrationsAssembly(migrationAssembly))); // Newly Added
+
+    builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+-------------------------------
+-------------------------------Webmodule.cs
+using Autofac;
+using Blog.Application;
+using Blog.Application.Services;
+using Blog.Domain.RepositoryContracts;
+using Blog.Infrastructure;
+using Blog.Infrastructure.Repositories;
+using Blog.Infrastructure.UnitOfWorks;
+using DevSkill.Inventory.Web.Data;
+using DevSkill.Inventory.Web.Models;
+
+namespace DevSkill.Inventory.Web
+{
+    public class WebModule (string connectionString, string migrationAssembly) : Module  //Syntax Primary Constructor
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<BlogDbContext>().AsSelf()
+                .WithParameter("connectionString", connectionString)
+                .WithParameter("migrationAssembly", migrationAssembly)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ApplicationDbContext>().AsSelf()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostRepository>()
+                .As<IBlogPostRepositiory>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogUnitOfWork>()
+                .As<IBlogUnitOfWork>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostManagementServices>()
+                .As<IBlogPostManagementServices>()
+                 .InstancePerLifetimeScope();
+        }
+    }
+}
+-------------------------------Program.cs [add migration to ApplicationDbContext]
+// Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var migrationAssembly = Assembly.GetExecutingAssembly().FullName;   //Taking migrationAssembly
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString, (x) => x.MigrationsAssembly(migrationAssembly))); // Newly Added migration
+
+builder.Services.AddDbContext<BlogDbContext>(options =>
+    options.UseSqlServer(connectionString,(x)=> x.MigrationsAssembly(migrationAssembly))); // Newly Added
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+
+----------------------------------BlogUnitOfWork.cs[Added IBlogUnitOfWork]
+using Blog.Application;
+using Blog.Domain.RepositoryContracts;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Blog.Infrastructure.UnitOfWorks
+{
+    public class BlogUnitOfWork : UnitOfWork , IBlogUnitOfWork
+    {
+        public IBlogPostRepositiory BlogPostRepositiory { get; private set; }
+        public BlogUnitOfWork(BlogDbContext dbContext, 
+            IBlogPostRepositiory blogPostRepositiory) : base(dbContext)
+        {
+            BlogPostRepositiory = blogPostRepositiory;
+        }
+    }
+}
+---------------------------------------------------Webmodule.cs
+using Autofac;
+using Blog.Application;
+using Blog.Application.Services;
+using Blog.Domain.RepositoryContracts;
+using Blog.Infrastructure;
+using Blog.Infrastructure.Repositories;
+using Blog.Infrastructure.UnitOfWorks;
+using DevSkill.Inventory.Web.Data;
+using DevSkill.Inventory.Web.Models;
+
+namespace DevSkill.Inventory.Web
+{
+    public class WebModule (string connectionString, string migrationAssembly) : Module  //Syntax Primary Constructor
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<BlogDbContext>().AsSelf()
+                .WithParameter("connectionString", connectionString)
+                .WithParameter("migrationAssembly", migrationAssembly)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ApplicationDbContext>().AsSelf()
+                .WithParameter("connectionString", connectionString)
+                .WithParameter("migrationAssembly", migrationAssembly)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostRepository>()
+                .As<IBlogPostRepositiory>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogUnitOfWork>()
+                .As<IBlogUnitOfWork>()
+                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BlogPostManagementServices>()
+                .As<IBlogPostManagementServices>()
+                 .InstancePerLifetimeScope();
+        }
+    }
+}
+----------------------------------------
+----------------------------------------ApplicationDbContext.cs
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
+namespace DevSkill.Inventory.Web.Data
+{
+    public class ApplicationDbContext : IdentityDbContext
+    {
+        private readonly string _connectionString;
+        private readonly string _migrationAssembly;
+
+        public ApplicationDbContext(string connectionString, string migrationAssembly)
+        {
+            _connectionString = connectionString;
+            _migrationAssembly = migrationAssembly;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(_connectionString,
+                    x => x.MigrationsAssembly(_migrationAssembly));
+            }
+
+            base.OnConfiguring(optionsBuilder);
+        }
+    }
+}
+--------------------------------
+Always build solution then migrate
+
+
+
+[class 16_ 9:29] assignment3 is untill 31:54
+
+
+# Now We Go to Migration
+
+
+dotnet ef database update --project DevSkill.Inventory.Web
+dotnet ef database update --project DevSkill.Inventory.Web --context BlogDbContext
+dotnet ef migrations add UpdateUserTables --project Blog.Web --context ApplicationDbContext
+
+dotnet ef migrations add UpdateUserTables --project DevSkill.Inventory.Web --context ApplicationDbContext
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

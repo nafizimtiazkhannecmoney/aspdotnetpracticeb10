@@ -1,0 +1,87 @@
+Trigger Types
+1.DML Trigger: INSERT, UPDATE, DELETE | DML Command
+2.DDL Trigger: CREATE, ALTER, DROP    | DDL Command
+------------------------------------------------------------------------------------------------------
+CREATE TRIGGER trigger_name
+[BEFORE | AFTER] [INSERT | UPDATE | DELETE]
+ON table_name
+FOR EACH ROW
+BEGIN
+    -- SQL statements
+END;
+
+
+
+CREATE TRIGGER trigger_name: Defines a new trigger named trigger_name.
+
+[BEFORE | AFTER]: Specifies when the trigger should be executed, either before or after the event.
+
+[INSERT | UPDATE | DELETE]: Specifies the type of event that will activate the trigger.
+
+ON table_name: Indicates the table on which the trigger is set.
+
+FOR EACH ROW: Specifies that the trigger will execute once for each row affected by the event.
+
+BEGIN: Starts the block of SQL statements to be executed when the trigger is fired.
+
+-- SQL statements: Placeholder for the actual SQL code to be executed by the trigger.
+
+END;: Marks the end of the trigger's SQL block.
+------------------------------------------------------------------------------------------------------
+CREATE TRIGGER log_changes
+AFTER UPDATE ON employees
+FOR EACH ROW
+BEGIN
+    INSERT INTO employees_log (employee_id, name, action)
+    VALUES (OLD.employee_id, OLD.name, 'updated');
+END;
+
+
+
+CREATE TRIGGER log_changes: Defines a new trigger named log_changes.
+
+AFTER UPDATE ON employees: Specifies the trigger activates after an update on the employees table.
+
+FOR EACH ROW: Ensures the trigger executes for each row affected by the update.
+
+BEGIN: Starts the block of SQL statements to execute when the trigger fires.
+
+INSERT INTO employees_log (employee_id, name, action): Inserts a new record into the employees_log table.
+
+VALUES (OLD.employee_id, OLD.name, 'updated'): Uses the old values of employee_id and name before the update, and sets the action as 'updated'.
+
+END;: Ends the trigger definition.
+------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

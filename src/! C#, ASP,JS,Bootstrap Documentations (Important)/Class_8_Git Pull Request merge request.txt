@@ -1,0 +1,13 @@
+Class:8
+* A pull request – also referred to as a merge request – is an event that takes place in software development when a   contributor/developer is ready to begin the process of merging new code changes with the main project repository.
+#  pull requests>>create pull request>> after mark>> merge with main
+
+*Pull Request Templates
+Pull request templates can be created and stored to help expedite the process and ensure consistency across all team members. When creating your pull request template, it’s important to include:
+
+*Summary of Code Update: Was this a bug fix or a new feature? Summarize what was accomplished with this new code update.
+*Unit Test Cases: Was this code update tested across all devices and browsers?
+
+
+fork
+forked repository

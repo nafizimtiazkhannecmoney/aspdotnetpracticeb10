@@ -1,0 +1,16 @@
+ DataTable dataTable = new DataTable();
+ string ConnString = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
+ 
+ SqlConnection connection = new SqlConnection(ConnString);
+ connection.Open();
+
+ SqlCommand cmd = new SqlCommand();
+ cmd.Connection = connection;
+ cmd.CommandText = "dbo.spOst_LstMember";      // Temporary, Stored Procedure Hasn't Created Yet
+ cmd.CommandType = CommandType.StoredProcedure;
+ cmd.CommandTimeout = 0;
+
+ SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+ adapter.Fill(dataTable);
+ cmd.Dispose();
+ connection.Close();

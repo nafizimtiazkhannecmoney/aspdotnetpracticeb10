@@ -1,0 +1,39 @@
+
+
+1. DRY- Dont repeat yoursefl - Reduces Duplication
+
+2. Encapsulate What Changes- Encapsulate it or make it abstract
+Hides implementation detail, helps maintenance
+
+3. Favour Composition Over Inheritance- Code Reuse without cost of inflexibility  
+Composition = one calss can hold other classes instance as property
+Like student class has a class of address (Sub Object Is Composition)
+so we can make an instance of address class inside student class so that we dont have to inherit address from student
+# We cant remove inheritance so it is tightly coupled
+
+4. Programming for Interface- Helps in maintenance, improves flexibility(dependency injection)
+We can make interface and inject them, Or we can also use abstract class
+
+5. Delegation Principle- Dont do all things by yourself, delegate it.
+Give responsibility to other, like we are in accounts and we need to sort so we can give this responsibility to other
+Its like single responsibiloty principle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,344 @@
+Class 1: 
+Start to 1.08.10 Rules, Conditions, Motivations, Success story of previous batch students and General Discussion. 
+1.08.11 to 1.39.50 Version Control (Using Command prompt).
+1.39.51 to End Discussion about AI, AI Future and Q&A.
+
+
+Class 2:
+Start to 00.03.05 Q&A About Control (Using Command prompt).
+00.03.06 to 00.18.10 Control (Using Visul Stdio).
+00.18.11 to 1.58.00 Reflection
+1.58.01 to End General Discussion. 
+
+Class 3:
+Start to 01.08.20 New features in C# 13,12,11.
+01.08.21 to 01.26.00 Assignment-1 related discussion.
+01.26.01 to 02.02.30 Gitflow 
+02.02.31 to end Q&A
+
+
+Class 4:
+Start to 00.50.00 Discussion about 1st assignment
+00.50.01 to 01.03.50 Discussion about cheating and code copy in assignment.
+01.03.51 to 01.08.50 Break
+01.08.51 to 1.13.30 Introduction to dot net framework. 
+1.13.31 to 2.02.20 Create first MVC Project, discussion about file structure, default routing
+02.02.21 to end Q&A
+
+
+Class 5:
+Start to 00.09.15 Discussion about 1st assignment
+00.09.16 to 01.30.10 Discussion about file structure
+01.30.11 to end Discussion about tag helper, html helper
+
+
+Class 6:
+Start to 00.02.40 Discussion about tag helper, html helper.
+00.02.41 to 00.44.20 Validation, Data annotation, Regular expression
+00.44.21 to end Dependency Injection, Transient, add scope, add singleton
+
+
+Class 7:
+Start to 00.06.10 Discussion on Dependency Injection, FromKeyedServices.
+00.06.11 to 00.21.56 Discussion about Autofac 
+00.21.57 to 01.07.11 Discussion about when should be final project given
+01.07.12 to 01.41.00 Discussion about Logger configuration and Serilog
+01.41.01 to End General Discussion and Q&A
+
+
+Class 8:
+Start to 00.12.56 Discussion about how to do final project *** very important 
+00.12.57 to 00.38.47 Discussion about Store Procedures
+00.38.58 to 00.46.13 Discussion about Function in SQL
+00.46.14 to end Discussion about Dynamic SQL
+
+
+Class 9:
+Start to 00.08.20 Discussion about assignment result
+00.08.21 to 00.21.12 Discussion about Bootstrap
+00.21.13 to 01.46.12 Areas, Theme Integration
+01.46.13 to end Q&A
+
+
+Class 10:
+Start to 00.06.10 Discussion about assignment 1 and Q&A
+00.06.11 to 00.49.10 Discussion about SASS
+00.49.11 to 01.14.00 Q&A, Job life difficulty,
+01.14.01 to 01.30.37 Use case diagram
+01.30.38 to 01.39.24 Class diagram
+01.39.25 to 01.54.50 Sequence diagram
+01.54.51 to end Q&A
+
+
+
+Class 11:
+Start to 00.07.00 General discussion 
+00.07.01 to 00.25.35 discussion about SOLID Principles (Theory)
+00.25.36 to 00.38.50 discussion about another 5 important principles (Theory)
+Creational design patterns 
+00.38.51 to 00.57.30 Singleton pattern
+00.57.31 to 01.12.50 Factory pattern
+01.12.51 to 01.34.35 Builder pattern
+01.34.36 to end general discussion
+
+
+
+Class 12:
+Start to 00.11.16 prototype pattern
+00.11.17 to 00.39.40 abstract factory pattern
+00.39.40 to 01.19.25 clean architecture 
+01.19.26 to 01.29.40 repository pattern
+01.29.41 to end Q&A
+
+
+
+Class 13:
+Start to 00.29.10 General discussion 
+00.29.11 to 00.46.50 Unit of work pattern
+00.46.51 to 01.43.25 clean architecture Coding (Very Important) 
+01.43.26 to end Q&A
+
+
+
+Class 14:
+Start to end clean architecture Coding (Very Important)
+ i. Repository Pattern Setup
+ii. Unit of work Pattern Setup
+
+
+
+Class 15:
+Start to 00.09.00 General discussion
+00.09.01 to end clean architecture Coding (Very Important)
+
+
+
+Class 16:  
+Migration added and discussion about clean architecture code
+
+
+Class 17:
+Start to 00.08.10 General discussion 
+00.29.11 to 00.26.00 Data Annotation
+00.26.01 to end Data Table, Index Page.
+
+
+Class 18: 
+Start to 00.21.30 General discussion
+00.21.31 to 01.10.30 Index Page(Still not completed)
+01.10.31 to end Create Response(Showing added successfully massage using temp data)
+
+
+Class 19:
+Data Table completed. Q&A 
+Q&A Start to end.
+
+
+
+Class 20: 
+Start to 00.20.50 General discussion
+00.20.51 to end DataTable (ColumnDefs, Update, Delete)
+
+
+
+Class 21:
+Start to 00.43.00 Create Category Table and update Blogpost tables.
+(Update database without removing existing data -> Very Importent).
+00.43.01 to end Code writing in Store procedure and how to add Store procedure in database using migration.
+
+
+Class 22:
+Start to 00.07.45 General discussion.
+00.07.46 to 01.20.17 Store Procedure implement in backend 
+01.20.18 to 01.49.30 Store Procedure implement in frontend
+01.49.31 to end  Q&A
+
+
+Class 23:
+Start to 00.10.10 Discussion about Assignment 3.
+00.10.01 to End Advance search completed Advance search
+
+
+Class 24:
+Start to 00.30.30 How to create Select (Razor utility)
+00.30.31 to End Auto Mapper
+
+
+Class 25:
+00.00.00 to 00.13.00 General discussion
+00.13.01 to 01.00.35 Validation
+01.00.36 to 01.32.10 Fix date for advance search
+01.32.11 to end General discussion
+
+
+Class 26:
+00.00.00 to 00.38.20 discussion about final project
+00.38.21 to 00.50.00 Discussion about Object oriented programming(Not related to class and syllables)
+00.50.01 to 01.02.54 Identity Frame work. Default table added successfully. 
+01.02.55 to 01.19.44 creating page from Scaffolded. Discussion about Razor page(MVVM)
+01.19.45 to 01.44.00 Customized Identity is not completed(Created Identity folder, Update in Program.cs, Migration failed, Again Migration done
+01.44.01 to 01.52.10 GeneraL Discussion
+01.52.11 to End  (program crashed)
+
+Class 27:
+00.00.00 to 00.32.00 General Discussion
+00.32.01 to 00.53.25 Customization of Identity. Creating Account controller and understand Account controller code.
+00.53.26 to 01.06.35 View for Account Controller. Account Create and register successfully .
+01.06.36 to 01.29.12 Login, Logout complete.
+01.29.13 to 01.41.00 Working with return URL.
+01.41.01 to End Q&A
+
+Note: Have to change Identity User to Application User.
+
+
+Class 28:
+00.00.00 to 00.03.30 General Discussion
+00.03.31 to 00.59.00 Email sending using mailkit
+00.59.01 to 01.24.24 General Discussion and Discussion about job Industry
+01.24.25 to 01.42.45 Role based Authentication
+01.42.46 to End Q&A
+
+Note: Install MailKit, IEmailUtity, EmailUtity, SmtpEncryptionTypes, Update AppSettings for SMTP settings, Update Program.cs
+
+
+Class 29:
+00.00.00 to 01.11.15 Final Project Review
+01.11.16 to End Role based, Claim based, Policy based, Authentication, Authorization
+
+
+Note: Member controller,Role Create Model, View Create.
+
+
+
+Class 30:
+00.00.00 to 00.42.00 General discussion and frustration about our performance 
+00.42.01 to 01.01.40 Policy based Authorization.
+01.01.41 to 01.10.00 General discussion.
+01.10.01 to 01.32.00 claim based Authorization
+01.32.01 to 01.36.45 Q&A
+01.36.46 to 01.55.30 Custom claim based Authorization/custom requirement
+01.55.31 to end Q&A
+
+
+Class 31:
+Start to 39.40 discussion about data seeding in identity tables. How to seed data in database. 
+Keep one or two DbSet in project?
+39.40 to 44.25 discussion about course topics 
+44.26 to 01.07.30 SQL Injection
+01.07.31  to 01.22.25 CSRF
+01.22.26 to 01.36.55 Script injection 
+01.36.56 to 01.44.16 DDos attack 
+1.44.17 to 01.49.55 SSL certificate and HTTPS
+1.49.56 to end precautions (database backup, error logging and encrypting to minimize damage)
+
+
+
+Class 32:
+0 to 1.03.30 General discussion.
+01.03.31 to 01.16.45 (VMware or Vmbox)
+1.16.46 to  1.24.55 Docker(Conceptual discussion)
+1.24.56 to end Docker(Practical Not related our project)
+
+
+
+Class 33:
+00 to 19.30 SQL server configuration, port configuration, how to find IP address, 
+how to use IP address in visual studio.
+19.30 to 31.55 Q&A and general discussion about Nafis Bhai
+31.56 to end writing docker file and Create docker image
+
+
+Class 34:
+00 to 00.26.27 Docker image create for project(Without yml and env file)
+00.26.28 to 00.50.07 Creating image with yml and env file
+00.50.08 to 01.15.57 Discussion about volumn
+01.15.58 to 
+
+
+Class 35:
+Final Project review using docker.
+
+Class 36:
+00 to 00.14.05 Q&A about Docker problems and how to open a port in windows firewall
+00.14.06 to 00.49.30 IIS Configuration
+00.49.31 to 01.02.30 Q&A
+01.02.31 to 01.24.40 DNS Configuration
+01.24.41 to Q&A about docker
+
+
+Class 37:
+00 to 00.18.15 Discussion about Hosting
+00.18.16 to 00.54.07 Discussion about cloud concept
+00.54.09 to 01.30.15 How to open AWS account in windows machine
+01.30.16 to 01.40.00 Discussion about AWS price calculation
+01.40.01 to End General Discussion
+
+
+Class 38:
+00 to 00.08.30 General Discussion
+00.08.31 to 00.11.50 Login in AWS and creating Linux instance
+00.11.51 to 00.15.44 General Discussion
+00.15.45 to 00.22.10 Connecting and install Apache
+00.22.11 to 00.34.25 General Discussion
+00.34.26 to 00.47.35 Load balancing concept discussion
+00.47.36 to 00.49.30 Image create
+00.49.31 to 00.59.08 Discussion about image and creating Instance/Server from image
+00.59.09 to 01.07.25 Creating Load Balancer
+01.07.26 to 01.21.10 General Discussion
+01.21.11 to 01.27.25 Checking Load Balancer
+01.27.26 to end Auto Scaling concept discussion
+
+
+Class 39:
+00 to 00.15.40 Auto Scaling create
+00.15.41 to 00.39.45 Checking auto scaling working or not
+00.39.46 to 
+
+
+
+Class 40:
+00 to 00.14.00 Discussion about no SQL
+00.14.01 to 00.16.50 RDS
+00.16.51 to 00.33.40 SQS(Conceptual discussion)
+00.33.41 to 01.14.25 SQS(Practical SQS create in AWS) 
+01.14.26 to 01.46.10 Discussion about DynamoDB 
+01.46.11 to end Q&A
+
+
+Class 41:
+00 to 00.19.50 General discussion
+00.19.51 to 00.29.20 Create user, Key pair credential, How to use AWS from code
+00.29.21 to 01.24.17 Worker service
+01.24.18 to 01.31.11 steps how to use S3 bucket(Only conceptual discussion)
+01.31.12 to 01.44.50 AWS S3 bucket use in command line
+01.44.51 to 01.51.05 discussion about documentation and how to use and understand command
+01.51.06 to end General discussion about where to use command line and difference between 
+new released dotnet and current version 
+
+
+Class 42:
+00 to 00.13.05 discussion about how to dockerize database
+00.13.06 to 01.00.20 General discussion
+01.00.21 to 01.35.07 Create S3 bucket, Upload file in S3 bucket using console app
+01.35.08 to 01.44.50 SQS practical using console app
+01.44.51 to end find out the problem in new version code of S3 repository
+
+
+Class 43:
+00 to 00.24.30 General discussion
+00.24.31 to 2.01.00 Unit testing(Continued to the next class)
+02.01.01 to end General discussion
+
+
+Class 44: 
+No course related topic only General discussion
+
+
+Class 45:
+
+
+
+
+
+
+

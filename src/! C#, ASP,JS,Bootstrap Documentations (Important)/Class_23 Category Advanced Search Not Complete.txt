@@ -1,0 +1,47 @@
+
+Assignment 3 errors Pull Rrequest ---3:29
+Explain Unitof work error, blog unit of work---4:00 (Inventoryunitofwork, inventorydbcontext) Fix error in PR and Resolve Conversation(Put ok on classroom)
+Advanced Search(ado.net ot fixed, but fixed in my code)---17:30 	
+DTO(Data Transfer Object)- 20:18
+asp-items--25:21
+Data tola in Model -- 27:10
+category
+ ..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

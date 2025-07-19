@@ -1,0 +1,88 @@
+
+ 1### Add Delete button In Edit Page
+===================================================================================================================
+Edit.cshtml
+===================================================================================================================
+@model NZWalks.UI.Models.DTO.RegionDTO
+<h1 class="mt-3">Edit Region</h1>
+
+@if (Model != null)
+{
+    <form method="post">
+        <div class="mt-3">
+            <label class="form-label">Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="mt-3">
+            <label class="form-label">Code</label>
+            <input type="text" class="form-control" asp-for="Code" />
+            <span asp-validation-for="Code" class="text-danger"></span>
+        </div>
+        <div class="mt-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" type="text" asp-for="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mt-3">
+            <label class="form-label">Img URL</label>
+            <input type="text" class="form-control" asp-for="RegionImgUrl" />
+            <span asp-validation-for="RegionImgUrl" class="text-danger"></span>
+        </div>
+
+        <div class="mt-3 d-flex justify-content-between">
+            <button type="submit" class="btn btn alert-primary">Save</button>
+            <button type="submit" asp-controller="Regions" asp-action="Delete" class="btn btn-danger">Delete</button>
+        </div>
+    </form>
+}
+
+@section Scripts {
+    <!-- Include the client-side validation scripts -->
+    <partial name="_ValidationScriptsPartial" />
+}
+===================================================================================================================
+
+ 2### Add The Delete Iactionmethod In Controller
+===================================================================================================================
+RegionsController.cs
+===================================================================================================================
+[HttpPost]
+public async Task<IActionResult> Delete(RegionDTO request)
+{
+    var client = httpClientFactory.CreateClient();
+    var httpResponseMessage = await client.DeleteAsync($"https://localhost:7142/api/regions/{request.Id}");
+    httpResponseMessage.EnsureSuccessStatusCode();
+    return RedirectToAction("Index", "Regions");
+}
+===================================================================================================================
+
+
+
+Done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

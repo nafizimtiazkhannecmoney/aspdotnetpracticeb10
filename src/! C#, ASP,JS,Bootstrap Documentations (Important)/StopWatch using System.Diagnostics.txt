@@ -1,0 +1,73 @@
+
+This would print out how many milliseconds have elapsed on each iteration as well as the end elapsed milliseconds. 
+As this is a short program, you can convert to nanoseconds by using ticks like so:
+
+long ticks = stopwatch.ElapsedTicks;
+double nanoseconds = (ticks * 1e9) / Stopwatch.Frequency;
+
+
+
+
+=======================================================================
+using System.Diagnostics;
+
+// Create a new Stopwatch instance
+var sw = new Stopwatch();
+
+// Start the stop watch clock
+sw.Start();
+
+// run your code
+var sum = 0;
+for (int i = 0; i < 100; i++)
+{
+    sum += i * i;
+    Console.WriteLine($"{sw.ElapsedMilliseconds}");
+}
+// Stop the clock !
+sw.Stop();
+
+// Output total time elapsed on the Stopwatch.
+Console.WriteLine($"Elapsed time: {sw.ElapsedMilliseconds} ms");
+=======================================================================
+
+=======================================================================
+ List<RegionDTO> response = new List<RegionDTO>();
+
+     // Get All Regions from API
+     var client = httpClientFactory.CreateClient();
+     
+     var startTime = Stopwatch.GetTimestamp();            	// START Stop Watch
+     var httpResponseMessage = await client.GetAsync("https://localhost:7142/api/regions");
+     var deltaTime = Stopwatch.GetElapsedTime(startTime);      // END
+
+     httpResponseMessage.EnsureSuccessStatusCode();
+
+     string Time = deltaTime.TotalSeconds.ToString();
+     ViewBag.Time = Time;    
+
+     response.AddRange(await httpResponseMessage.Content.ReadFromJsonAsync<IEnumerable<RegionDTO>>());
+
+
+ return View(response);
+=======================================================================
+
+
+*** Or We Can Use BenchMarkDotnet for better performance monitoring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

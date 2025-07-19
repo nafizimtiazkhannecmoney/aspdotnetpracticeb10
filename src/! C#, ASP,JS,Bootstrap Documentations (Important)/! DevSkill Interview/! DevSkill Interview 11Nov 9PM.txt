@@ -1,0 +1,284 @@
+
+
+1. Reflection 
+Reflection is a feature that allows your program to inspect and manipulate types, methods, 
+and fields at runtime. ( personType.GetProperties();)
+
+Common Use Cases for Reflection:
+Plugin architectures
+Serialization/Deserialization
+Mapping between objects
+Unit testing frameworks
+Dependency injection containers
+ORM (Object-Relational Mapping) frameworks
+
+2. New Features In C#
+Primary constructors - You can create primary constructors in any class or struct type.
+Collection expressions - A new syntax to specify collection expressions, including the spread element, (..e), to expand any collection.
+Inline arrays - Inline arrays enable you to create an array of fixed size in a struct type.
+Optional parameters in lambda expressions - You can define default values for parameters on lambda expressions.
+ref readonly parameters - ref readonly parameters enables more clarity for APIs that might be using ref parameters or in parameters.
+Alias any type - You can use the using alias directive to alias any type, not just named types.
+Experimental attribute - Indicate an experimental feature.
+
+3. Gitflow Workflow
+Gitflow is an alternative Git branching model that involves the use of feature branches and multiple primary branches.
+
+Main - The Main Branch
+Develop - develop branch serves as an integration branch for features
+Feature - Each new feature should reside in its own branch, 
+          which can be pushed to the central repository for backup/collaboration. 
+          But, instead of branching off of main, feature branches use develop as their parent branch. 
+          When a feature is complete, it gets merged back into develop. 
+          Features should never interact directly with main.
+Release - Once develop has acquired enough features for a release (or a predetermined release date is approaching),
+          you fork a release branch off of develop. Creating this branch starts the next release cycle,
+          so no new features can be added after this point—only bug fixes, documentation generation, 
+          and other release-oriented tasks should go in this branch. Once it's ready to ship,
+          the release branch gets merged into main and tagged with a version number. In addition,
+          it should be merged back into develop, which may have progressed since the release was initiated.
+Hotfix - Maintenance or “hotfix” branches are used to quickly patch production releases. 
+          Hotfix branches are a lot like release branches and feature branches except they're based on main instead of develop. 
+          This is the only branch that should fork directly off of main. As soon as the fix is complete,
+          it should be merged into both main and develop (or the current release branch), 
+          and main should be tagged with an updated version number.
+
+The overall flow of Gitflow is:
+
+1. A develop branch is created from main
+
+2. A release branch is created from develop
+
+3. Feature branches are created from develop
+
+4. When a feature is complete it is merged into the develop branch
+
+5. When the release branch is done it is merged into develop and main
+
+6. If an issue in main is detected a hotfix branch is created from main
+
+7. Once the hotfix is complete it is merged to both develop and main
+
+
+Routing in ASP.NET Core
+Routing is responsible for matching incoming HTTP requests and dispatching those requests to 
+the app's executable endpoints. Endpoints are the app's units of executable request-handling code. 
+Endpoints are defined in the app and configured when the app starts. The endpoint matching process 
+can extract values from the request's URL and provide those values for request processing. 
+Using endpoint information from the app, routing is also able to generate URLs that map to endpoints.
+
+Validation/Model validation
+
+Data Annotation
+
+RegularExpression
+https://www.youtube.com/watch?v=8HfjMr-VQzg
+
+Dependency Injection
+Dependency injection (DI) is a technique for achieving loose coupling between objects and their collaborators, 
+or dependencies. Most often, classes will declare their dependencies via their constructor, 
+allowing them to follow the Explicit Dependencies Principle. This approach is known as "constructor injection".
+
+AddTransient: Transient lifetime services are created each time they are requested. This lifetime works best for lightweight, stateless services. 
+AddScoped: Scoped lifetime services are created once per request. 
+AddSingleton: Singleton lifetime services are created the first time they are requested (or when ConfigureServices is run if you specify an instance there) and then every subsequent request will use the same instance.
+
+same(only exact one)
+_________________________________________________________________________________________
+Service Type   | In the Scope of a given HTTP request   | Across different HTTP requests |
+-----------------------------------------------------------------------------------------|
+Transient      | New Instance                           | New Instance                   |
+Scoped         | Same Instance                          | New Instance                   |
+Singleton      | Same Instance                          | Same Instance                  |
+------------------------------------------------------------------------------------------
+
+1. Transient: Creates a new instance of the service per request.
+2. Scoped: Creates a single instance of the service per HTTP request.
+3. Singleton: Creates a single instance of the service for the entire application lifetime.
+
+
+When to use what?
+Transient Scenarios
+
+Formatting Operations: Services that format strings, dates, or other data types.
+Helper Services: Services that provide utility methods, such as generating random numbers or unique IDs.
+Scoped Scenarios
+
+Database Context: Using Entity Framework Core's DbContext to manage database operations. Each request gets its own context to ensure changes are isolated to that request.
+Unit of Work Pattern: Managing a set of operations that must be completed in a single transaction.
+Singleton Scenarios
+
+Configuration Service: Managing application-wide settings and configuration that do not change during the application's lifetime.
+Caching Service: Storing and retrieving data that needs to be shared across the application.
+
+
+
+Autofac (Nudget for DI)
+
+Logger
+
+Serilog
+
+Stored Procedure VS Function in SQL Server
+
+
+Dynamic SQL
+
+SASS
+Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.
+.sass file gets converted to .css file when compiled
+
+Use Case Diagram-Unified Modeling Language (UML) (interactions between users (actors) and a system (usecase-place order)(system-scope))
+A Use Case Diagram in Unified Modeling Language (UML) is a visual representation that illustrates 
+the interactions between users (actors) and a system. It captures the functional requirements of a system,
+ showing how different users engage with various use cases, or specific functionalities, within the system.
+ Use case diagrams provide a high-level overview of a system’s behavior, making them useful for stakeholders,
+ developers, and analysts to understand how a system is intended to operate from the user’s perspective,
+ and how different processes relate to one another. They are crucial for defining system scope and requirements
+
+
+Class Diagram - UML
+A UML class diagram is a visual tool that represents the structure of a system by showing its 
+classes, attributes, methods, and the relationships between them. It helps everyone involved in a 
+project—like developers and designers—understand how the system is organized and how its components interact.
+
+Sequence diagram
+A Sequence Diagram is a key component of Unified Modeling Language (UML) used to visualize the interaction 
+between objects in a sequential order. It focuses on how objects communicate with each other over time, 
+making it an essential tool for modeling dynamic behavior in a system. Sequence diagrams illustrate object interactions, 
+message flows, and the sequence of operations, making them valuable for understanding use cases, designing system architecture, 
+and documenting complex processes.
+
+SOLID Principle
+
+Creational Design Patterns
+1.Abstract Factory
+This pattern is used for creating of families of related objects so we have interface or abstract class as 
+factory which have multiple methods that usually return related type.
+2.Factory Method
+To be honest,  factory method pattern is like abstract factory but with only one difference, abstract factory 
+is an object with a multiple factory method, you can use this method for high flexibility.
+3.Builder Pattern
+This pattern is used for creating big object with lots of possible configuration.
+4.Prototype
+This pattern is used for taking clone of any object with any complexity with decoupling clone from origin object.
+5.Singleton (Copy Constructor)
+ith this pattern we ensure that we have one instance of object in runtime with one general global access.
+
+
+Repository pattern
+
+Unit Of Work
+
+clean architecture
+
+Domain- Entities, Applicacion MOdel Class
+Application - Business Logic(repository pattern)
+Infrastructure - Database context, Migration
+Presenation layer
+
+
+Auto Mapper
+
+Razor page(MVVM)
+
+SQL Injection
+SQL injection is a code injection technique that might destroy your database.
+SQL injection usually occurs when you ask a user for input, like their username/userid, 
+and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database.
+SELECT * FROM Users WHERE UserId = 105 OR 1=1;
+
+CSRF Attak (Cross-site request forgery)
+For example, suppose an application contains a function that lets the user change the email address on their account. 
+When a user performs this action, they make an HTTP request like the following:
+
+POST /email/change HTTP/1.1
+Host: vulnerable-website.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 30
+Cookie: session=yvthwsztyeQkAPzeQ5gHgTvlyxHfsAfE
+
+email=wiener@normal-user.com
+This meets the conditions required for CSRF:
+
+The action of changing the email address on a user's account is of interest to an attacker. Following this action, 
+the attacker will typically be able to trigger a password reset and take full control of the user's account.
+The application uses a session cookie to identify which user issued the request. There are no other tokens or 
+mechanisms in place to track user sessions.
+The attacker can easily determine the values of the request parameters that are needed to perform the action.
+
+
+Script injection 
+
+DDos attack (distributed denial-of-service)
+A distributed denial-of-service (DDoS) attack is a malicious attempt to disrupt the normal traffic of a targeted server, 
+service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.
+
+
+SSL certificate  (Allows to use HTTPS (secured))
+SSL certificates are what enable websites to use HTTPS, which is more secure than HTTP. 
+An SSL certificate is a data file hosted in a website's origin server. SSL certificates make SSL/TLS encryption possible, 
+and they contain the website's public key and the website's identity, along with related information.
+
+
+In order to provide a high degree of privacy, SSL encrypts data that is transmitted across the web. 
+This means that anyone who tries to intercept this data will only see a garbled mix of characters that is nearly impossible to decrypt.
+
+
+IIS
+
+DNS Configuration
+
+Load balancer (balancing load between 2 server, loading one then loading another)
+Load Balancer is a virtual machine or appliance that balances your web application load that could be 
+Http or Https traffic that you are getting in. It balances a load of multiple web servers so that no web server gets overwhelmed.
+
+
+Auto Scaling(No additional cost,You only pay for the underlying resources (EC2 instances, etc.).)
+Auto Scaling is a cloud computing feature that enables an application to automatically adjust its resources, 
+such as servers and compute instances, based on real-time demand. The goal is to ensure sufficient resources 
+for performance and availability, while optimizing costs by scaling up or down as needed.
+
+
+Horizontal Scaling, Vertical Scaling
+
+RDS (Amazon Relational Database Service)
+Amazon Relational Database Service (Amazon RDS) is an easy-to-manage relational 
+database service optimized for total cost of ownership.
+
+SQS (Simple Queue Service)
+
+DynamoDB  (key value data base)
+Amazon DynamoDB is a cloud-native NoSQL primarily key-value database. Let’s define each of those terms.
+
+Worker service
+Worker services in .NET Core have emerged as a powerful mechanism for building background services that run 
+continuously and perform various tasks.
+
+ data processing, message queue consumption, or scheduled tasks.
+
+
+S3 Bucket (Amazon Simple Storage Service)
+Amazon Simple Storage Service (Amazon S3) is an object storage service 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

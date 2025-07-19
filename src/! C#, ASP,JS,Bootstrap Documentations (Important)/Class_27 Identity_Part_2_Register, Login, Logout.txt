@@ -1,0 +1,628 @@
+Class starts  32:10
+Topic: Register, Login, Logout
+
+As we stopped  //app.MapRazorPages(); line so the razor pages wont work
+So we need to add AccountController
+
+##Inventory.Web>>Controller(Outside Area)>>New Controller>>MVC Controller Empty
+
+## Now we will transfer the codes of registration from Razor PAges
+
+## Replace IdentityUser(Ctrl+H) to ApplicationUser (Only in Web Project)(Select Current Project) (add using directives, namespaces)
+
+## Take all the contents of Register.cshtml.cs and paste it to Account controller(yes replace the Index action also)
+
+## Make a new model inside global>>Model>>RegisterModel.cs, and delete the Input MOdel From AccountController
+also remove bind property from Controller
+[
+        [BindProperty]
+        public InputModel Input { get; set; }
+]
+
+also remove emailsender from paraemter and property
+
+also ILogger<RegisterModel> should be the controller name ILogger<AccountController>
+
+also constructor name should be controller name
+
+also take this code from AccountController to RegisterModel
+[
+public string ReturnUrl { get; set; }
+
+public IList<AuthenticationScheme> ExternalLogins { get; set; }
+]
+
+and make this 2 fields nullable/ so we dont get any errors
+[
+public string? ReturnUrl { get; set; }
+
+public IList<AuthenticationScheme>? ExternalLogins { get; set; }
+]
+
+also remove the InputModel from AccountController
+
+also change to method names---- OnGetAsync>>to>>RegisterAsync
+## slight error change RegisterModel to>>RegistrationModel (thus we have a conflict)
+## Also remove >>using DevSkill.Inventory.Web.Areas.Identity.Pages.Account;
+
+finally the method code should be
+[
+public async Task<IActionResult> RegisterAsync(string returnUrl = null)
+{
+    var model = new RegistrationModel();
+    model.ReturnUrl = returnUrl;
+    model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+    return View(model);
+}
+]
+
+ also OnPostAsync should be RegisterAsync
+
+and the code of this method is 
+
+----------------------------------------------------------------------------------[][Start]
+[HttpPost, ValidateAntiForgeryToken]
+public async Task<IActionResult> RegisterAsync(RegistrationModel model)
+{
+    model.ReturnUrl ??= Url.Content("~/");
+    model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+    if (ModelState.IsValid)
+    {
+        var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+        var result = await _userManager.CreateAsync(user, model.Password);
+        if (result.Succeeded)
+        {
+            _logger.LogInformation("User created a new account with password.");
+
+
+            //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            //var callbackUrl = Url.Page(
+            //    "/Account/ConfirmEmail",
+            //    pageHandler: null,
+            //    values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+            //    protocol: Request.Scheme);
+
+            //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+            //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+
+            if (_userManager.Options.SignIn.RequireConfirmedAccount)
+            {
+                return RedirectToAction("RegisterConfirmation", new { email = model.Email, returnUrl = model.ReturnUrl });
+            }
+            else
+            {
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                return LocalRedirect(model.ReturnUrl);
+            }
+        }
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
+    }
+
+    // If we got this far, something failed, redisplay form
+    return View(model);
+}
+----------------------------------------------------------------------------------[][END]
+
+
+## Now we add a view to RegisterAsync[HttpPost](Razor View) and copy from the Identity>>Pages>>Account>>Register.cshtml
+and paste it to RegisterAsync.cshtml>>copy all from @model(change name RegistrationModel)
+
+--change fields
+--change this for the main form ()
+ <form id="registerForm" asp-area="" asp-action="Register" asp-controller="Account" asp-antiforgery="true" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+--asp-page >> asp-action, asp-area="", asp-controller="Account", asp-area=""
+
+##Change the links in _LoginPartial.cshtml
+
+
+
+
+----------------------------------------------------------------------------------[_LoginPartial.cshtml][Start]
+@using DevSkill.Inventory.Infrastructure.Identity
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <a  class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Index" title="Manage">Hello @User.Identity?.Name!</a>
+    </li>
+    <li class="nav-item">
+        <form  class="form-inline" asp-area="" asp-controller="Account" asp-action="Logout"  asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+    </li>
+}
+</ul>
+
+----------------------------------------------------------------------------------[_LoginPartial.cshtml][END]
+
+##Change the name of view RegisterAsync to Register
+##>Rebuild
+#>>Start
+## Registration Done, Now We have to make Login CRUD
+
+## Add  [AllowAnonymous] to Account controller in -- RegisterAsync(both)
+
+
+## Take this code from below in Login.cshtml.cs from Identity
+
+----------------------------------------------------------------------------------[Login.cshtml.cs][Start]
+public async Task OnGetAsync(string returnUrl = null)
+{
+    if (!string.IsNullOrEmpty(ErrorMessage))
+    {
+        ModelState.AddModelError(string.Empty, ErrorMessage);
+    }
+
+    returnUrl ??= Url.Content("~/");
+
+    // Clear the existing external cookie to ensure a clean login process
+    await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+
+    ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+    ReturnUrl = returnUrl;
+}
+
+public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+{
+    returnUrl ??= Url.Content("~/");
+
+    ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+    if (ModelState.IsValid)
+    {
+        // This doesn't count login failures towards account lockout
+        // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+        var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+        if (result.Succeeded)
+        {
+            _logger.LogInformation("User logged in.");
+            return LocalRedirect(returnUrl);
+        }
+        if (result.RequiresTwoFactor)
+        {
+            return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
+        }
+        if (result.IsLockedOut)
+        {
+            _logger.LogWarning("User account locked out.");
+            return RedirectToPage("./Lockout");
+        }
+        else
+        {
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            return Page();
+        }
+    }
+
+    // If we got this far, something failed, redisplay form
+    return Page();
+}
+----------------------------------------------------------------------------------[Login.cshtml.cs][END]
+
+## Then paste this to AccountController.cs
+
+
+## Now take the Input model from Login.cshtml.cs and make A SigninModel.cs
+
+## Also take 2 fields From RegistrationModel
+
+----------------------------------------------------------------------------------[SigninModel.cs][Start]
+using Microsoft.AspNetCore.Authentication;
+using System.ComponentModel.DataAnnotations;
+
+namespace DevSkill.Inventory.Web.Models
+{
+    public class SigninModel
+    {
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        [Display(Name = "Remember me?")]
+        public bool RememberMe { get; set; }
+
+        public string? ReturnUrl { get; set; }
+        public IList<AuthenticationScheme>? ExternalLogins { get; set; }
+    }
+}
+
+----------------------------------------------------------------------------------[SigninModel.cs][END]
+
+
+
+## Now change action names see the code
+--OnGetAsync-> Task<IActionResult> LoginAsync
+
+## Now the function looks like this 
+[
+[AllowAnonymous]
+public async Task<IActionResult> LoginAsync(string returnUrl = null)
+{
+    var model = new SigninModel();
+    model.ReturnUrl ??= Url.Content("~/");
+
+    // Clear the existing external cookie to ensure a clean login process
+    await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+
+    model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+    return View(model);
+}
+]
+
+
+## Now the postmethod --OnPostAsync-->LoginAsync
+
+
+## The whole code for account controller is given below
+
+
+----------------------------------------------------------------------------------[AccountController.cs][Start]
+namespace DevSkill.Inventory.Web.Controllers
+{
+    public class AccountController : Controller
+    {
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ILogger<AccountController> _logger;
+
+        public AccountController(
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
+            ILogger<AccountController> logger)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _logger = logger;
+        }
+
+
+
+        [AllowAnonymous]
+        public async Task<IActionResult> RegisterAsync(string returnUrl = null)
+        {
+            var model = new RegistrationModel();
+            model.ReturnUrl = returnUrl;
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            return View(model);
+        }
+
+
+        [HttpPost, ValidateAntiForgeryToken, AllowAnonymous]
+        public async Task<IActionResult> RegisterAsync(RegistrationModel model)
+        {
+            model.ReturnUrl ??= Url.Content("~/");
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation("User created a new account with password.");
+
+
+                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                    //var callbackUrl = Url.Page(
+                    //    "/Account/ConfirmEmail",
+                    //    pageHandler: null,
+                    //    values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+                    //    protocol: Request.Scheme);
+
+                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+
+                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                    {
+                        return RedirectToAction("RegisterConfirmation", new { email = model.Email, returnUrl = model.ReturnUrl });
+                    }
+                    else
+                    {
+                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        return LocalRedirect(model.ReturnUrl);
+                    }
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> LoginAsync(string returnUrl = null)
+        {
+            var model = new SigninModel();
+            model.ReturnUrl ??= Url.Content("~/");
+
+            // Clear the existing external cookie to ensure a clean login process
+            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            return View(model);
+        }
+
+        [HttpPost, ValidateAntiForgeryToken, AllowAnonymous]
+        public async Task<IActionResult> LoginAsync(SigninModel model)
+        {
+            model.ReturnUrl ??= Url.Content("~/");
+
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            if (ModelState.IsValid)
+            {
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation("User logged in.");
+                    return LocalRedirect(model.ReturnUrl);
+                }
+                if (result.RequiresTwoFactor)
+                {
+                    return RedirectToAction("LoginWith2fa", new { ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
+                }
+                if (result.IsLockedOut)
+                {
+                    _logger.LogWarning("User account locked out.");
+                    return RedirectToAction("Lockout");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return View(model);
+                }
+            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+    }
+}
+
+----------------------------------------------------------------------------------[AccountController.cs][END]
+
+## Now we add view(Razor View) to IActionResult LoginAsync-- Name it Login
+
+## Take All the codes from Identity>>Login.cshtml and paste it to the new view page (which is Ligin.cstml)
+
+## We need Logout
+
+## Add this Logout Action to AccountController
+
+[
+ public async Task<IActionResult> LogoutAsync(string returnUrl = null)
+ {
+     await _signInManager.SignOutAsync();
+     await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+     return LocalRedirect(returnUrl);
+ }
+]
+
+
+
+## IMPORTANT-- To Block Anonymous-- We add [Authorize] in the AccountController and ProductController(Area>>Admin)
+## Now no one can access these pages without Logging In
+
+## To add return url , the browser to remember the url to access before login we add this line to Login.cshtml (Not working Actually )
+[
+<form id="account" method="post" asp-antiforgery="true" asp-area="" asp-controller="Account" 
+asp-route-retutnUrl="@Model.ReturnUrl" asp-action="Login">
+]
+
+## Working Code , AccountController
+add--- model.ReturnUrl = returnUrl == null ?  Url.Content("~/") : returnUrl;--- in LoginAsync(Get)
+add--- returnUrl ??= Url.Content("~/");-- in LogoutAsync
+
+
+So the entire code is 
+----------------------------------------------------------------------------------[AccountController.cs][Start]
+using DevSkill.Inventory.Infrastructure.Identity;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Encodings.Web;
+using System.Text;
+using DevSkill.Inventory.Web.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+
+namespace DevSkill.Inventory.Web.Controllers
+{
+    [Authorize]
+    public class AccountController : Controller
+    {
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ILogger<AccountController> _logger;
+
+        public AccountController(
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
+            ILogger<AccountController> logger)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _logger = logger;
+        }
+
+
+
+        [AllowAnonymous]
+        public async Task<IActionResult> RegisterAsync(string returnUrl = null)
+        {
+            var model = new RegistrationModel();
+            model.ReturnUrl = returnUrl;
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            return View(model);
+        }
+
+
+        [HttpPost, ValidateAntiForgeryToken, AllowAnonymous]
+        public async Task<IActionResult> RegisterAsync(RegistrationModel model)
+        {
+            model.ReturnUrl ??= Url.Content("~/");
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation("User created a new account with password.");
+
+
+                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                    //var callbackUrl = Url.Page(
+                    //    "/Account/ConfirmEmail",
+                    //    pageHandler: null,
+                    //    values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+                    //    protocol: Request.Scheme);
+
+                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+
+                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                    {
+                        return RedirectToAction("RegisterConfirmation", new { email = model.Email, returnUrl = model.ReturnUrl });
+                    }
+                    else
+                    {
+                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        return LocalRedirect(model.ReturnUrl);
+                    }
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> LoginAsync(string returnUrl = null)
+        {
+            var model = new SigninModel();
+            model.ReturnUrl = returnUrl == null ?  Url.Content("~/") : returnUrl;
+
+            // Clear the existing external cookie to ensure a clean login process
+            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            return View(model);
+        }
+
+        [HttpPost, ValidateAntiForgeryToken, AllowAnonymous]
+        public async Task<IActionResult> LoginAsync(SigninModel model)
+        {
+            model.ReturnUrl ??= Url.Content("~/");
+
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            if (ModelState.IsValid)
+            {
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation("User logged in.");
+                    return LocalRedirect(model.ReturnUrl);
+                }
+                if (result.RequiresTwoFactor)
+                {
+                    return RedirectToAction("LoginWith2fa", new { ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
+                }
+                if (result.IsLockedOut)
+                {
+                    _logger.LogWarning("User account locked out.");
+                    return RedirectToAction("Lockout");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return View(model);
+                }
+            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+
+        
+        public async Task<IActionResult> LogoutAsync(string returnUrl = null)
+        {
+            await _signInManager.SignOutAsync();
+            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+
+            returnUrl ??= Url.Content("~/");
+            return LocalRedirect(returnUrl);
+        }
+    }
+}
+
+----------------------------------------------------------------------------------[AccountController.cs][END]
+
+
+##Build>>Start
+
+>>>>>>>>>Bootstrap Landing page fro e commerce
+
+Done
+
+
+
+----------------------------------------------------------------------------------[][Start]
+----------------------------------------------------------------------------------[][END]
+----------------------------------------------------------------------------------[][Start]
+----------------------------------------------------------------------------------[][END]
+----------------------------------------------------------------------------------[][Start]
+----------------------------------------------------------------------------------[][END]
+----------------------------------------------------------------------------------[][Start]
+----------------------------------------------------------------------------------[][END]
+----------------------------------------------------------------------------------[][Start]
+----------------------------------------------------------------------------------[][END]
+----------------------------------------------------------------------------------[][Start]
+----------------------------------------------------------------------------------[][END]

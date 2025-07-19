@@ -1,0 +1,80 @@
+Topic                      P
+
+Git----------------------------------------------------2
+Data Types --------------------------------------------2
+Arrays-------------------------------------------------3
+MultiDimentional/Rectangular Array---------------------3
+Jagged Array-------------------------------------------4
+ReadLine()---------------------------------------------7
+Switch Case--------------------------------------------8
+Ternary Operator?:-------------------------------------9
+For Loop-----------------------------------------------9
+Foreach Loop------------------------------------------10
+String Formatting Methods-----------------------------10
+Substring(Int StartIndex)--10
+String.Compare(string, string)(0,Positive,Negative)--11
+String.Concat(string, string)--11
+"string".Contains("String")--11
+"string".EndsWith("String")--12
+"string".Insert(int IndexValue, string Value)--12
+"stringng".LastIndexOf("ng")---12
+"string".Remove(Start Index, Length)--13
+"string".Replace("Replace To", "Replace With")--13
+"string".Split()--13
+"string".ToCharArray()--14
+string S = new string(chars)--15
+"string".Trim(CharsToTrim)--15
+Char.IsPunctuation(Char)--16
+Classes & Objects--17
+Constructors(Default|Parameter|Copy|Private|Static)--18
+Properties{get;set;}(Encapsulation)--23
+Automatic Properties(Short Hand--24
+Overloading(Compile-Time)(Polymorphism)--25
+Access Modifiers(Pu|Pr|Pro|Int|ProInt|PrPro)(Encapsulation)--26
+~Destructor();(Garbage Collector)--27
+Properties(GET SET)(Encapsulation)--27
+Static|Static Class|Static Variable|Static Method|Static Constructor--28
+Abstraction --33
+Interface(Abstraction)--35
+Override(Run-Time)(Polymorphism)--37
+Method Hiding(new-Keyword)--39
+Sealed(Restrict Inheriting)---41
+NameSpaces(Container)--41
+Constant & Read-Only(Can't Overwrite) ---43
+Partial Class(Multiple Dev)--45
+Structures(Value-Type, Default CTOR, Can't Inherit)---48
+Enum(Named Constants)--49
+DateTime(Value Type Structure)--50
+String Builder(System.Text)--54
+Method Parameter Modifiers(None|Ref|Out|Params)--56
+Operator Overloading-60
+Tuple|(double, int)t=(4.5, 3)|(Custom Data Type)--66
+Anonymous Object/Type(Similar To tuple)--67
+Nullable? Type--68
+Collections--70
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

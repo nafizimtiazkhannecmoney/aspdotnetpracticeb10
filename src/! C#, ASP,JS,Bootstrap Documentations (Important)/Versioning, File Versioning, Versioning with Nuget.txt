@@ -1,0 +1,180 @@
+
+### Versioning By Folder Structure
+
+ 1### make two folders in the project -> V1 and V2
+ 2### Copy the entire controller folder and paste it to both V1 and V2 folders
+ 3### Then Delete the Controller Folder
+ 4### Change the name spaces -
+	namespace Countrie.V1.Controllers
+	namespace Countrie.V2.Controllers
+ 5### Change the Route -
+	[Route("api/v1/[controller]")]
+	[Route("api/v2/[controller]")]
+ 6## Also Do the Same thing for DTO and Domain Models Like DTOV1 and DTOV2
+
+
+
+### Versioning By Nuget Package
+	Package-> Microsoft.AspNetCore.Mvc.Versioning
+	     	  Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer
+
+ 1### Domain Models Like DTOV1 and DTOV2
+ 2### Install The Nuget then add this service in Program.cs
+	builder.Services.AddControllers();
+	builder.Services.AddApiVersioning();
+ 3### Setup default version, so if not specified user will go to v1 
+	builder.Services.AddControllers();
+	builder.Services.AddApiVersioning(options =>
+	{
+    		options.AssumeDefaultVersionWhenUnspecified = true;
+	});
+
+ 4### Controller Should Be Like This
+--------------------------------------------------------------------------------------------------------------------------------
+CountriesController.cs
+--------------------------------------------------------------------------------------------------------------------------------
+namespace versioningByNuget.Controllers
+{
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiController]
+    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
+    public class CountriesController : ControllerBase
+    {
+        [MapToApiVersion("1.0")]
+        [HttpGet]
+        public IActionResult GetV1()
+        {
+            var countries = CountrieData.GetCountries();
+            var DTO = new List<CountrieDTOV1>();
+            
+            foreach(var cntry in countries)
+            {
+                DTO.Add(
+                    new CountrieDTOV1
+                    {
+                        Id = cntry.Id,
+                        Name = cntry.Name
+                    });
+            }
+            return Ok(DTO);
+        }
+
+        [MapToApiVersion("2.0")]
+        [HttpGet]
+        public IActionResult GetV2()
+        {
+            var countries = CountrieData.GetCountries();
+            var DTO = new List<CountrieDTOV2>();
+
+            foreach (var cntry in countries)
+            {
+                DTO.Add(
+                    new CountrieDTOV2
+                    {
+                        Id = cntry.Id,
+                        CountrieName = cntry.Name
+                    });
+            }
+            return Ok(DTO);
+        }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------
+
+ 5### Setup for swagger support
+--------------------------------------------------------------------------------------------------------------------------------
+Program.cs
+--------------------------------------------------------------------------------------------------------------------------------
+builder.Services.AddControllers();
+builder.Services.AddApiVersioning(options =>
+{
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+    options.ReportApiVersions = true;
+});
+builder.Services.AddVersionedApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
+});
+
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+var versionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        foreach (var description in versionDescriptionProvider.ApiVersionDescriptions)
+        {
+            options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+        }
+    });
+}
+--------------------------------------------------------------------------------------------------------------------------------	
+
+ 6### Make a new Class In the Root -- ConfigureSwaggerOptions.cs 
+--------------------------------------------------------------------------------------------------------------------------------
+ConfigureSwaggerOptions.cs 	
+--------------------------------------------------------------------------------------------------------------------------------
+namespace versioningByNuget
+{
+    public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
+    {
+        private readonly IApiVersionDescriptionProvider apiVersionDescriptionProvider;
+
+        public ConfigureSwaggerOptions(IApiVersionDescriptionProvider apiVersionDescriptionProvider)
+        {
+            this.apiVersionDescriptionProvider = apiVersionDescriptionProvider;
+        }
+        public void Configure(string? name, SwaggerGenOptions options)
+        {
+            Configure(options);
+        }
+        public void Configure(SwaggerGenOptions options)
+        {
+            foreach (var item in apiVersionDescriptionProvider.ApiVersionDescriptions)
+            {
+                options.SwaggerDoc(item.GroupName, CreateVersionInfo(item));
+            } 
+        }
+
+        private OpenApiInfo CreateVersionInfo(ApiVersionDescription description)
+        {
+            var info = new OpenApiInfo
+            {
+                Title = "Your versioned API",
+                Description = description.ApiVersion.ToString(),
+            };
+            return info;
+        }
+    }
+}	
+--------------------------------------------------------------------------------------------------------------------------------	
+
+ 7### Now Inject It in the Program.cs
+--------------------------------------------------------------------------------------------------------------------------------
+Program.cs	
+--------------------------------------------------------------------------------------------------------------------------------	
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();  // Add this line
+
+var app = builder.Build();
+--------------------------------------------------------------------------------------------------------------------------------
+
+*** Done , Now We can use the versions from the Definitions from swagger on top Right Corner Dropdown
+
+
+
+Example Url :
+	https://localhost:7082/api/Countries?api-version=1.0
+	https://localhost:7082/api/Countries?api-version=2.0

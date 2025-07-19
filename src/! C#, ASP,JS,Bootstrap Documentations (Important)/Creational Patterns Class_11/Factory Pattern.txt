@@ -1,0 +1,18 @@
+
+# We use Factory Design Pattern so that we dont can create obj fast(When the obj is large)
+
+centralized function where it creates obj, and reduces pain, we dont have to make obj again and again
+
+# So factory patern helps us not to repeat any tasks to make obj
+
+# We make a function and it will initialize the obj and fill it by itself for us
+
+
+
+
+
+
+
+
+
+

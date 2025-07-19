@@ -1,0 +1,76 @@
+SOLID
+
+1. SRP (Single Responsibility Principle) One Class should do one task and do it well
+There shoulbe no mixedup code, It should serve only one purpose.
+Exapmple: Cpntoller Class, which helps in navigation, Kon route e request ashle kon route e jabe and which view page 
+it should return.
+So we shouldnt keeb any other code in controller like data operation or business Logic
+(But most of the company in bd violates this)
+
+2.Open Closed Design Principle- Open For extension but closed for modification.
+We will make a class in that way like make interface so that we dhont have to change the main codes but 
+we can also extend the class, Like we can make the child classes different, If we modifiy the main code 
+then the previous functionality will break
+
+3. LSP (Liskov Substitution Principle)- Sub type should be suitable for super type
+Like we can inherit from car type to a Mazda but we can also inherit a rocket from car but it is illogical
+Like we can inherit from car to rocket but rocket will have wheel and it dosent make any sence.
+
+4. ISP (Interface Segrigation Principle)- Avoid Monolithic Interfaces, Reduce pain on client
+We need to make reusable mini interfaces, The interface cant hold so many functions so that we cannot use it 
+everywhere, so thus its no reusable.
+
+public Interface IPrintTasks
+{
+  bool PrintContent(string content)
+  bool ScanContent(string content)
+  bool FaxContent(string content)
+  bool PhotoCopyContent(string content)
+  bool PrintDuplexContent(strin content)
+}
+
+// Above Interface is monolithic
+
+public Interface IPrintScanContent
+{
+  bool PrintContent(string content)
+  bool ScanContent(string content)
+  bool PhotoCopyContent(string content) 
+}
+
+public Interface IFaxContent
+{
+  bool FaxContent(string content)
+}
+
+public Interface IPrintDuplex
+{
+ bool PrintDuplexContent(strin content)
+}
+
+we split it in small chunks so it is more reusable
+
+5. DIP (Dependency inversion Principle)- Dependency Injection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

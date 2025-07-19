@@ -1,0 +1,589 @@
+Stored Procedure
+# Category is an independent agregate root, we might need to crud on category
+# Migrate and update db of Category table
+
+# 1:01:00 Dynamic SQL Create
+# 1:12:00 How TO Debug Dynamic SQL Tutorial
+# Kivabe stored procedure ke migration uner e nite pari (1:28:00)
+
+DONE
+
+
+
+
+--------------------------------------------------------------------------------[Product.cs]START
+# We add new property
+# We add Category as a property
+
+namespace DevSkill.Inventory.Domain.Entities
+{
+    public class Product : IEntity<Guid>
+    {
+        public Guid Id { get ; set; }
+        public string ProductName { get; set; }  //Title
+        public string Description { get; set; }  //Body 
+
+        public Category Category { get; set; }
+       
+    }
+}
+
+--------------------------------------------------------------------------------[Product.cs]END
+
+# We add more Entity--- Category.cs
+
+--------------------------------------------------------------------------------[Category.cs]START
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DevSkill.Inventory.Domain.Entities
+{
+    public  class Category : IEntity<Guid>
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+    }
+}
+
+--------------------------------------------------------------------------------[Category.cs]END
+
+
+
+--------------------------------------------------------------------------------[ProductDbCntext.cs]START
+# Infrastructure>>ProductDbContext.cs >> we add the Category table in it(DbSet<>)
+# We will Foreign key in migration
+
+using DevSkill.Inventory.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace DevSkill.Inventory.Infrastructutre
+{
+    public class ProductDbCntext : DbContext
+    {
+        private readonly string _connectionString;
+        private readonly string _migrationAssembly;
+
+        public ProductDbCntext(string connectionString, string migrationAssembly)
+        {
+            _connectionString = connectionString;
+            _migrationAssembly = migrationAssembly;
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(_connectionString,
+                    x => x.MigrationsAssembly(_migrationAssembly));
+            }
+
+            base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+        public DbSet<Product> products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+    }
+}
+--------------------------------------------------------------------------------[ProductDbCntext.cs]END
+
+# One Product will have One category, Category will have multiple Products
+
+# Now We Migrate, We have category in product thats why we get a relationship, generated a foreign key withe product category
+# And Update the database
+
+[dotnet ef migrations add "AddCategoryInProduct" --project DevSkill.Inventory.Web --context ProductDbCntext]
+[dotnet ef update --project DevSkill.Inventory.Web --context ProductDbCntext]
+
+# We create another migration
+[dotnet ef migrations add "CreateRelationBetweenProductAndCategory" --project DevSkill.Inventory.Web --context ProductDbCntext]
+
+# So now we have a blank migration "CreateRelationBetweenProductAndCategory"
+# Well we remove the last migration "CreateRelationBetweenProductAndCategory"
+[dotnet ef migrations remove --project DevSkill.Inventory.Web --context ProductDbCntext]
+# Removed "CreateRelationBetweenProductAndCategory"
+# Now We seed category, in ProductDbContext.cs
+
+# Generate new guid from Tools>>Create GUID, and place it to category id, seed it
+
+--------------------------------------------------------------------------------[ProductDbCntext]START
+using DevSkill.Inventory.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace DevSkill.Inventory.Infrastructutre
+{
+    public class ProductDbCntext : DbContext
+    {
+        private readonly string _connectionString;
+        private readonly string _migrationAssembly;
+
+        public ProductDbCntext(string connectionString, string migrationAssembly)
+        {
+            _connectionString = connectionString;
+            _migrationAssembly = migrationAssembly;
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(_connectionString,
+                    x => x.MigrationsAssembly(_migrationAssembly));
+            }
+
+            base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>().HasData(new Category 
+            { 
+                Id = new Guid("89BBDCC9-43F5-4ACE-ACFE-9CC4DB28EAD8"),
+                Name = "General" 
+            });
+            base.OnModelCreating(modelBuilder);
+        }
+        public DbSet<Product> products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+    }
+}
+
+--------------------------------------------------------------------------------[ProductDbCntext]END
+
+# We build Solution
+# And Again we generate migration
+[dotnet ef migrations add "InsertCategorySeed" --project DevSkill.Inventory.Web --context ProductDbCntext]
+
+# now we commnet out the foreignkey in "AddCategoryInProduct" migration (IUn both Up and Down)
+
+
+
+--------------------------------------------------------------------------------[AddCategoryInProduct]START
+using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace DevSkill.Inventory.Web.Migrations.ProductDbCntextMigrations
+{
+    /// <inheritdoc />
+    public partial class AddCategoryInProduct : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<Guid>(
+                name: "CategoryId",
+                table: "products",
+                type: "uniqueidentifier",
+                nullable: false,
+                defaultValue: new Guid("00000000-0000-0000-0000-000000000000"));
+
+            migrationBuilder.AddColumn<string>(
+                name: "Description",
+                table: "products",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.CreateTable(
+                name: "Categories",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categories", x => x.Id);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_products_CategoryId",
+                table: "products",
+                column: "CategoryId");
+
+            //migrationBuilder.AddForeignKey(
+            //    name: "FK_products_Categories_CategoryId",
+            //    table: "products",
+            //    column: "CategoryId",
+            //    principalTable: "Categories",
+            //    principalColumn: "Id",
+            //    onDelete: ReferentialAction.Cascade);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_products_Categories_CategoryId",
+            //    table: "products");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
+
+            migrationBuilder.DropIndex(
+                name: "IX_products_CategoryId",
+                table: "products");
+
+            migrationBuilder.DropColumn(
+                name: "CategoryId",
+                table: "products");
+
+            migrationBuilder.DropColumn(
+                name: "Description",
+                table: "products");
+        }
+    }
+}
+
+--------------------------------------------------------------------------------[AddCategoryInProduct]END
+
+# Now we do a database Update
+[dotnet ef database update --project DevSkill.Inventory.Web --context ProductDbCntext]
+
+Applying migration '20240821053512_AddCategoryInProduct'.
+Applying migration '20240821062526_InsertCategorySeed'.
+Done.
+
+# In the database we can see all the category id is 0, we need to update them
+
+# SQL diye update korbo
+[update products set CategoryId = '89BBDCC9-43F5-4ACE-ACFE-9CC4DB28EAD8']
+
+# Now we create another migration for the foreign key
+[dotnet ef migrations add "CreateProductAndCategoryRelation" --project DevSkill.Inventory.Web --context ProductDbCntext]
+
+# Now we take the commented foreign key relation from the previous migration and paste it into "CreateProductAndCategoryRelation"
+ 
+# Now we update database
+[dotnet ef database update --project DevSkill.Inventory.Web --context ProductDbCntext]
+Applying migration '20240821065225_CreateProductAndCategoryRelation'.
+Done.
+
+# we need to make a repository for category but apatoto amra na baniye kaaj korbo
+
+# We will make a new page and do the same thing(List page), we will make it with stored procedure
+
+
+# Add Product Created Date
+
+
+
+--------------------------------------------------------------------------------[Product.cs]START
+namespace DevSkill.Inventory.Domain.Entities
+{
+    public class Product : IEntity<Guid>
+    {
+        public Guid Id { get ; set; }
+        public string ProductName { get; set; }  //Title
+        public string Description { get; set; }  //Body 
+        public DateTime ProductCreateDate { get; set; }  //PostDate
+
+        public Category Category { get; set; }
+       
+    }
+}
+--------------------------------------------------------------------------------[Product.cs]END
+# Now Migrate this small change and update the database
+[dotnet ef migrations add "AddedDateInProduct" --project DevSkill.Inventory.Web --context ProductDbCntext]
+[dotnet ef database update --project DevSkill.Inventory.Web --context ProductDbCntext]
+Applying migration '20240821085517_AddedDateInProduct'.
+Done.
+
+# The date colum is null so we update the whole productcreate column
+SQL
+[update products set ProductCreateDate = '2022/3/3' where Id = '1E115365-84A7-4CEA-832D-038A134E6D8F']
+# Do it one by one for every single products
+
+# Now We make a stored procedure Programmability>>StoredProcedure>>Stored Procedure..
+# Open the Dynamic SQL doc and copy codes from it
+
+
+--------------------------------------------------------------------------------[Stored Procedure(GetProducts)]START
+
+ALTER PROCEDURE GetProducts
+	@PageIndex int,
+	@PageSize int , 
+	@OrderBy nvarchar(50),
+	@ProductName nvarchar(max) = '%',
+	@ProductDateFrom datetime = NULL,
+	@ProductDateTo datetime = NULL,
+	@Description nvarchar(max) = '%',
+	@CategoryId uniqueidentifier = NULL,
+	@Total int output,
+	@TotalDisplay int output
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	Declare @sql nvarchar(2000);
+	Declare @countsql nvarchar(2000);
+	Declare @paramList nvarchar(MAX); 
+	Declare @countparamList nvarchar(MAX);
+
+	--Collecting TOtal
+	Select @Total = count(*) from products;
+
+	--Collecting Total Display
+	SET @countsql = 'select @TotalDisplay = count(*) from products pr inner join 
+					Categories c on pr.CategoryId = c.Id where 1 = 1 ';
+
+	SET @countsql = @countsql + ' AND pr.ProductName LIKE ''%'' + @xProductName + ''%''' 
+
+	SET @countsql = @countsql + ' AND pr.Description LIKE ''%'' + @xDescription + ''%''' 
+
+	IF @ProductDateFrom IS NOT NULL
+	SET @countsql = @countsql + ' AND pr.ProductCreateDate >= @xProductDateFrom'
+
+	IF @ProductDateTo IS NOT NULL
+	SET @countsql = @countsql + ' AND pr.ProductCreateDate <= @xProductDateTo' 
+
+	IF @CategoryId IS NOT NULL
+	SET @countsql = @countsql + ' AND pr.CategoryId = @xCategoryId' 
+
+
+	SELECT @countparamlist = '@xProductName nvarchar(max),
+		@xDescription nvarchar(max),
+		@xProductDateFrom datetime,
+		@xProductDateTo datetime,
+		@xCategoryId uniqueidentifier,
+		@TotalDisplay int output' ;
+
+
+	exec sp_executesql @countsql , @countparamlist ,
+		@ProductName,
+		@Description,
+		@ProductDateFrom,
+		@ProductDateTo,
+		@CategoryId,
+		@TotalDisplay = @TotalDisplay output;
+
+
+	--Collecting Data
+	SET @sql = 'select * from products pr inner join 
+					Categories c on pr.CategoryId = c.Id where 1 = 1 ';
+
+	SET @sql = @sql + ' AND pr.ProductName LIKE ''%'' + @xProductName + ''%''' 
+
+	SET @sql = @sql + ' AND pr.Description LIKE ''%'' + @xDescription + ''%''' 
+
+	IF @ProductDateFrom IS NOT NULL
+	SET @sql = @sql + ' AND pr.ProductCreateDate >= @xProductDateFrom'
+
+	IF @ProductDateTo IS NOT NULL
+	SET @sql = @sql + ' AND pr.ProductCreateDate <= @xProductDateTo' 
+
+	IF @CategoryId IS NOT NULL
+	SET @sql = @sql + ' AND pr.CategoryId = @xCategoryId' 
+
+	SET @sql = @sql + ' Order by '+@OrderBy+' OFFSET @PageSize * (@PageIndex - 1) 
+	ROWS FETCH NEXT @PageSize ROWS ONLY';
+
+
+	SELECT @paramlist = '@xProductName nvarchar(max),
+		@xDescription nvarchar(max),
+		@xProductDateFrom datetime,
+		@xProductDateTo datetime,
+		@xCategoryId uniqueidentifier,
+		@PageIndex int,
+		@PageSize int' ;
+
+
+	exec sp_executesql @sql , @paramlist ,
+		@ProductName,
+		@Description,
+		@ProductDateFrom,
+		@ProductDateTo,
+		@CategoryId,
+		@PageIndex,
+		@PageSize;
+
+
+    
+END
+GO
+
+--------------------------------------------------------------------------------[Stored Procedure(GetProducts)]END
+# Execute the procedure
+#dbo.GetProducts>>Right CLicl>>Execute Stored Procedure
+# Give Value @PageIndex = 1, @PageSize = 10, @OrderBy = ProductName  [OK]
+
+# we need to add the sp to MIgration
+
+# First Generate a migration (Blank One)
+[dotnet ef migrations add "CreateGetProductSP" --project DevSkill.Inventory.Web --context ProductDbCntext]
+
+
+
+
+# And in the CreateGetProductSP migration in up  
+var sql = """
+
+""";
+
+paste this inside the 3 quotation
+
+# And Also A drop statement
+--------------------------------------------------------------------------------[CreateGetProductSP ]START
+using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace DevSkill.Inventory.Web.Migrations.ProductDbCntextMigrations
+{
+    /// <inheritdoc />
+    public partial class CreateGetProductSP : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            var sql = """
+                                
+                    CREATE OR ALTER PROCEDURE GetProducts
+                	@PageIndex int,
+                	@PageSize int , 
+                	@OrderBy nvarchar(50),
+                	@ProductName nvarchar(max) = '%',
+                	@ProductDateFrom datetime = NULL,
+                	@ProductDateTo datetime = NULL,
+                	@Description nvarchar(max) = '%',
+                	@CategoryId uniqueidentifier = NULL,
+                	@Total int output,
+                	@TotalDisplay int output
+                AS
+                BEGIN
+
+                	SET NOCOUNT ON;
+
+                	Declare @sql nvarchar(2000);
+                	Declare @countsql nvarchar(2000);
+                	Declare @paramList nvarchar(MAX); 
+                	Declare @countparamList nvarchar(MAX);
+
+                	--Collecting TOtal
+                	Select @Total = count(*) from products;
+
+                	--Collecting Total Display
+                	SET @countsql = 'select @TotalDisplay = count(*) from products pr inner join 
+                					Categories c on pr.CategoryId = c.Id where 1 = 1 ';
+
+                	SET @countsql = @countsql + ' AND pr.ProductName LIKE ''%'' + @xProductName + ''%''' 
+
+                	SET @countsql = @countsql + ' AND pr.Description LIKE ''%'' + @xDescription + ''%''' 
+
+                	IF @ProductDateFrom IS NOT NULL
+                	SET @countsql = @countsql + ' AND pr.ProductCreateDate >= @xProductDateFrom'
+
+                	IF @ProductDateTo IS NOT NULL
+                	SET @countsql = @countsql + ' AND pr.ProductCreateDate <= @xProductDateTo' 
+
+                	IF @CategoryId IS NOT NULL
+                	SET @countsql = @countsql + ' AND pr.CategoryId = @xCategoryId' 
+
+
+                	SELECT @countparamlist = '@xProductName nvarchar(max),
+                		@xDescription nvarchar(max),
+                		@xProductDateFrom datetime,
+                		@xProductDateTo datetime,
+                		@xCategoryId uniqueidentifier,
+                		@TotalDisplay int output' ;
+
+
+                	exec sp_executesql @countsql , @countparamlist ,
+                		@ProductName,
+                		@Description,
+                		@ProductDateFrom,
+                		@ProductDateTo,
+                		@CategoryId,
+                		@TotalDisplay = @TotalDisplay output;
+
+
+                	--Collecting Data
+                	SET @sql = 'select * from products pr inner join 
+                					Categories c on pr.CategoryId = c.Id where 1 = 1 ';
+
+                	SET @sql = @sql + ' AND pr.ProductName LIKE ''%'' + @xProductName + ''%''' 
+
+                	SET @sql = @sql + ' AND pr.Description LIKE ''%'' + @xDescription + ''%''' 
+
+                	IF @ProductDateFrom IS NOT NULL
+                	SET @sql = @sql + ' AND pr.ProductCreateDate >= @xProductDateFrom'
+
+                	IF @ProductDateTo IS NOT NULL
+                	SET @sql = @sql + ' AND pr.ProductCreateDate <= @xProductDateTo' 
+
+                	IF @CategoryId IS NOT NULL
+                	SET @sql = @sql + ' AND pr.CategoryId = @xCategoryId' 
+
+                	SET @sql = @sql + ' Order by '+@OrderBy+' OFFSET @PageSize * (@PageIndex - 1) 
+                	ROWS FETCH NEXT @PageSize ROWS ONLY';
+
+
+                	SELECT @paramlist = '@xProductName nvarchar(max),
+                		@xDescription nvarchar(max),
+                		@xProductDateFrom datetime,
+                		@xProductDateTo datetime,
+                		@xCategoryId uniqueidentifier,
+                		@PageIndex int,
+                		@PageSize int' ;
+
+
+                	exec sp_executesql @sql , @paramlist ,
+                		@ProductName,
+                		@Description,
+                		@ProductDateFrom,
+                		@ProductDateTo,
+                		@CategoryId,
+                		@PageIndex,
+                		@PageSize;
+
+
+
+                END
+                GO
+                
+                """;
+            migrationBuilder.Sql(sql);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            var sql = "DROP PROCEDURE [dbo].[GetProducts]";
+            migrationBuilder.DropTable(sql);
+
+        }
+    }
+}
+ 
+--------------------------------------------------------------------------------[CreateGetProductSP ]END
+
+# Now we do a database update
+[dotnet ef database update --project DevSkill.Inventory.Web --context ProductDbCntext]
+Applying migration '20240821111739_CreateGetProductSP'.
+Done.
+
+# (Already was created) Now if we refresh the database we will see that the procedure has been created
+
+--------------------------------------------------------------------------------[]START
+
+--------------------------------------------------------------------------------[]END
+
+--------------------------------------------------------------------------------[]START
+--------------------------------------------------------------------------------[]END
+
+--------------------------------------------------------------------------------[]START
+--------------------------------------------------------------------------------[]END
+
+
+
+
+
+
+

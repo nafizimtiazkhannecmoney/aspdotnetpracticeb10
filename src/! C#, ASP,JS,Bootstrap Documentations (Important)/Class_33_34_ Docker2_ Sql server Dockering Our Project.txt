@@ -1,0 +1,181 @@
+
+## SQL Server Configuration Manager>>Run As Administrator
+>> SQL Server Network Configuration>>Protocols for SQLEXPRESS
+## TCP/IP -- Make Sure its is Enabled By right Clicking
+
+---TCP/IP>> Properties>> Protocol Make Sure Listen All and Enabled is Yes
+
+>> TCP/IP>> Properties>> IP Addresses>>IP ALL--TCP PORT=
+
+do all the steps untill 7 from docs pdf
+
+###
+Terminal>> Run As Administrator>> ipconfig >> copy the iPv4 address(make sure its not virtual(WSL)) ex-192.168.5.60
+## Now Go to project
+
+>> appsettings.json>>
+
+before --> "DefaultConnection": "Server=.\\SQLEXPRESS;Database=beststore2;User Id=aspnetb10;Password=123456;Trust Server Certificate=True"
+after  --> "DefaultConnection": "Server=192.168.5.60,49172\\SQLEXPRESS;Database=beststore2;User Id=aspnetb10;Password=123456;Trust Server Certificate=True"
+
+
+## Now Run The project if it runs
+
+## Create a Docker file without extention inside the solution (yes in the file where program.cs resides) 
+
+
+--Dockerfile--
+------------------------------------------   
+see at 1:05:00 (Exampple)
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+RUN apt update && apt install -y nodejs
+COPY ["Blog.Web/*.csproj", "Blog.Web/"]
+COPY ["Blog.Application/*.csproj", "Blog.Application/"]
+COPY ["Blog.Domain/*.csproj", "Blog.Domain/"]
+COPY ["Blog.Infrastructure/*.csproj", "Blog.Infrastructure/"]
+RUN dotnet restore "Blog.Web/Blog.Web.csproj"
+COPY . .
+WORKDIR "/src/Blog.Web"
+RUN dotnet build "Blog.Web.csproj" -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish "Blog.Web.csproj" -c Release -o /app
+
+FROM build AS final
+WORKDIR /app
+COPY --from=publish /app .
+EXPOSE 80
+ENTRYPOINT ["dotnet", "Blog.Web.dll"]
+------------------------------------------   
+Main Dockerfile
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+RUN apt update && apt install -y nodejs
+COPY ["BestStore/*.csproj", "BestStore/"]
+RUN dotnet restore "BestStore/BestStore.csproj"
+COPY . .
+WORKDIR "/src/BestStore"
+RUN dotnet build "BestStore.csproj" -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish "BestStore.csproj" -c Release -o /app
+
+FROM build AS final
+WORKDIR /app
+COPY --from=publish /app .
+EXPOSE 80
+ENTRYPOINT ["dotnet", "BestStore.dll"]
+------------------------------------------   
+
+## Now Lets Build This
+Take the path from the file where sln is -- C:\Users\plicl\Desktop\Project Work Devskill\Attempt 2 Best Store Category\BestStore 
+ ## open terminal  then type cd <path>
+
+--> docker build -t best_image -f BestStore/Dockerfile   (go to class 34 steps)
+
+(Might occur error on nuget, internet issue)
+
+
+
+Class--- 34 ----------------
+
+add one line program.cs
+before the AddDbcontext
+//
+builder.WebHost.UseUrls("http://*:80");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+------------------------------------------------------------
+
+
+*** after u put builder.WebHost.UseUrls("http://*:80"); it will cause error without docker
+but it will work in IIS, so remove this line if not with docker
+
+
+terminal>> cd <path>
+>> docker build -t blogimage -f BestStore/Dockerfile .
+now it will build the image
+
+-- Build done
+
+## docker run -d -p 8000:80 blogimage
+
+container running
+
+## now go to http://localhost:8000/
+Done
+
+
+
+Next Topic , we dnt keep connectionstring inside the project
+we provide connectionstring and credentials through env variable from outside
+
+
+## Now we make Docker Compose (In te folder where sln resides)
+
+
+>> New Text file>> .env
+
+opne env file with visual studio code
+-----------------------------------------------------------------
+ConnectionStrings:DefaultConnection="Server=192.168.5.60,49172\\SQLEXPRESS;Database=beststore2;User Id=aspnetb10;Password=123456;Trust Server Certificate=True"
+ConnectionStrings_DefaultConnection="Server=192.168.5.60,49172\\SQLEXPRESS;Database=beststore2;User Id=aspnetb10;Password=123456;Trust Server Certificate=True"
+-----------------------------------------------------------------
+
+copy docker-compose.yml >> and paste it in the folder where sln resides
+
+------------------------------------------------------------------------------[docker-compose.yml]
+version: "3"
+services:
+    web:
+        build: 
+            context: .
+            dockerfile: Blog.Web/Dockerfile
+        image: blog-image
+        env_file: 
+            - web.env
+        volumes:
+            - blog-data:/app/Logs
+        ports:
+            - "8000:80"
+        entrypoint: ["dotnet", "Blog.Web.dll"]
+volumes:
+    blog-data:
+      external: true
+------------------------------------------------------------------------------[docker-compose.yml]
+
+### before we build we make the connectionstring empty like "DefaultConnection" : "",
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% When u go home start from 40 min
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

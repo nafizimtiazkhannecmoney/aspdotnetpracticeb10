@@ -1,0 +1,6 @@
+Assignment 3 Errors--1:00
+Class Starts from 15:28
+How to Ignote any field from automapper--46:02
+Validation for model and create page--1:01:00
+Data Annotation(Allowed in Model)--1:02:30
+Done CRUD--1:32:00 ..

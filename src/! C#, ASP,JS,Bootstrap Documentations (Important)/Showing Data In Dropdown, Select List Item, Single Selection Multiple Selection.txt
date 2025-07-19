@@ -1,0 +1,227 @@
+
+
+
+===============================================================================================
+				SINGLE SELECTION
+===============================================================================================
+----------------------------------------------------------------------------------------------------------------------
+namespace Bloggie.Web.Models.ViewModels
+{
+    public class AddBlogPostRequest
+    {
+        public string Heading { get; set; }
+        public string PageTitle { get; set; }
+        public string Content { get; set; }
+        public string ShortDescription { get; set; }
+        public string FeaturedImageUrl { get; set; }
+        public string UrlHandle { get; set; }
+        public DateTime PublishedDate { get; set; }
+        public string Author { get; set; }
+        public bool Visible { get; set; }
+
+        // Display tags
+        public IEnumerable<SelectListItem>  Tags { get; set; }
+
+        // Collect Tag
+        public string SelectedTag { get; set; }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
+namespace Bloggie.Web.Controllers
+{
+    public class AdminBlogPostsController : Controller
+    {
+        private readonly ITagRepository _tagRepository;
+
+        public AdminBlogPostsController(ITagRepository tagRepository)
+        {
+            this._tagRepository = tagRepository;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Add()
+        {
+            // Get Tags From Repository
+            var tags = await _tagRepository.GetAllAsync();
+            var model = new AddBlogPostRequest
+            {
+                Tags = tags.Select(x=> new SelectListItem{ Text = x.Name, Value = x.Id.ToString() })
+            };
+            return View(model);
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
+<div class="mb-3">
+    <label>Tag</label>
+    <select class="form-select" asp-items="@Model.Tags" asp-for="SelectedTag">
+
+    </select>
+</div>
+----------------------------------------------------------------------------------------------------------------------
+
+
+===============================================================================================
+				MULTIPLE SELECTION  (Just Change SelectedTags To Array)
+===============================================================================================
+
+----------------------------------------------------------------------------------------------------------------------
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace Bloggie.Web.Models.ViewModels
+{
+    public class AddBlogPostRequest
+    {
+        public string Heading { get; set; }
+        public string PageTitle { get; set; }
+        public string Content { get; set; }
+        public string ShortDescription { get; set; }
+        public string FeaturedImageUrl { get; set; }
+        public string UrlHandle { get; set; }
+        public DateTime PublishedDate { get; set; }
+        public string Author { get; set; }
+        public bool Visible { get; set; }
+
+        // Display tags
+        public IEnumerable<SelectListItem>  Tags { get; set; }
+
+        // Collect Tag
+        public string[] SelectedTags { get; set; } = Array.Empty<string>();
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
+<div class="mb-3">
+    <label class="form-label">Tag</label>
+    <select class="form-select" 
+            asp-items="@Model.Tags" 
+            asp-for="SelectedTags">
+    </select>
+</div>
+----------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
+ public class AdminBlogPostsController : Controller
+ {
+     private readonly ITagRepository _tagRepository;
+     private readonly IBlogPostRepository _blogPostRepository;
+
+     public AdminBlogPostsController(ITagRepository tagRepository, IBlogPostRepository blogPostRepository)
+     {
+         this._tagRepository = tagRepository;
+         this._blogPostRepository = blogPostRepository;
+     }
+
+     [HttpGet]
+     public async Task<IActionResult> Add()
+     {
+         // Get Tags From Repository
+         var tags = await _tagRepository.GetAllAsync();
+         var model = new AddBlogPostRequest
+         {
+             Tags = tags.Select(x=> new SelectListItem{ Text = x.Name, Value = x.Id.ToString() })
+         };
+         return View(model);
+     }
+
+     [HttpPost]
+     public async Task<IActionResult> Add(AddBlogPostRequest addBlogPostRequest)
+     {
+         // M >> D
+         var blogPostDomain = new BlogPost
+         {
+             Heading = addBlogPostRequest.Heading,
+             PageTitle = addBlogPostRequest.PageTitle,
+             Content = addBlogPostRequest.Content,
+             ShortDescription = addBlogPostRequest.ShortDescription,
+             FeaturedImageUrl = addBlogPostRequest.FeaturedImageUrl,
+             UrlHandle = addBlogPostRequest.UrlHandle,
+             PublishedDate = addBlogPostRequest.PublishedDate,
+             Author = addBlogPostRequest.Author,
+             Visible = addBlogPostRequest.Visible,
+         };
+
+         // Map Tags from SelectedTags
+         List<Tag> selectedTags = new List<Tag>();
+         foreach (var selectedTagId in addBlogPostRequest.SelectedTags)
+         {
+             var selectedTagIdAsGuid = Guid.Parse(selectedTagId);
+             var existingTag = await _tagRepository.GetAsync(selectedTagIdAsGuid);
+
+             if(existingTag != null)
+             {
+                 selectedTags.Add(existingTag);
+             }
+         }
+
+         // Mapping Tags back to domain model
+         blogPostDomain.Tags = selectedTags;
+
+         await _blogPostRepository.AddAsync(blogPostDomain); 
+
+         return RedirectToAction("Add");
+     }
+ }
+
+[HttpGet]
+public async Task<IActionResult> Edit(Guid id)
+{
+    var blogPost = await _blogPostRepository.GetAsync(id);
+    var tags = await _tagRepository.GetAllAsync();
+
+    // Map Domain Model to ViewModel
+    var editBlogPostRequest = new EditBlogPostRequest
+    {
+        Id = blogPost.Id,
+        Heading = blogPost.Heading,
+        PageTitle = blogPost.PageTitle,
+        Content = blogPost.Content,
+        ShortDescription = blogPost.ShortDescription,
+        FeaturedImageUrl = blogPost.FeaturedImageUrl,
+        UrlHandle = blogPost.UrlHandle,
+        PublishedDate = blogPost.PublishedDate,
+        Author = blogPost.Author,
+        Visible = blogPost.Visible,
+        Tags = tags.Select(x => new SelectListItem 
+        {
+            Text = x.Name,
+            Value= x.Id.ToString(),
+        }),
+        SelectedTags = blogPost.Tags.Select(x=> x.Id.ToString()).ToArray()
+    };
+
+    return View(blogPost);
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

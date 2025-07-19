@@ -1,0 +1,63 @@
+
+
+AUTO SCALLING
+
+1.Launch Templates>> Create Launch Template>>Name>Description(no need)
+2.My AMIs>> Select Image>>Instance Type(t2.micro)>>Keypair(demo)
+3.Network Settings>>Subnet>>Dnt Include in lanch Template>> Select Existing Security group
+  security groups(demo)>>Volume(as it is)
+  CREATE LAUNNH TEMPLATE 
+
+
+View Launch Templates>>Auto Scalling>>Auto Scalling Groups
+
+CREATE AUTO SCALLING GROUP
+
+1.Group Name>>Launch Template(select the template)>>Next>>Acailability zone(select all)>>NEXT
+2.Attach to an existing Load Balancer>>Choose from your loadbalancer target(new machines will atach to it)
+3.Health Check(Turn On Elastic Load Balancing)>>NEXT 
+4.Desired capacity(2)-Starting capacity>>Min(1)>>Max(3)
+5.Automatic Scalling>>Target tracking scalling policy>>Avg CPU utilization
+6.Target value(60)>>Instance Maintenance policy(no policy)>> NEXT>> NEXT>> NEXT>> Create Auto Scalling Group
+7.Load BAlancer>>DNS copy it>>Open The link>>Target Group(we can see generated servers are connected)
+8.To delete>> We ned to delete Auto Scalling Groups(dnt delete instances)
+9.Delete Load Balancer
+10.DeRegister AMI
+11.Delete Snapshot
+12.Delete Secutrity Groups
+13.KeyPair Delete
+14.Launch Temlate Delete(Delete this befor AMI)
+(No Charge Fro Auto Scalling)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

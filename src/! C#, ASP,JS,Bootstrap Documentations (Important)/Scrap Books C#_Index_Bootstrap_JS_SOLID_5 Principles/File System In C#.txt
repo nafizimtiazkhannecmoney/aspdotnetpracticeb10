@@ -1,0 +1,61 @@
+\\192.168.100.20
+using System;
+using System.IO;
+using System.Text;
+File-> Static Class. FileInfo-> More OOP Based.
+
+1.Append String
+File.AppendAllText(@"Path", "String To append");
+
+2.Overwrite Text, If dosen't exist then create
+File.WriteAllText(@"path", "String to overrite");
+
+3.Check if the File Exists
+bool ifExist = File.Exists(@"Path");
+
+4.Move File To new Location
+File.Move(@"path from", @"path to");
+
+5.Open File and returns FileStream for reading bytes from the File
+FileStream fs = File.OpenText(@"Path", FileMOde.OpenOrCreate);
+
+6.Delete File
+File.Delete(@"Path");
+
+7.Read From a File
+string readText = File.ReadAllText(@"path"); --> cw(readText);
+
+8.Copy an Existing File to a new file
+File.Copy(@"source path", @"destination path");
+
+
+EX-----------
+File.AppendAllText(@"path", "String to append");
+Five.WriteAllText(@"path", "String to overwite");
+bool ifExist = File.Exists(@"path");
+File.Move(@"path from ", @"path to");
+File.Delete(@"path goes here");
+File.WriteAllText(@"path", "string goes here to overwite");
+File.AppendAllText(@"path", "string goes here to append");
+bool ifExist = File.Exists(@"path"); returns true if the file exists
+File.Delete(@"path to delete");
+File.AppendAllText(@"path ", "string to append");
+File.WriteAllText(@"path", "string to overwrite")
+File.Delete(@"path to delete");
+File.AppendAllText(@"path", "string to append");
+File.WriteAllText(@"path", "string to overWrite");
+bool ifExist = File.Exists(@"path"); // Returns true if the file exists
+File.Delete(@"path");
+
+
+
+
+
+
+
+
+
+
+
+
+

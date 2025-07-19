@@ -1,0 +1,8 @@
+Technoogy dependent code will be stored here
+So when the technology changes we can easily change thus Domain and Application layer is separate
+
+* Say we want to use Dapper in the place of Entity Framework, so we dont have to touch the entire
+code, only the Infrastructure Layer
+
+Framework Dependent Code, like Entity framework, Dapper, ADO.NET, Nhibernate
+Liberary for image resizing or for email

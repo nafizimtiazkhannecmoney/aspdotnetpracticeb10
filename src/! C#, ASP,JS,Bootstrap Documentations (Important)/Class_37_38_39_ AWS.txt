@@ -1,0 +1,113 @@
+https://console.aws.amazon.com/        | RDP
+
+
+CLASS_37
+AWS, Azure, GCP(Google Cloud), Alibaba Cloud, Digital Ocean
+
+Login Root USer--Mfa(Multifactor Authentication) Code
+
+# Compute>>EC2(Virtual Servers In the Cloud)
+
+# Now We create a Virtual Machine(Make Sure we are in North.Virginia Region)
+=Launch Instance
+>>Name
+=Application And OS Images
+>>Select Windows
+>>Amazon Machine Image(AMI)
+>>Microsoft Windows Server 2022 Base
+=Instance Type
+>>Select t2.micro
+=Key Pair(login)
+>>Need to generate ssh key, select existing if we have
+otherwise- Create new key pair(.pem key) and save this file.
+=Network Settings
+>>Create Security Group, 
+Allow RDP traffic form, 
+Allow https traffic from the internet
+Allow http traffic from the internet
+=Configure Storage
+>>30GB
+==On Right Side No of Instances
+this means how many servers do u want to make
+Then Press LAUNCH INSTANCE(It will create instance)
+
+#View All Instance(To navigate the instances)(it will take time to initialize)(OS is being installed)(Refresh page)
+
+Now Windows machine has been created now we need to connect to the machine, for that we need to use Remote Desktop
+
+# Press CONNECT>>RDP Client>>Get Password>>Upload Private Key File(Uplod the .pem key)
+>>DECRYPT PASSWORD
+>>Then Copy the password(Save it to notepad)
+>>Press Cancel
+=Open Remote Desktop
+>>REmote DEsktop Connection
+>>Check below the Instances menu Public Ipv4 address(copy it)
+>>And paste it to remotedesktop window(the ipv4 address of the instance)CONNECT
+>>Username:Administrator, Password:paste the decrypted password here(it will connect)
+
+==Configure IIS
+>>Go to server manager from start 
+>>Add Roles And Features, Press next untill SERVER ROLES, Select  (Web Server(IIS))
+>>NEXT>>FEATURES>>Select-- .NET Framework 3.5 Features>>NEXT
+=Role Services>>Select-- Dynamic Content Compression, HTTP REdirection, Custom Logging, Logging Tools, OBC Logging,
+Request Monitor, Tracing>> NEXT>> Confirmation >> INSTALL
+
+
+
+1:23:33
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

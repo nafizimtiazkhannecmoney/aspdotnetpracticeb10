@@ -1,0 +1,171 @@
+(function ($) {
+    var loadingAllowed = true;
+
+    var CustomBlog = {
+        init: function () {
+            var self = CustomBlog;
+
+            self.el = {
+                wrap: $('#custom-blog-wrapper'),
+            };
+
+            self.config = {
+                templateItems: wp.template('custom-blog-items'),
+                post_type: self.el.wrap.data('post_type'),
+                posts_count: self.el.wrap.data('posts_count'),
+                page: 1,
+                posts_per_page: parseInt(self.el.wrap.data('posts_per_page')),
+                category: self.el.wrap.data('category'),
+                tag: self.el.wrap.data('tag'),
+                author: self.el.wrap.data('author'),
+            };
+
+            self.initEvents();
+            self.initSearch();
+
+        },
+
+        initEvents: function () {
+            var self = CustomBlog;
+
+            // Load More items on scroll
+            $(window).on('scroll touchend', function () {
+                var $itemsWrap = $('.custom-blog-posts');
+
+                if (!$itemsWrap.length) return;
+                if (self.config.posts_count < 1) return;
+                if (self.config.posts_count <= self.config.posts_per_page) return;
+
+                if ($(window).scrollTop() >= $('.custom-blog-posts').offset().top + $('.custom-blog-posts').outerHeight() - window.innerHeight) {
+                    if (loadingAllowed) {
+                        var searchVal =  $('input.blog-search__input').val();
+                        self.filterItems(true, searchVal);
+                        loadingAllowed = false;
+                    }
+
+                }
+            });
+
+            // Show Subscribe box on scroll
+            var $postContent = $('.custom-blog-content-wrap');
+            var $postSidebar = $('.custom-post--sidebar');
+            var $postSidebarClose = $(".custom-post--sidebar span.close");
+            if($("body").hasClass("single-post")){
+            }else{
+                if ($postContent.length && $postSidebar.length ) {
+                    $(window).on('scroll touchend', function () {
+                        if ($(window).scrollTop() >= $postContent.offset().top) {
+                            $postSidebar.addClass('show-box');
+                        } else {
+                            $postSidebar.removeClass('show-box');
+                        }
+
+                    });
+                }
+                $postSidebarClose.click(function(){
+                    $postSidebar.remove();
+                });
+            }
+        },
+
+        initSearch: function () {
+            var self = CustomBlog;
+            var typingTimer;
+            var doneTypingInterval = 1000;
+
+            $('input.blog-search__input').keyup(function () {
+                var searchVal = $(this).val();
+                clearTimeout(typingTimer);
+
+                typingTimer = setTimeout(function () {
+                    self.filterItems(false, searchVal, eventType = 'keyup');
+                }, doneTypingInterval);
+
+            });
+        },
+
+        filterItems: function (loadMore, searchVal = null, eventType = null) {
+
+            var self = CustomBlog;
+
+            if (loadMore) {
+                self.config.page += 1;
+            } else {
+                self.config.page = 1;
+            }
+
+            var data = {
+                posts_per_page: self.config.posts_per_page,
+                page: self.config.page,
+                category: self.config.category,
+                tag: self.config.tag,
+                author: self.config.author,
+            };
+
+            if (!self.el.wrap.hasClass('loading')) {
+                self.el.wrap.addClass('loading');
+            }
+
+            self.getItems(data, function (response) {
+                var found_items = response.data.posts_count;
+                var total_pages = Math.ceil(parseInt(found_items) / parseInt(self.config.posts_per_page));
+
+                loadingAllowed = true;
+
+                if (total_pages === self.config.page || parseInt(found_items) === 0) {
+                    loadingAllowed = false;
+                }
+
+                if ( eventType == 'keyup' ) {
+                    self.el.wrap.find('.custom-blog-posts').html(self.config.templateItems(response.data));
+
+                    console.log(searchVal);
+
+                    if(searchVal.length > 0) {
+                        var string = 'Showing <b>{found-posts}</b> results for <b>"{search-val}"</b>';
+                        string = string.replace('{found-posts}', response.data.posts_count);
+                        string = string.replace('{search-val}', searchVal);
+                        $('.blog-search__info').html(string).show();
+                    } else {
+                        $('.blog-search__info').html('').hide();
+                    }
+                } else {
+                    self.el.wrap.find('.custom-blog-posts').append(self.config.templateItems(response.data));
+                }
+
+                self.el.wrap.find('.custom-blog-posts').imagesLoaded().always(function () {
+                    self.el.wrap.find('.custom-blog-post').fadeIn(300);
+                });
+
+                self.el.wrap.removeClass('loading');
+
+            }, searchVal);
+        },
+
+        getItems: function (data, callback, search = false) {
+
+            $.ajax({
+                url: ajaxurl,
+                type: 'GET',
+                data: {
+                    action: 'blog_filter',
+                    posts_per_page: data.posts_per_page,
+                    page: data.page || 1,
+                    category: data.category,
+                    tag: data.tag,
+                    author: data.author,
+                    search : search
+                },
+                success: function (response) {
+                    callback(response);
+                }
+            });
+        },
+
+    };
+
+    $(document).ready(function () {
+        CustomBlog.init();
+    });
+
+}(typeof jQuery === 'function' ? jQuery : this));
