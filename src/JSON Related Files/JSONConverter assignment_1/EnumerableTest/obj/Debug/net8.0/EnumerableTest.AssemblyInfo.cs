@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EnumerableTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a37f8e7d9b247e5948b3bf7f7abfa2cad913636")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73f52014d0ffc01a48138d6dfb34e1779b4228bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnumerableTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnumerableTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

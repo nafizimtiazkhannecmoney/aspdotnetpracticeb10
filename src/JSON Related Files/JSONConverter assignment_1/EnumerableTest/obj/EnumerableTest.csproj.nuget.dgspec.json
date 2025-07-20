@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASPdotNet Practice\\aspdotnetpracticeb10\\src\\JSONConverter\\EnumerableTest\\EnumerableTest.csproj": {}
+    "H:\\Project Nafinec Git\\aspdotnetpracticeb10\\src\\JSON Related Files\\JSONConverter assignment_1\\EnumerableTest\\EnumerableTest.csproj": {}
   },
   "projects": {
-    "D:\\ASPdotNet Practice\\aspdotnetpracticeb10\\src\\JSONConverter\\EnumerableTest\\EnumerableTest.csproj": {
+    "H:\\Project Nafinec Git\\aspdotnetpracticeb10\\src\\JSON Related Files\\JSONConverter assignment_1\\EnumerableTest\\EnumerableTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASPdotNet Practice\\aspdotnetpracticeb10\\src\\JSONConverter\\EnumerableTest\\EnumerableTest.csproj",
+        "projectUniqueName": "H:\\Project Nafinec Git\\aspdotnetpracticeb10\\src\\JSON Related Files\\JSONConverter assignment_1\\EnumerableTest\\EnumerableTest.csproj",
         "projectName": "EnumerableTest",
-        "projectPath": "D:\\ASPdotNet Practice\\aspdotnetpracticeb10\\src\\JSONConverter\\EnumerableTest\\EnumerableTest.csproj",
-        "packagesPath": "C:\\Users\\plicl\\.nuget\\packages\\",
-        "outputPath": "D:\\ASPdotNet Practice\\aspdotnetpracticeb10\\src\\JSONConverter\\EnumerableTest\\obj\\",
+        "projectPath": "H:\\Project Nafinec Git\\aspdotnetpracticeb10\\src\\JSON Related Files\\JSONConverter assignment_1\\EnumerableTest\\EnumerableTest.csproj",
+        "packagesPath": "C:\\Users\\Nec\\.nuget\\packages\\",
+        "outputPath": "H:\\Project Nafinec Git\\aspdotnetpracticeb10\\src\\JSON Related Files\\JSONConverter assignment_1\\EnumerableTest\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\plicl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,7 +38,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -55,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

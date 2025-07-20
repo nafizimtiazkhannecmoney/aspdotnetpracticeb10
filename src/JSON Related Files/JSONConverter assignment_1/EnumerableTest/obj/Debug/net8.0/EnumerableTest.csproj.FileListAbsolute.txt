@@ -13,3 +13,18 @@ D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\
 D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.pdb
 D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\EnumerableTest.genruntimeconfig.cache
 D:\ASPdotNet Practice\aspdotnetpracticeb10\src\JSONConverter\EnumerableTest\obj\Debug\net8.0\ref\EnumerableTest.dll
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\bin\Debug\net8.0\EnumerableTest.exe
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\bin\Debug\net8.0\EnumerableTest.deps.json
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\bin\Debug\net8.0\EnumerableTest.runtimeconfig.json
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\bin\Debug\net8.0\EnumerableTest.dll
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\bin\Debug\net8.0\EnumerableTest.pdb
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\EnumerableTest.GeneratedMSBuildEditorConfig.editorconfig
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\EnumerableTest.AssemblyInfoInputs.cache
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\EnumerableTest.AssemblyInfo.cs
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\EnumerableTest.csproj.CoreCompileInputs.cache
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\EnumerableTest.sourcelink.json
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\EnumerableTest.dll
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\refint\EnumerableTest.dll
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\EnumerableTest.pdb
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\EnumerableTest.genruntimeconfig.cache
+H:\Project Nafinec Git\aspdotnetpracticeb10\src\JSON Related Files\JSONConverter assignment_1\EnumerableTest\obj\Debug\net8.0\ref\EnumerableTest.dll
