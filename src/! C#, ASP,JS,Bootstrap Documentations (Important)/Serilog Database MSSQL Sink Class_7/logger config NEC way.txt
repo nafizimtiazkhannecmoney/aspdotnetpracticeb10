@@ -1,0 +1,58 @@
+dotnet add package Serilog.AspNetCore
+dotnet add package Serilog.Sinks.File
+
+
+appsettings.json
+-------------------------------------------
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "AllowedHosts": "*",
+    "Jwt": {
+        "Key": "u2gk9WvN3+UO3jfFybr0fMaAyAc4zqM8Pe7e+4sGzrs=",
+        "Issuer": "Issuer",
+        "Audience": "Audience"
+    },
+    "ConnectionStrings": {
+        "PgConnection": "Host=192.168.1.102;Port=5432;Database=NEC_MONEY_DEV;Username=nec_dev_dbo;Password=nec_dev_dbo@123"
+    },
+    "Serilog": { 
+        "Using": [ "Serilog.Sinks.File" ],
+        "MinimumLevel": {
+            "Default": "Debug",
+            "Override": {
+                "Microsoft": "Warning",
+                "System": "Warning"
+            }
+        },
+        "WriteTo": [
+            {
+                "Name": "File",
+                "Args": {
+                    "path": "logs/app.log",
+                    "rollingInterval": "Day",
+                    "retainedFileCountLimit": 7,
+                    "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+                }
+            }
+        ]
+    }
+}
+-------------------------------------------------
+
+
+Program.cs
+-------------------------------------------------
+var builder = WebApplication.CreateBuilder(args);
+
+// Load Serilog configuration from appsettings.json
+builder.Host.UseSerilog((context, services, configuration) =>
+    configuration
+        .ReadFrom.Configuration(context.Configuration)
+        .Enrich.FromLogContext());
+-------------------------------------------------
+

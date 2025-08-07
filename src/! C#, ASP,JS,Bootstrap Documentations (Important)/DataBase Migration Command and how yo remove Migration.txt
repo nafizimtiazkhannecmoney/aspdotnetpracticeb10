@@ -17,6 +17,11 @@ Last MIgration Remove>>
 dotnet ef database update 0 --project EntityPractice2 --context AppDbContext
 
 
+// Add-Migration "Adding Like Functionality" -Context "BloggieDbContext"
+// Update-Database -Context "BloggieDbContext"
+// Update-Database -Context "BloggieDbContext" "20250806101700_Adding Like Functionality"                  *** Previous Migration
+// Remove-Migration -Context "BloggieDbContext" -Force   ** Try not to use force unless you are sure you want to remove the migration
+
 public class Animal
 {
  Id
