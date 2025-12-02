@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NZWalks.API.Models.DTO
 {
-    public class AddRegionDTO
+    public class AddRegionDTO 
     {
         [Required]
         [MinLength(3, ErrorMessage = "Code Has To Be Minimum of 3 Letters")]
