@@ -56,3 +56,21 @@ builder.Host.UseSerilog((context, services, configuration) =>
         .Enrich.FromLogContext());
 -------------------------------------------------
 
+
+----------------------------------------------------------
+// Fix: Use builder.Logging.AddSerilog instead of builder.Host.UseSerilog
+builder.Logging.AddSerilog((new LoggerConfiguration())
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger());
+---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
