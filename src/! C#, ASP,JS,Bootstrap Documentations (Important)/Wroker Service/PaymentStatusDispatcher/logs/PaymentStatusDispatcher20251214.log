@@ -1,0 +1,2895 @@
+2025-12-14 11:01:11 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:16 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:27 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:27 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:28 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:28 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:28 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:28 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:28 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:28 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:30 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:30 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:30 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:30 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:30 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:30 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:31 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:31 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:40 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:40 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:41 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:41 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:42 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:42 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:42 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:42 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:43 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:43 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:43 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:43 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:44 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:44 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:45 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:45 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:01:45 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:01:45 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:10:10 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:10:19 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:41:16 [INF] MoneyGram Response Status: "OK"
+2025-12-14 11:41:19 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:48:21 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 11:48:23 [DBG] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:49:15 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 11:49:16 [DBG] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:49:42 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 11:49:43 [DBG] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:49:49 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 11:49:54 [DBG] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:49:58 [INF] MoneyGram Response Received | EndToEndId: 40230440000003132024 | TTID: 45677 | HTTP Status: "OK"
+2025-12-14 11:49:59 [DBG] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:50:02 [INF] MoneyGram Response Received | EndToEndId: 23743804000003132024 | TTID: 45682 | HTTP Status: "OK"
+2025-12-14 11:50:03 [DBG] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:50:06 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 11:50:08 [DBG] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:51:42 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 11:51:45 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:51:57 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 11:51:58 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:52:00 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 11:52:01 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:52:02 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 11:52:03 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:52:05 [INF] MoneyGram Response Received | EndToEndId: 40230440000003132024 | TTID: 45677 | HTTP Status: "OK"
+2025-12-14 11:52:05 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:52:09 [INF] MoneyGram Response Received | EndToEndId: 23743804000003132024 | TTID: 45682 | HTTP Status: "OK"
+2025-12-14 11:52:10 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:52:13 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 11:52:34 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:52:39 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 11:52:40 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 11:53:21 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 11:53:22 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:04:47 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 15:05:14 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:06:39 [INF] MoneyGram SUCCESS STORED | EndToEndId: 28409245000003112024 | TTID: 45619
+2025-12-14 15:17:31 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 15:17:52 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:24:59 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 15:24:59 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:25:04 [INF] MoneyGram SUCCESS STORED | EndToEndId: 28409245000003112024 | TTID: 45619
+2025-12-14 15:25:20 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 15:25:21 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:25:38 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 15:26:45 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 15:26:46 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:30:14 [INF] MoneyGram SUCCESS STORED | EndToEndId: 79464480000003122024 | TTID: 45660
+2025-12-14 15:30:44 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 15:30:44 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:31:00 [INF] MoneyGram SUCCESS STORED | EndToEndId: 81615438000003132024 | TTID: 45676
+2025-12-14 15:32:03 [INF] MoneyGram Response Received | EndToEndId: 40230440000003132024 | TTID: 45677 | HTTP Status: "OK"
+2025-12-14 15:32:04 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:32:19 [INF] MoneyGram SUCCESS STORED | EndToEndId: 40230440000003132024 | TTID: 45677
+2025-12-14 15:34:25 [INF] MoneyGram Response Received | EndToEndId: 23743804000003132024 | TTID: 45682 | HTTP Status: "OK"
+2025-12-14 15:34:25 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:35:44 [ERR] MoneyGram ERROR STORED | EndToEndId: 23743804000003132024 | TTID: 45682
+2025-12-14 15:39:32 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 15:39:32 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:39:42 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 15:39:53 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 15:39:54 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:40:07 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 15:41:23 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 15:41:25 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:41:47 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400
+2025-12-14 15:47:49 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 15:47:49 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:48:16 [INF] MoneyGram SUCCESS STORED | EndToEndId: 28409245000003112024 | TTID: 45619
+2025-12-14 15:49:16 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 15:49:16 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:49:30 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 15:50:47 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 15:50:47 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:51:14 [INF] MoneyGram SUCCESS STORED | EndToEndId: 79464480000003122024 | TTID: 45660
+2025-12-14 15:52:02 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 15:52:02 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:52:20 [INF] MoneyGram SUCCESS STORED | EndToEndId: 81615438000003132024 | TTID: 45676
+2025-12-14 15:53:15 [ERR] MoneyGram NETWORK ERROR | EndToEndId: 40230440000003132024 | TTID: 45677
+System.Net.Http.HttpRequestException: No such host is known. (extadpartner.moneygram.com:443)
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at PaymentStatusDispatcher.Services.Worker.ProcessMoneygramStatusAsync(CancellationToken stoppingToken) in E:\Project NEC\NEC_Money_Docs_Files\Reza Sir\Automation 1\PaymentStatusDispatcherWU BackUp 12_14  RND\PaymentStatusDispatcher\Services\Worker.cs:line 290
+2025-12-14 15:55:03 [INF] MoneyGram Response Received | EndToEndId: 23743804000003132024 | TTID: 45682 | HTTP Status: "OK"
+2025-12-14 15:55:04 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:57:59 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 15:57:59 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:57:59 [INF] MoneyGram SUCCESS STORED | EndToEndId: 28409245000003112024 | TTID: 45619
+2025-12-14 15:58:00 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 15:58:00 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:00 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 15:58:02 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 15:58:02 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:02 [INF] MoneyGram SUCCESS STORED | EndToEndId: 79464480000003122024 | TTID: 45660
+2025-12-14 15:58:03 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 15:58:03 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:03 [INF] MoneyGram SUCCESS STORED | EndToEndId: 81615438000003132024 | TTID: 45676
+2025-12-14 15:58:04 [INF] MoneyGram Response Received | EndToEndId: 40230440000003132024 | TTID: 45677 | HTTP Status: "OK"
+2025-12-14 15:58:04 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:04 [INF] MoneyGram SUCCESS STORED | EndToEndId: 40230440000003132024 | TTID: 45677
+2025-12-14 15:58:05 [INF] MoneyGram Response Received | EndToEndId: 23743804000003132024 | TTID: 45682 | HTTP Status: "OK"
+2025-12-14 15:58:05 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:05 [ERR] MoneyGram ERROR STORED | EndToEndId: 23743804000003132024 | TTID: 45682
+2025-12-14 15:58:06 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 15:58:06 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:06 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 15:58:07 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 15:58:07 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:07 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 15:58:08 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 15:58:08 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:08 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400
+2025-12-14 15:58:10 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 15:58:10 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:10 [INF] MoneyGram SUCCESS STORED | EndToEndId: 28409245000003112024 | TTID: 45619
+2025-12-14 15:58:12 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 15:58:12 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:12 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 15:58:13 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 15:58:13 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:13 [INF] MoneyGram SUCCESS STORED | EndToEndId: 79464480000003122024 | TTID: 45660
+2025-12-14 15:58:14 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 15:58:14 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:14 [INF] MoneyGram SUCCESS STORED | EndToEndId: 81615438000003132024 | TTID: 45676
+2025-12-14 15:58:15 [INF] MoneyGram Response Received | EndToEndId: 40230440000003132024 | TTID: 45677 | HTTP Status: "OK"
+2025-12-14 15:58:15 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:15 [INF] MoneyGram SUCCESS STORED | EndToEndId: 40230440000003132024 | TTID: 45677
+2025-12-14 15:58:16 [INF] MoneyGram Response Received | EndToEndId: 23743804000003132024 | TTID: 45682 | HTTP Status: "OK"
+2025-12-14 15:58:16 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:16 [ERR] MoneyGram ERROR STORED | EndToEndId: 23743804000003132024 | TTID: 45682
+2025-12-14 15:58:18 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 15:58:18 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:18 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 15:58:19 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 15:58:19 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:19 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 15:58:20 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 15:58:20 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:20 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400
+2025-12-14 15:58:22 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 15:58:22 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:22 [INF] MoneyGram SUCCESS STORED | EndToEndId: 28409245000003112024 | TTID: 45619
+2025-12-14 15:58:23 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 15:58:23 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:23 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 15:58:24 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 15:58:24 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:24 [INF] MoneyGram SUCCESS STORED | EndToEndId: 79464480000003122024 | TTID: 45660
+2025-12-14 15:58:25 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 15:58:25 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:25 [INF] MoneyGram SUCCESS STORED | EndToEndId: 81615438000003132024 | TTID: 45676
+2025-12-14 15:58:26 [INF] MoneyGram Response Received | EndToEndId: 40230440000003132024 | TTID: 45677 | HTTP Status: "OK"
+2025-12-14 15:58:26 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:26 [INF] MoneyGram SUCCESS STORED | EndToEndId: 40230440000003132024 | TTID: 45677
+2025-12-14 15:58:27 [INF] MoneyGram Response Received | EndToEndId: 23743804000003132024 | TTID: 45682 | HTTP Status: "OK"
+2025-12-14 15:58:27 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:27 [ERR] MoneyGram ERROR STORED | EndToEndId: 23743804000003132024 | TTID: 45682
+2025-12-14 15:58:29 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 15:58:29 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:29 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 15:58:30 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 15:58:30 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:30 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 15:58:31 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 15:58:31 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:31 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400
+2025-12-14 15:58:33 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 15:58:33 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:33 [INF] MoneyGram SUCCESS STORED | EndToEndId: 28409245000003112024 | TTID: 45619
+2025-12-14 15:58:34 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 15:58:34 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:34 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 15:58:35 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 15:58:35 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:36 [INF] MoneyGram SUCCESS STORED | EndToEndId: 79464480000003122024 | TTID: 45660
+2025-12-14 15:58:37 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 15:58:37 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:37 [INF] MoneyGram SUCCESS STORED | EndToEndId: 81615438000003132024 | TTID: 45676
+2025-12-14 15:58:38 [INF] MoneyGram Response Received | EndToEndId: 40230440000003132024 | TTID: 45677 | HTTP Status: "OK"
+2025-12-14 15:58:38 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 15:58:38 [INF] MoneyGram SUCCESS STORED | EndToEndId: 40230440000003132024 | TTID: 45677
+2025-12-14 16:01:22 [INF] MoneyGram Response Received | EndToEndId: 28409245000003112024 | TTID: 45619 | HTTP Status: "OK"
+2025-12-14 16:01:23 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:23 [INF] MoneyGram SUCCESS STORED | EndToEndId: 28409245000003112024 | TTID: 45619
+2025-12-14 16:01:24 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 16:01:24 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:24 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 16:01:25 [INF] MoneyGram Response Received | EndToEndId: 79464480000003122024 | TTID: 45660 | HTTP Status: "OK"
+2025-12-14 16:01:25 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:25 [INF] MoneyGram SUCCESS STORED | EndToEndId: 79464480000003122024 | TTID: 45660
+2025-12-14 16:01:26 [INF] MoneyGram Response Received | EndToEndId: 81615438000003132024 | TTID: 45676 | HTTP Status: "OK"
+2025-12-14 16:01:26 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:26 [INF] MoneyGram SUCCESS STORED | EndToEndId: 81615438000003132024 | TTID: 45676
+2025-12-14 16:01:27 [INF] MoneyGram Response Received | EndToEndId: 40230440000003132024 | TTID: 45677 | HTTP Status: "OK"
+2025-12-14 16:01:27 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:updateStatusResponse></par:updateStatusResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:27 [INF] MoneyGram SUCCESS STORED | EndToEndId: 40230440000003132024 | TTID: 45677
+2025-12-14 16:01:28 [INF] MoneyGram Response Received | EndToEndId: 23743804000003132024 | TTID: 45682 | HTTP Status: "OK"
+2025-12-14 16:01:28 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 23743804 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:28 [ERR] MoneyGram ERROR STORED | EndToEndId: 23743804000003132024 | TTID: 45682
+2025-12-14 16:01:29 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 16:01:29 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:29 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 16:01:30 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 16:01:30 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:30 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 16:01:31 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 16:01:31 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:01:32 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400
+2025-12-14 16:46:59 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 16:46:59 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:46:59 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 16:47:00 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 16:47:00 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:47:00 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 16:47:01 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 16:47:01 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:47:01 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 16:47:02 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 16:47:02 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:47:02 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400
+2025-12-14 16:53:00 [INF] Worker running at: "2025-12-14T16:53:00.9175537+06:00"
+2025-12-14 16:53:03 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 16:53:03 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:53:03 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 16:53:04 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 16:53:04 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:53:04 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 16:53:05 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 16:53:05 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:53:05 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 16:53:06 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 16:53:06 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 16:53:06 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400
+2025-12-14 16:56:51 [INF] Worker running at: "2025-12-14T16:56:51.9100566+06:00"
+2025-12-14 16:56:52 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228083818368660 with code=4024
+2025-12-14 16:56:54 [INF] WU response OK for EndToEndId=2228083818368660. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228083818368660",
+    "creationDateTime" : "2025-12-14 10:56:52.206"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228083818368660"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:56:54 [WRN] Western Union status update Error Occured for EndToEndId=2228083818368660. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:56:55 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228084322867817 with code=4024
+2025-12-14 16:56:55 [INF] WU response OK for EndToEndId=2228084322867817. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228084322867817",
+    "creationDateTime" : "2025-12-14 10:56:55.302"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228084322867817"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:56:55 [WRN] Western Union status update Error Occured for EndToEndId=2228084322867817. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:56:56 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228480892049530 with code=4024
+2025-12-14 16:56:56 [INF] WU response OK for EndToEndId=2228480892049530. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228480892049530",
+    "creationDateTime" : "2025-12-14 10:56:56.341"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228480892049530"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:56:56 [WRN] Western Union status update Error Occured for EndToEndId=2228480892049530. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:56:57 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228485770766160 with code=4024
+2025-12-14 16:56:57 [INF] WU response OK for EndToEndId=2228485770766160. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228485770766160",
+    "creationDateTime" : "2025-12-14 10:56:57.332"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228485770766160"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:56:57 [WRN] Western Union status update Error Occured for EndToEndId=2228485770766160. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:56:58 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228489720707017 with code=4024
+2025-12-14 16:56:58 [INF] WU response OK for EndToEndId=2228489720707017. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228489720707017",
+    "creationDateTime" : "2025-12-14 10:56:58.267"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228489720707017"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:56:58 [WRN] Western Union status update Error Occured for EndToEndId=2228489720707017. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:56:59 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228680982055570 with code=4024
+2025-12-14 16:56:59 [INF] WU response OK for EndToEndId=2228680982055570. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228680982055570",
+    "creationDateTime" : "2025-12-14 10:56:59.266"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228680982055570"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:56:59 [WRN] Western Union status update Error Occured for EndToEndId=2228680982055570. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:57:00 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228682621874171 with code=4024
+2025-12-14 16:57:00 [INF] WU response OK for EndToEndId=2228682621874171. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228682621874171",
+    "creationDateTime" : "2025-12-14 10:57:00.229"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228682621874171"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 16:57:00 [INF] Western Union status update SUCCESS for EndToEndId=2228682621874171 with subCode=0000 and code=200
+2025-12-14 16:57:01 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228682921289164 with code=4024
+2025-12-14 16:57:01 [INF] WU response OK for EndToEndId=2228682921289164. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228682921289164",
+    "creationDateTime" : "2025-12-14 10:57:01.346"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228682921289164"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:57:01 [WRN] Western Union status update Error Occured for EndToEndId=2228682921289164. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:57:02 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228684241743904 with code=4024
+2025-12-14 16:57:02 [INF] WU response OK for EndToEndId=2228684241743904. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228684241743904",
+    "creationDateTime" : "2025-12-14 10:57:02.322"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228684241743904"
+    }
+  },
+  "status" : {
+    "code" : "500",
+    "subCode" : "1510",
+    "msg" : "Invalid payment state transition"
+  }
+}
+2025-12-14 16:57:02 [WRN] Western Union status update Error Occured for EndToEndId=2228684241743904. Received error code=500- Sending this To [WSErrorHistories] Table
+2025-12-14 16:57:03 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228689290367575 with code=4024
+2025-12-14 16:57:03 [INF] WU response OK for EndToEndId=2228689290367575. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228689290367575",
+    "creationDateTime" : "2025-12-14 10:57:03.379"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228689290367575"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 16:57:03 [INF] Western Union status update SUCCESS for EndToEndId=2228689290367575 with subCode=0000 and code=200
+2025-12-14 16:57:04 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2231289051334951 with code=4024
+2025-12-14 16:57:04 [INF] WU response OK for EndToEndId=2231289051334951. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2231289051334951",
+    "creationDateTime" : "2025-12-14 10:57:04.482"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2231289051334951"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:57:04 [WRN] Western Union status update Error Occured for EndToEndId=2231289051334951. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:57:05 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2305284391155202 with code=4024
+2025-12-14 16:57:05 [INF] WU response OK for EndToEndId=2305284391155202. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2305284391155202",
+    "creationDateTime" : "2025-12-14 10:57:05.463"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2305284391155202"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 16:57:05 [INF] Western Union status update SUCCESS for EndToEndId=2305284391155202 with subCode=0000 and code=200
+2025-12-14 16:57:06 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2305586990205069 with code=4024
+2025-12-14 16:57:06 [INF] WU response OK for EndToEndId=2305586990205069. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2305586990205069",
+    "creationDateTime" : "2025-12-14 10:57:06.565"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2305586990205069"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 16:57:07 [INF] Western Union status update SUCCESS for EndToEndId=2305586990205069 with subCode=0000 and code=200
+2025-12-14 16:57:07 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334184040728559 with code=4030
+2025-12-14 16:57:07 [INF] WU response OK for EndToEndId=2334184040728559. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334184040728559",
+    "creationDateTime" : "2025-12-14 10:57:07.610"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334184040728559"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:57:07 [WRN] Western Union status update Error Occured for EndToEndId=2334184040728559. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:57:08 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334186940178686 with code=4030
+2025-12-14 16:57:08 [INF] WU response OK for EndToEndId=2334186940178686. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334186940178686",
+    "creationDateTime" : "2025-12-14 10:57:08.586"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334186940178686"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:57:08 [WRN] Western Union status update Error Occured for EndToEndId=2334186940178686. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:57:09 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334187339242397 with code=4030
+2025-12-14 16:57:09 [INF] WU response OK for EndToEndId=2334187339242397. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334187339242397",
+    "creationDateTime" : "2025-12-14 10:57:09.543"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334187339242397"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:57:09 [WRN] Western Union status update Error Occured for EndToEndId=2334187339242397. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:57:10 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334188245095223 with code=4030
+2025-12-14 16:57:10 [INF] WU response OK for EndToEndId=2334188245095223. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334188245095223",
+    "creationDateTime" : "2025-12-14 10:57:10.487"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334188245095223"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 16:57:10 [WRN] Western Union status update Error Occured for EndToEndId=2334188245095223. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 16:57:11 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2410682753149512 with code=4030
+2025-12-14 16:57:11 [INF] WU response OK for EndToEndId=2410682753149512. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2410682753149512",
+    "creationDateTime" : "2025-12-14 10:57:11.430"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2410682753149512"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 16:57:11 [INF] Western Union status update SUCCESS for EndToEndId=2410682753149512 with subCode=0000 and code=200
+2025-12-14 16:57:12 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2410685610728330 with code=4030
+2025-12-14 16:57:12 [INF] WU response OK for EndToEndId=2410685610728330. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2410685610728330",
+    "creationDateTime" : "2025-12-14 10:57:12.499"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2410685610728330"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 16:57:12 [INF] Western Union status update SUCCESS for EndToEndId=2410685610728330 with subCode=0000 and code=200
+2025-12-14 16:57:13 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2410689111046871 with code=4030
+2025-12-14 16:57:14 [INF] WU response OK for EndToEndId=2410689111046871. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2410689111046871",
+    "creationDateTime" : "2025-12-14 10:57:13.604"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2410689111046871"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 16:57:14 [INF] Western Union status update SUCCESS for EndToEndId=2410689111046871 with subCode=0000 and code=200
+2025-12-14 17:03:03 [INF] Worker running at: "2025-12-14T17:03:03.2399327+06:00"
+2025-12-14 17:03:03 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228083818368660 with code=4024
+2025-12-14 17:03:05 [INF] WU response OK for EndToEndId=2228083818368660. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228083818368660",
+    "creationDateTime" : "2025-12-14 17:03:03.506"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228083818368660"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:05 [WRN] Western Union status update Error Occured for EndToEndId=2228083818368660. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:06 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228084322867817 with code=4024
+2025-12-14 17:03:06 [INF] WU response OK for EndToEndId=2228084322867817. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228084322867817",
+    "creationDateTime" : "2025-12-14 17:03:06.134"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228084322867817"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:06 [WRN] Western Union status update Error Occured for EndToEndId=2228084322867817. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:07 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228480892049530 with code=4024
+2025-12-14 17:03:07 [INF] WU response OK for EndToEndId=2228480892049530. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228480892049530",
+    "creationDateTime" : "2025-12-14 17:03:07.097"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228480892049530"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:07 [WRN] Western Union status update Error Occured for EndToEndId=2228480892049530. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:08 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228485770766160 with code=4024
+2025-12-14 17:03:08 [INF] WU response OK for EndToEndId=2228485770766160. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228485770766160",
+    "creationDateTime" : "2025-12-14 17:03:08.091"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228485770766160"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:08 [WRN] Western Union status update Error Occured for EndToEndId=2228485770766160. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:09 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228489720707017 with code=4024
+2025-12-14 17:03:09 [INF] WU response OK for EndToEndId=2228489720707017. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228489720707017",
+    "creationDateTime" : "2025-12-14 17:03:09.019"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228489720707017"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:09 [WRN] Western Union status update Error Occured for EndToEndId=2228489720707017. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:09 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228680982055570 with code=4024
+2025-12-14 17:03:10 [INF] WU response OK for EndToEndId=2228680982055570. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228680982055570",
+    "creationDateTime" : "2025-12-14 17:03:09.952"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228680982055570"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:10 [WRN] Western Union status update Error Occured for EndToEndId=2228680982055570. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:10 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228682621874171 with code=4024
+2025-12-14 17:03:11 [INF] WU response OK for EndToEndId=2228682621874171. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228682621874171",
+    "creationDateTime" : "2025-12-14 17:03:10.884"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228682621874171"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 17:03:11 [INF] Western Union status update SUCCESS for EndToEndId=2228682621874171 with subCode=0000 and code=200
+2025-12-14 17:03:11 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228682921289164 with code=4024
+2025-12-14 17:03:12 [INF] WU response OK for EndToEndId=2228682921289164. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228682921289164",
+    "creationDateTime" : "2025-12-14 17:03:11.940"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228682921289164"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:12 [WRN] Western Union status update Error Occured for EndToEndId=2228682921289164. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:12 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228684241743904 with code=4024
+2025-12-14 17:03:13 [INF] WU response OK for EndToEndId=2228684241743904. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228684241743904",
+    "creationDateTime" : "2025-12-14 17:03:12.888"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228684241743904"
+    }
+  },
+  "status" : {
+    "code" : "500",
+    "subCode" : "1510",
+    "msg" : "Invalid payment state transition"
+  }
+}
+2025-12-14 17:03:13 [WRN] Western Union status update Error Occured for EndToEndId=2228684241743904. Received error code=500- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:13 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228689290367575 with code=4024
+2025-12-14 17:03:14 [INF] WU response OK for EndToEndId=2228689290367575. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228689290367575",
+    "creationDateTime" : "2025-12-14 17:03:13.891"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228689290367575"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 17:03:14 [INF] Western Union status update SUCCESS for EndToEndId=2228689290367575 with subCode=0000 and code=200
+2025-12-14 17:03:14 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2231289051334951 with code=4024
+2025-12-14 17:03:15 [INF] WU response OK for EndToEndId=2231289051334951. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2231289051334951",
+    "creationDateTime" : "2025-12-14 17:03:14.946"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2231289051334951"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:15 [WRN] Western Union status update Error Occured for EndToEndId=2231289051334951. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:16 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2305284391155202 with code=4024
+2025-12-14 17:03:16 [INF] WU response OK for EndToEndId=2305284391155202. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2305284391155202",
+    "creationDateTime" : "2025-12-14 17:03:16.140"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2305284391155202"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 17:03:16 [INF] Western Union status update SUCCESS for EndToEndId=2305284391155202 with subCode=0000 and code=200
+2025-12-14 17:03:17 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2305586990205069 with code=4024
+2025-12-14 17:03:17 [INF] WU response OK for EndToEndId=2305586990205069. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2305586990205069",
+    "creationDateTime" : "2025-12-14 17:03:17.179"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2305586990205069"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 17:03:17 [INF] Western Union status update SUCCESS for EndToEndId=2305586990205069 with subCode=0000 and code=200
+2025-12-14 17:03:18 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334184040728559 with code=4030
+2025-12-14 17:03:18 [INF] WU response OK for EndToEndId=2334184040728559. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334184040728559",
+    "creationDateTime" : "2025-12-14 17:03:18.237"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334184040728559"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:18 [WRN] Western Union status update Error Occured for EndToEndId=2334184040728559. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:19 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334186940178686 with code=4030
+2025-12-14 17:03:19 [INF] WU response OK for EndToEndId=2334186940178686. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334186940178686",
+    "creationDateTime" : "2025-12-14 17:03:19.166"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334186940178686"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:19 [WRN] Western Union status update Error Occured for EndToEndId=2334186940178686. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:20 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334187339242397 with code=4030
+2025-12-14 17:03:20 [INF] WU response OK for EndToEndId=2334187339242397. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334187339242397",
+    "creationDateTime" : "2025-12-14 17:03:20.165"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334187339242397"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:20 [WRN] Western Union status update Error Occured for EndToEndId=2334187339242397. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:21 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334188245095223 with code=4030
+2025-12-14 17:03:21 [INF] WU response OK for EndToEndId=2334188245095223. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334188245095223",
+    "creationDateTime" : "2025-12-14 17:03:21.099"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334188245095223"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:03:21 [WRN] Western Union status update Error Occured for EndToEndId=2334188245095223. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:03:22 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2410682753149512 with code=4030
+2025-12-14 17:03:22 [INF] WU response OK for EndToEndId=2410682753149512. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2410682753149512",
+    "creationDateTime" : "2025-12-14 17:03:22.030"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2410682753149512"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 17:03:22 [INF] Western Union status update SUCCESS for EndToEndId=2410682753149512 with subCode=0000 and code=200
+2025-12-14 17:03:23 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2410685610728330 with code=4030
+2025-12-14 17:03:23 [INF] WU response OK for EndToEndId=2410685610728330. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2410685610728330",
+    "creationDateTime" : "2025-12-14 17:03:23.101"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2410685610728330"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 17:03:23 [INF] Western Union status update SUCCESS for EndToEndId=2410685610728330 with subCode=0000 and code=200
+2025-12-14 17:03:24 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2410689111046871 with code=4030
+2025-12-14 17:03:24 [INF] WU response OK for EndToEndId=2410689111046871. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2410689111046871",
+    "creationDateTime" : "2025-12-14 17:03:24.150"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2410689111046871"
+    }
+  },
+  "status" : {
+    "code" : "200",
+    "subCode" : "0000",
+    "msg" : "State is changed successfully"
+  }
+}
+2025-12-14 17:03:24 [INF] Western Union status update SUCCESS for EndToEndId=2410689111046871 with subCode=0000 and code=200
+2025-12-14 17:16:00 [INF] Worker running at: "2025-12-14T17:16:00.3589289+06:00"
+2025-12-14 17:16:02 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228083818368660 with code=4024
+2025-12-14 17:16:06 [INF] WU response OK for EndToEndId=2228083818368660. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228083818368660",
+    "creationDateTime" : "2025-12-14 17:16:02.621"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228083818368660"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:06 [WRN] Western Union status update Error Occured for EndToEndId=2228083818368660. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:07 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228084322867817 with code=4024
+2025-12-14 17:16:07 [INF] WU response OK for EndToEndId=2228084322867817. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228084322867817",
+    "creationDateTime" : "2025-12-14 17:16:07.075"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228084322867817"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:07 [WRN] Western Union status update Error Occured for EndToEndId=2228084322867817. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:08 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228480892049530 with code=4024
+2025-12-14 17:16:08 [INF] WU response OK for EndToEndId=2228480892049530. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228480892049530",
+    "creationDateTime" : "2025-12-14 17:16:08.003"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228480892049530"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:08 [WRN] Western Union status update Error Occured for EndToEndId=2228480892049530. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:08 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228485770766160 with code=4024
+2025-12-14 17:16:09 [INF] WU response OK for EndToEndId=2228485770766160. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228485770766160",
+    "creationDateTime" : "2025-12-14 17:16:08.938"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228485770766160"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:09 [WRN] Western Union status update Error Occured for EndToEndId=2228485770766160. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:09 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228489720707017 with code=4024
+2025-12-14 17:16:10 [INF] WU response OK for EndToEndId=2228489720707017. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228489720707017",
+    "creationDateTime" : "2025-12-14 17:16:09.887"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228489720707017"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:10 [WRN] Western Union status update Error Occured for EndToEndId=2228489720707017. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:10 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228680982055570 with code=4024
+2025-12-14 17:16:11 [INF] WU response OK for EndToEndId=2228680982055570. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228680982055570",
+    "creationDateTime" : "2025-12-14 17:16:10.831"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228680982055570"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:11 [WRN] Western Union status update Error Occured for EndToEndId=2228680982055570. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:11 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228682921289164 with code=4024
+2025-12-14 17:16:12 [INF] WU response OK for EndToEndId=2228682921289164. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228682921289164",
+    "creationDateTime" : "2025-12-14 17:16:11.762"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228682921289164"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:12 [WRN] Western Union status update Error Occured for EndToEndId=2228682921289164. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:12 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228684241743904 with code=4024
+2025-12-14 17:16:13 [INF] WU response OK for EndToEndId=2228684241743904. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228684241743904",
+    "creationDateTime" : "2025-12-14 17:16:12.690"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228684241743904"
+    }
+  },
+  "status" : {
+    "code" : "500",
+    "subCode" : "1510",
+    "msg" : "Invalid payment state transition"
+  }
+}
+2025-12-14 17:16:13 [WRN] Western Union status update Error Occured for EndToEndId=2228684241743904. Received error code=500- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:13 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2231289051334951 with code=4024
+2025-12-14 17:16:14 [INF] WU response OK for EndToEndId=2231289051334951. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2231289051334951",
+    "creationDateTime" : "2025-12-14 17:16:13.683"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2231289051334951"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:14 [WRN] Western Union status update Error Occured for EndToEndId=2231289051334951. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:14 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334186940178686 with code=4030
+2025-12-14 17:16:14 [INF] WU response OK for EndToEndId=2334186940178686. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334186940178686",
+    "creationDateTime" : "2025-12-14 17:16:14.608"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334186940178686"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:14 [WRN] Western Union status update Error Occured for EndToEndId=2334186940178686. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:15 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334187339242397 with code=4030
+2025-12-14 17:16:15 [INF] WU response OK for EndToEndId=2334187339242397. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334187339242397",
+    "creationDateTime" : "2025-12-14 17:16:15.539"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334187339242397"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:15 [WRN] Western Union status update Error Occured for EndToEndId=2334187339242397. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:16:16 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334188245095223 with code=4030
+2025-12-14 17:16:16 [INF] WU response OK for EndToEndId=2334188245095223. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334188245095223",
+    "creationDateTime" : "2025-12-14 17:16:16.499"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334188245095223"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:16:16 [WRN] Western Union status update Error Occured for EndToEndId=2334188245095223. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:13 [INF] Worker running at: "2025-12-14T17:34:13.2213185+06:00"
+2025-12-14 17:34:15 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228083818368660 with code=4024
+2025-12-14 17:34:17 [INF] WU response OK for EndToEndId=2228083818368660. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228083818368660",
+    "creationDateTime" : "2025-12-14 17:34:15.752"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228083818368660"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:17 [WRN] Western Union status update Error Occured for EndToEndId=2228083818368660. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:18 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228084322867817 with code=4024
+2025-12-14 17:34:18 [INF] WU response OK for EndToEndId=2228084322867817. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228084322867817",
+    "creationDateTime" : "2025-12-14 17:34:18.034"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228084322867817"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:18 [WRN] Western Union status update Error Occured for EndToEndId=2228084322867817. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:18 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228480892049530 with code=4024
+2025-12-14 17:34:19 [INF] WU response OK for EndToEndId=2228480892049530. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228480892049530",
+    "creationDateTime" : "2025-12-14 17:34:18.995"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228480892049530"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:19 [WRN] Western Union status update Error Occured for EndToEndId=2228480892049530. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:19 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228485770766160 with code=4024
+2025-12-14 17:34:20 [INF] WU response OK for EndToEndId=2228485770766160. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228485770766160",
+    "creationDateTime" : "2025-12-14 17:34:19.924"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228485770766160"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:20 [WRN] Western Union status update Error Occured for EndToEndId=2228485770766160. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:20 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228489720707017 with code=4024
+2025-12-14 17:34:21 [INF] WU response OK for EndToEndId=2228489720707017. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228489720707017",
+    "creationDateTime" : "2025-12-14 17:34:20.866"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228489720707017"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:21 [WRN] Western Union status update Error Occured for EndToEndId=2228489720707017. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:21 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228680982055570 with code=4024
+2025-12-14 17:34:22 [INF] WU response OK for EndToEndId=2228680982055570. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228680982055570",
+    "creationDateTime" : "2025-12-14 17:34:21.813"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228680982055570"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:22 [WRN] Western Union status update Error Occured for EndToEndId=2228680982055570. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:22 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228682921289164 with code=4024
+2025-12-14 17:34:23 [INF] WU response OK for EndToEndId=2228682921289164. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228682921289164",
+    "creationDateTime" : "2025-12-14 17:34:22.763"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228682921289164"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:23 [WRN] Western Union status update Error Occured for EndToEndId=2228682921289164. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:23 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228684241743904 with code=4024
+2025-12-14 17:34:24 [INF] WU response OK for EndToEndId=2228684241743904. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228684241743904",
+    "creationDateTime" : "2025-12-14 17:34:23.696"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228684241743904"
+    }
+  },
+  "status" : {
+    "code" : "500",
+    "subCode" : "1510",
+    "msg" : "Invalid payment state transition"
+  }
+}
+2025-12-14 17:34:24 [WRN] Western Union status update Error Occured for EndToEndId=2228684241743904. Received error code=500- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:24 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2231289051334951 with code=4024
+2025-12-14 17:34:25 [INF] WU response OK for EndToEndId=2231289051334951. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2231289051334951",
+    "creationDateTime" : "2025-12-14 17:34:24.686"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2231289051334951"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:25 [WRN] Western Union status update Error Occured for EndToEndId=2231289051334951. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:25 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334186940178686 with code=4030
+2025-12-14 17:34:25 [INF] WU response OK for EndToEndId=2334186940178686. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334186940178686",
+    "creationDateTime" : "2025-12-14 17:34:25.632"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334186940178686"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:25 [WRN] Western Union status update Error Occured for EndToEndId=2334186940178686. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:26 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334187339242397 with code=4030
+2025-12-14 17:34:26 [INF] WU response OK for EndToEndId=2334187339242397. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334187339242397",
+    "creationDateTime" : "2025-12-14 17:34:26.566"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334187339242397"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:26 [WRN] Western Union status update Error Occured for EndToEndId=2334187339242397. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:27 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334188245095223 with code=4030
+2025-12-14 17:34:27 [INF] WU response OK for EndToEndId=2334188245095223. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334188245095223",
+    "creationDateTime" : "2025-12-14 17:34:27.498"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334188245095223"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:34:27 [WRN] Western Union status update Error Occured for EndToEndId=2334188245095223. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:34:30 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 17:34:30 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 17:34:30 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 17:34:31 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 17:34:31 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 17:34:31 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 17:34:32 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 17:34:32 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 17:34:32 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 17:34:33 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 17:34:33 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 17:34:34 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400
+2025-12-14 17:51:09 [INF] Worker running at: "2025-12-14T17:51:09.0410933+06:00"
+2025-12-14 17:51:11 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228083818368660 with code=4024
+2025-12-14 17:51:12 [INF] WU response OK for EndToEndId=2228083818368660. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228083818368660",
+    "creationDateTime" : "2025-12-14 17:51:11.387"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228083818368660"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:12 [WRN] Western Union status update Error Occured for EndToEndId=2228083818368660. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:12 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228084322867817 with code=4024
+2025-12-14 17:51:13 [INF] WU response OK for EndToEndId=2228084322867817. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228084322867817",
+    "creationDateTime" : "2025-12-14 17:51:12.845"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228084322867817"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:13 [WRN] Western Union status update Error Occured for EndToEndId=2228084322867817. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:13 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228480892049530 with code=4024
+2025-12-14 17:51:14 [INF] WU response OK for EndToEndId=2228480892049530. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228480892049530",
+    "creationDateTime" : "2025-12-14 17:51:13.772"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228480892049530"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:14 [WRN] Western Union status update Error Occured for EndToEndId=2228480892049530. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:14 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228485770766160 with code=4024
+2025-12-14 17:51:15 [INF] WU response OK for EndToEndId=2228485770766160. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228485770766160",
+    "creationDateTime" : "2025-12-14 17:51:14.706"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228485770766160"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:15 [WRN] Western Union status update Error Occured for EndToEndId=2228485770766160. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:15 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228489720707017 with code=4024
+2025-12-14 17:51:15 [INF] WU response OK for EndToEndId=2228489720707017. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228489720707017",
+    "creationDateTime" : "2025-12-14 17:51:15.654"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228489720707017"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:15 [WRN] Western Union status update Error Occured for EndToEndId=2228489720707017. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:16 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228680982055570 with code=4024
+2025-12-14 17:51:16 [INF] WU response OK for EndToEndId=2228680982055570. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228680982055570",
+    "creationDateTime" : "2025-12-14 17:51:16.584"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228680982055570"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:16 [WRN] Western Union status update Error Occured for EndToEndId=2228680982055570. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:17 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228682921289164 with code=4024
+2025-12-14 17:51:18 [INF] WU response OK for EndToEndId=2228682921289164. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228682921289164",
+    "creationDateTime" : "2025-12-14 17:51:17.837"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228682921289164"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:18 [WRN] Western Union status update Error Occured for EndToEndId=2228682921289164. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:18 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2228684241743904 with code=4024
+2025-12-14 17:51:19 [INF] WU response OK for EndToEndId=2228684241743904. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2228684241743904",
+    "creationDateTime" : "2025-12-14 17:51:18.770"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2228684241743904"
+    }
+  },
+  "status" : {
+    "code" : "500",
+    "subCode" : "1510",
+    "msg" : "Invalid payment state transition"
+  }
+}
+2025-12-14 17:51:19 [WRN] Western Union status update Error Occured for EndToEndId=2228684241743904. Received error code=500- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:19 [INF] Sending CANCEL notification to WesternUnionUAT for EndToEndId=2231289051334951 with code=4024
+2025-12-14 17:51:20 [INF] WU response OK for EndToEndId=2231289051334951. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2231289051334951",
+    "creationDateTime" : "2025-12-14 17:51:19.775"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2231289051334951"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:20 [WRN] Western Union status update Error Occured for EndToEndId=2231289051334951. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:20 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334186940178686 with code=4030
+2025-12-14 17:51:21 [INF] WU response OK for EndToEndId=2334186940178686. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334186940178686",
+    "creationDateTime" : "2025-12-14 17:51:20.707"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334186940178686"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:21 [WRN] Western Union status update Error Occured for EndToEndId=2334186940178686. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:21 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334187339242397 with code=4030
+2025-12-14 17:51:21 [INF] WU response OK for EndToEndId=2334187339242397. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334187339242397",
+    "creationDateTime" : "2025-12-14 17:51:21.670"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334187339242397"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:21 [WRN] Western Union status update Error Occured for EndToEndId=2334187339242397. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:22 [INF] Sending PAID notification to WesternUnionUAT for EndToEndId=2334188245095223 with code=4030
+2025-12-14 17:51:22 [INF] WU response OK for EndToEndId=2334188245095223. StatusCode=200, Body={
+  "header" : {
+    "msgId" : "2334188245095223",
+    "creationDateTime" : "2025-12-14 17:51:22.604"
+  },
+  "paymentInfo" : {
+    "identification" : {
+      "endToEndId" : "2334188245095223"
+    }
+  },
+  "status" : {
+    "code" : "404",
+    "subCode" : "7200",
+    "msg" : "Transaction does not exist."
+  }
+}
+2025-12-14 17:51:22 [WRN] Western Union status update Error Occured for EndToEndId=2334188245095223. Received error code=404- Sending this To [WSErrorHistories] Table
+2025-12-14 17:51:25 [INF] MoneyGram Response Received | EndToEndId: 37659969000003122024 | TTID: 45646 | HTTP Status: "OK"
+2025-12-14 17:51:25 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 37659969 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 17:51:25 [ERR] MoneyGram ERROR STORED | EndToEndId: 37659969000003122024 | TTID: 45646
+2025-12-14 17:51:26 [INF] MoneyGram Response Received | EndToEndId: 50401410000003192024 | TTID: 48637 | HTTP Status: "OK"
+2025-12-14 17:51:26 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 50401410 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 17:51:26 [ERR] MoneyGram ERROR STORED | EndToEndId: 50401410000003192024 | TTID: 48637
+2025-12-14 17:51:28 [INF] MoneyGram Response Received | EndToEndId: 30485223000005032024 | TTID: 55007 | HTTP Status: "OK"
+2025-12-14 17:51:28 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 30485223 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 17:51:28 [ERR] MoneyGram ERROR STORED | EndToEndId: 30485223000005032024 | TTID: 55007
+2025-12-14 17:51:29 [INF] MoneyGram Response Received | EndToEndId: 89537532000007042024 | TTID: 65400 | HTTP Status: "OK"
+2025-12-14 17:51:29 [INF] MoneyGram Response Body:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://moneygram.com/service/PartnerConnectService">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<soapenv:Fault>
+			<faultcode>soapenv:Server</faultcode>
+			<faultstring>User input error</faultstring>
+			<detail>
+				<par:updateStatusFault>
+					<par:errorCode>9500</par:errorCode>
+					<par:errorMessage>Invalid State Transition: Transaction 89537532 is in state REJ.  Requested state is RECEIVED.</par:errorMessage>
+				</par:updateStatusFault>
+			</detail>
+		</soapenv:Fault>
+	</soapenv:Body>
+</soapenv:Envelope>
+2025-12-14 17:51:29 [ERR] MoneyGram ERROR STORED | EndToEndId: 89537532000007042024 | TTID: 65400

@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|e:\\project nec\\nec_money_docs_files\\reza sir\\automation 1\\paymentstatusdispatcherwu backup 12_14  done\\paymentstatusdispatcher\\services\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|solutionrelative:paymentstatusdispatcher\\services\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|e:\\project nec\\nec_money_docs_files\\reza sir\\automation 1\\paymentstatusdispatcherwu backup 12_14  done\\paymentstatusdispatcher\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|solutionrelative:paymentstatusdispatcher\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|e:\\project nec\\nec_money_docs_files\\reza sir\\automation 1\\paymentstatusdispatcherwu backup 12_14  done\\paymentstatusdispatcher\\services\\westernunionstatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|solutionrelative:paymentstatusdispatcher\\services\\westernunionstatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|e:\\project nec\\nec_money_docs_files\\reza sir\\automation 1\\paymentstatusdispatcherwu backup 12_14  done\\paymentstatusdispatcher\\models\\paymentstatusrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|solutionrelative:paymentstatusdispatcher\\models\\paymentstatusrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|e:\\project nec\\nec_money_docs_files\\reza sir\\automation 1\\paymentstatusdispatcherwu backup 12_14  done\\paymentstatusdispatcher\\services\\moneygramstatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|solutionrelative:paymentstatusdispatcher\\services\\moneygramstatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|e:\\project nec\\nec_money_docs_files\\reza sir\\automation 1\\paymentstatusdispatcherwu backup 12_14  done\\paymentstatusdispatcher\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|solutionrelative:paymentstatusdispatcher\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|e:\\project nec\\nec_money_docs_files\\reza sir\\automation 1\\paymentstatusdispatcherwu backup 12_14  done\\paymentstatusdispatcher\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|solutionrelative:paymentstatusdispatcher\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|e:\\project nec\\nec_money_docs_files\\reza sir\\automation 1\\paymentstatusdispatcherwu backup 12_14  done\\paymentstatusdispatcher\\models\\apiresponsestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D6F0DD-FE15-453A-BDF2-69046CBE66D0}|PaymentStatusDispatcher\\PaymentStatusDispatcher.csproj|solutionrelative:paymentstatusdispatcher\\models\\apiresponsestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 189,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaymentStatusRow.cs",
+              "DocumentMoniker": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Models\\PaymentStatusRow.cs",
+              "RelativeDocumentMoniker": "PaymentStatusDispatcher\\Models\\PaymentStatusRow.cs",
+              "ToolTip": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Models\\PaymentStatusRow.cs",
+              "RelativeToolTip": "PaymentStatusDispatcher\\Models\\PaymentStatusRow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T11:38:01.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WesternUnionStatusRepository.cs",
+              "DocumentMoniker": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Services\\WesternUnionStatusRepository.cs",
+              "RelativeDocumentMoniker": "PaymentStatusDispatcher\\Services\\WesternUnionStatusRepository.cs",
+              "ToolTip": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Services\\WesternUnionStatusRepository.cs",
+              "RelativeToolTip": "PaymentStatusDispatcher\\Services\\WesternUnionStatusRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T05:57:20.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Services\\Worker.cs",
+              "RelativeDocumentMoniker": "PaymentStatusDispatcher\\Services\\Worker.cs",
+              "ToolTip": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Services\\Worker.cs",
+              "RelativeToolTip": "PaymentStatusDispatcher\\Services\\Worker.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAEwDUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T04:58:06.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\appsettings.json",
+              "RelativeDocumentMoniker": "PaymentStatusDispatcher\\appsettings.json",
+              "ToolTip": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\appsettings.json",
+              "RelativeToolTip": "PaymentStatusDispatcher\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-27T04:54:29.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MoneyGramStatusRepository.cs",
+              "DocumentMoniker": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Services\\MoneyGramStatusRepository.cs",
+              "RelativeDocumentMoniker": "PaymentStatusDispatcher\\Services\\MoneyGramStatusRepository.cs",
+              "ToolTip": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Services\\MoneyGramStatusRepository.cs",
+              "RelativeToolTip": "PaymentStatusDispatcher\\Services\\MoneyGramStatusRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T07:25:54.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Models\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "PaymentStatusDispatcher\\Models\\ApiResponse.cs",
+              "ToolTip": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Models\\ApiResponse.cs",
+              "RelativeToolTip": "PaymentStatusDispatcher\\Models\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T03:41:59.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApiResponseStatus.cs",
+              "DocumentMoniker": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Models\\ApiResponseStatus.cs",
+              "RelativeDocumentMoniker": "PaymentStatusDispatcher\\Models\\ApiResponseStatus.cs",
+              "ToolTip": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Models\\ApiResponseStatus.cs",
+              "RelativeToolTip": "PaymentStatusDispatcher\\Models\\ApiResponseStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T03:41:33.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Program.cs",
+              "RelativeDocumentMoniker": "PaymentStatusDispatcher\\Program.cs",
+              "ToolTip": "E:\\Project NEC\\NEC_Money_Docs_Files\\Reza Sir\\Automation 1\\PaymentStatusDispatcherWU BackUp 12_14  Done\\PaymentStatusDispatcher\\Program.cs",
+              "RelativeToolTip": "PaymentStatusDispatcher\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T04:58:04.229Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
