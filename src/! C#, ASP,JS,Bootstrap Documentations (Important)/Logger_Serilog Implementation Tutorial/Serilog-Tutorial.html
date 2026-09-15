@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serilog Tutorial – Add Professional Logging to ASP.NET Core</title>
+    <style>
+        :root {
+            --primary: #0f766e;
+            --primary-dark: #0d9488;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --code-bg: #1e293b;
+            --border: #e2e8f0;
+            --success: #059669;
+            --warning: #d97706;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--bg);
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f766e, #0d9488);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #ccfbf1;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin: 1.8rem 0 0.8rem;
+            color: #0f766e;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin: 0.8rem 0 1.2rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07);
+            border: 1px solid var(--border);
+        }
+
+        .note {
+            background: #ecfdf5;
+            border-left: 4px solid var(--success);
+            padding: 1rem 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning {
+            background: #fffbeb;
+            border-left: 4px solid var(--warning);
+            padding: 1rem 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        pre {
+            background: var(--code-bg);
+            color: #e2e8f0;
+            padding: 1.2rem 1.4rem;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 1rem 0 1.5rem;
+        }
+
+        code {
+            font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9em;
+        }
+
+        p code, li code {
+            background: #f1f5f9;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            color: #0f766e;
+        }
+
+        .step {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.7rem; }
+            .container { padding: 1.5rem 1rem 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Serilog + ASP.NET Core</h1>
+    <p>Complete step-by-step guide to add professional file logging to any ASP.NET Core 6 / 7 / 8 project</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <strong>Why this tutorial exists</strong><br>
+        The default Microsoft logger only writes to the console.  
+        Serilog gives you structured logging, rolling files, clean templates, and easy configuration via <code>appsettings.json</code>.  
+        This page is your permanent reference – copy-paste ready.
+    </div>
+
+    <!-- ==================== STEP 1 ==================== -->
+    <h2>1. Install the required NuGet packages</h2>
+
+    <p>Open the terminal in your project folder and run:</p>
+
+    <pre><code>dotnet add package Serilog.AspNetCore
+dotnet add package Serilog.Sinks.File</code></pre>
+
+    <div class="note">
+        <strong>Serilog.AspNetCore</strong> is the most important package – it integrates Serilog with the ASP.NET Core host and DI system.
+    </div>
+
+    <!-- ==================== STEP 2 ==================== -->
+    <h2>2. Configure Serilog in appsettings.json</h2>
+
+    <p>Replace or add the following section in your <code>appsettings.json</code> (you can keep the old <code>"Logging"</code> section – it will be ignored once Serilog takes over):</p>
+
+    <pre><code>{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.File" ],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:/Logs/MyApp-.log",
+          "rollingInterval": "Day",
+          "retainedFileCountLimit": 7,
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+        }
+      }
+    ]
+  }
+}</code></pre>
+
+    <h3>Key options explained</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Setting</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>path</code></td>
+                <td>Log file location. The <code>-</code> before <code>.log</code> is replaced by the date (e.g. <code>MyApp-20260915.log</code>)</td>
+            </tr>
+            <tr>
+                <td><code>rollingInterval</code></td>
+                <td><code>Day</code> = new file every day. Other options: <code>Hour</code>, <code>Minute</code>, <code>Month</code></td>
+            </tr>
+            <tr>
+                <td><code>retainedFileCountLimit</code></td>
+                <td>How many old log files to keep (7 = one week)</td>
+            </tr>
+            <tr>
+                <td><code>outputTemplate</code></td>
+                <td>How each log line looks. <code>{Level:u3}</code> = INF, WRN, ERR…</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="warning">
+        <strong>Windows tip:</strong> Make sure the folder <code>C:\Logs</code> exists and your application has write permission to it.  
+        On Linux/macOS change the path to something like <code>/var/log/myapp/MyApp-.log</code>.
+    </div>
+
+    <!-- ==================== STEP 3 ==================== -->
+    <h2>3. Wire Serilog in Program.cs</h2>
+
+    <p>This is the most common place people go wrong.  
+    You must both create the bootstrap logger <strong>and</strong> tell the host to use Serilog.</p>
+
+    <pre><code>using Serilog;
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build())
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+try
+{
+    Log.Information("Application Starting...");
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    // ⭐ This line is critical – without it, controllers still use the default logger
+    builder.Host.UseSerilog();
+
+    // Register your services
+    builder.Services.AddControllers();
+    // builder.Services.Add... etc.
+
+    var app = builder.Build();
+
+    // Optional but highly recommended – logs every HTTP request
+    app.UseSerilogRequestLogging();
+
+    // Middleware pipeline
+    // app.UseAuthentication();
+    // app.UseAuthorization();
+    app.MapControllers();
+
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();   // ensures all logs are written before exit
+}</code></pre>
+
+    <div class="note">
+        <strong>Why two steps?</strong><br>
+        • The early <code>Log.Logger = …</code> captures startup messages (before the host is built).<br>
+        • <code>builder.Host.UseSerilog()</code> makes <code>ILogger&lt;T&gt;</code> in controllers and services use Serilog instead of the default Microsoft logger.
+    </div>
+
+    <!-- ==================== STEP 4 ==================== -->
+    <h2>4. How to use the logger in your code</h2>
+
+    <h3>In Controllers / Services (recommended)</h3>
+
+    <pre><code>public class TestController : ControllerBase
+{
+    private readonly ILogger&lt;TestController&gt; _logger;
+
+    public TestController(ILogger&lt;TestController&gt; logger)
+    {
+        _logger = logger;
+    }
+
+    [Authorize]
+    [HttpGet("private")]
+    public IActionResult Private()
+    {
+        _logger.LogInformation("Accessing private endpoint by user: {User}", User.Identity?.Name);
+
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        // ... rest of your code
+
+        return Ok(new { /* ... */ });
+    }
+}</code></pre>
+
+    <h3>Using the static Log class (anywhere)</h3>
+
+    <pre><code>Log.Information("Something happened with value {Value}", someValue);
+Log.Warning("This is a warning");
+Log.Error(ex, "An error occurred while processing {Id}", id);</code></pre>
+
+    <!-- ==================== STEP 5 ==================== -->
+    <h2>5. Common problems &amp; solutions</h2>
+
+    <div class="card">
+        <strong>Problem:</strong> “Application Starting…” appears, but controller logs do not.<br>
+        <strong>Solution:</strong> You forgot <code>builder.Host.UseSerilog();</code>
+    </div>
+
+    <div class="card">
+        <strong>Problem:</strong> No log file is created at all.<br>
+        <strong>Solution:</strong>
+        <ul>
+            <li>Check that the folder exists and is writable</li>
+            <li>Temporarily add a Console sink to see if logs appear in the terminal</li>
+            <li>Lower <code>MinimumLevel.Default</code> to <code>"Debug"</code> for testing</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <strong>Problem:</strong> Too many Microsoft framework logs.<br>
+        <strong>Solution:</strong> The <code>Override</code> section already silences them. You can make it even quieter:
+        <pre style="margin-top:0.8rem"><code>"Override": {
+  "Microsoft": "Error",
+  "System": "Error",
+  "Microsoft.AspNetCore": "Error"
+}</code></pre>
+    </div>
+
+    <!-- ==================== BONUS ==================== -->
+    <h2>6. Bonus – Add Console + File sinks together</h2>
+
+    <p>Useful during development so you see logs both in the terminal and in the file:</p>
+
+    <pre><code>"WriteTo": [
+  {
+    "Name": "Console"
+  },
+  {
+    "Name": "File",
+    "Args": {
+      "path": "C:/Logs/MyApp-.log",
+      "rollingInterval": "Day",
+      "retainedFileCountLimit": 7,
+      "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+    }
+  }
+]</code></pre>
+
+    <p>You also need the package:</p>
+    <pre><code>dotnet add package Serilog.Sinks.Console</code></pre>
+
+    <!-- ==================== FINAL CHECKLIST ==================== -->
+    <h2>7. Quick checklist (copy this)</h2>
+
+    <ol>
+        <li>☐ Install <code>Serilog.AspNetCore</code> + <code>Serilog.Sinks.File</code></li>
+        <li>☐ Add the <code>"Serilog"</code> section to <code>appsettings.json</code></li>
+        <li>☐ Create the bootstrap logger at the top of <code>Program.cs</code></li>
+        <li>☐ Call <code>builder.Host.UseSerilog()</code></li>
+        <li>☐ (Optional) Call <code>app.UseSerilogRequestLogging()</code></li>
+        <li>☐ Wrap everything in try/catch/finally with <code>Log.CloseAndFlush()</code></li>
+        <li>☐ Inject <code>ILogger&lt;T&gt;</code> in controllers and services</li>
+    </ol>
+
+    <div class="note" style="margin-top:2.5rem">
+        <strong>That’s it!</strong> Once you follow these steps, every <code>_logger.LogInformation(...)</code> and every <code>Log.Information(...)</code> will appear in your rolling log file.
+    </div>
+
+    <div class="footer">
+        Serilog Tutorial for ASP.NET Core • Keep this page as your personal reference
+    </div>
+
+</div>
+
+</body>
+</html>

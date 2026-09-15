@@ -1,0 +1,68 @@
+1. Install the required packages
+Bashdotnet add package Serilog.AspNetCore
+dotnet add package Serilog.Sinks.File
+
+using Serilog;
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build())
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+try
+{
+    Log.Information("Application Starting...");
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    // ⭐ This is the missing piece
+    builder.Host.UseSerilog();   // ← replaces the default logging providers
+
+    // ... your other services
+    builder.Services.AddControllers();
+    // etc.
+
+    var app = builder.Build();
+
+    // Optional but recommended
+    app.UseSerilogRequestLogging();   // logs HTTP requests
+
+    // ... middleware, endpoints, etc.
+
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
+
+{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.File" ],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:/Logs/AutheDemoGPT-.log",
+          "rollingInterval": "Day",
+          "retainedFileCountLimit": 7,
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj}{NewLine}{Exception}"
+        }
+      }
+    ]
+  }
+}

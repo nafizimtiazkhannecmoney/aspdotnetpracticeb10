@@ -1,0 +1,38 @@
+Step 1: Pre-requisite Check (WSL 2)
+1.Open your Windows PowerShell as Administrator.
+2.Type wsl --install and hit Enter.
+3.If it installs, restart your computer when prompted. If it says it's already installed, you are golden.
+
+
+Step 2: Download the Installer
+1.Go to the official website: docker.com/products/docker-desktop.
+2.Click Download for Windows.
+
+Step 3: Run the Setup
+1.Double-click the downloaded Docker Desktop Installer.exe.
+2.Crucial: On the configuration screen, ensure the checkbox "Use WSL 2 instead of Hyper-V (recommended)" is checked.
+3.Click OK and let the installation finish.
+4.Close and restart your computer one final time.
+
+
+
+Now Build
+cd ..
+docker build -t my-permanent-web-app -f TestWEbAPpDocker2/Dockerfile .
+docker build -t my-welcome-westweb-app -f TestWEbAPpDocker2/Dockerfile .
+
+docker build -t asp-withoutautogen-app -f TestwithoutAutogenDocker/Dockerfile .
+
+
+Command inside the dockerfile location
+📂 TestWEbAPpDocker2  <--- (YOU ARE HERE AFTER STEP 1. RUN THE BUILD HERE!)
+   └── 📂 TestWEbAPpDocker2 <--- (Where you started, where the Dockerfile lives)
+
+
+
+
+
+
+
+
+
