@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ASP.NET Core 8.0 + Docker Tutorial</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+    h1, h2 { color: #2c3e50; }
+    pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    code { color: #c0392b; }
+    ul { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>ASP.NET Core 8.0 + Docker Tutorial</h1>
+  <p>This tutorial walks through building, running, logging, and sharing your ASP.NET Core 8.0 project using Docker.</p>
+
+  <h2>1. Build Your Project</h2>
+  <pre><code>dotnet publish -c Release</code></pre>
+  <p>This prepares your app for deployment.</p>
+
+  <h2>2. Dockerfile Example</h2>
+  <pre><code># Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["NecSanctionScreening.csproj", "."]
+RUN dotnet restore "NecSanctionScreening.csproj"
+COPY . .
+RUN dotnet publish "NecSanctionScreening.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+EXPOSE 8080
+
+# Create logs directory
+RUN mkdir -p /app/logs
+
+# Copy published output
+COPY --from=build /app/publish .
+
+# Environment variable
+ENV DOTNET_ENVIRONMENT=Production
+ENV LOG_PATH=/app/logs
+
+ENTRYPOINT ["dotnet", "NecSanctionScreening.dll"]</code></pre>
+
+  <h2>3. Build & Run Docker Image</h2>
+  <ul>
+    <li>Build: <pre><code>docker build -t myapp:1.0 .</code></pre></li>
+    <li>Run: <pre><code>docker run -d -p 8080:80 myapp:1.0</code></pre></li>
+    <li>Run with environment: <pre><code>docker run -d -p 8080:80 -e DOTNET_ENVIRONMENT=Production myapp:1.0</code></pre></li>
+    <li>Run with logs mounted: <pre><code>docker run -d -p 8080:80 -v ./logs:/app/logs myapp:1.0</code></pre></li>
+  </ul>
+
+  <h2>4. Serilog Configuration</h2>
+  <p>Add this to <code>appsettings.json</code>:</p>
+  <pre><code>{
+  "Serilog": {
+    "MinimumLevel": "Information",
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "/app/logs/app.log",
+          "rollingInterval": "Day",
+          "shared": true
+        }
+      },
+      { "Name": "Console" }
+    ]
+  }
+}</code></pre>
+
+  <p>And in <code>Program.cs</code>:</p>
+  <pre><code>using Serilog;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog((context, services, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
+
+builder.Services.AddControllers();
+var app = builder.Build();
+app.MapControllers();
+app.Run();</code></pre>
+
+  <h2>5. Sharing Docker Images</h2>
+  <h3>Option A: Docker Hub</h3>
+  <pre><code>docker login
+docker tag myapp:1.0 yourdockerhubusername/myapp:1.0
+docker push yourdockerhubusername/myapp:1.0
+docker pull yourdockerhubusername/myapp:1.0</code></pre>
+
+  <h3>Option B: Save/Load (Offline)</h3>
+  <pre><code>docker save -o myapp.tar myapp:1.0
+docker load -i myapp.tar</code></pre>
+
+  <h2>6. Useful Commands Recap</h2>
+  <pre><code>docker images
+docker build -t myapp:1.0 .
+docker run -d -p 8080:80 myapp:1.0
+docker save -o myapp.tar myapp:1.0
+docker load -i myapp.tar
+docker login
+docker push yourdockerhubusername/myapp:1.0
+docker pull yourdockerhubusername/myapp:1.0</code></pre>
+
+  <p>With this workflow, you can build, run, log, and share your ASP.NET Core 8.0 project using Docker Desktop or CLI.</p>
+</body>
+</html>

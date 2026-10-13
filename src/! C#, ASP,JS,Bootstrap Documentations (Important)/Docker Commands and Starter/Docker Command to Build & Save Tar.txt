@@ -1,0 +1,2 @@
+Build: docker build -t nec-sanction-screening .
+Save:  docker save -o nec-sanction-screening.tar nec-sanction-screening

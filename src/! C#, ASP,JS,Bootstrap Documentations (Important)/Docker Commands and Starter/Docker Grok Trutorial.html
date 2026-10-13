@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASP.NET Core 8.0 Docker Tutorial – Beginner Guide</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --success: #198754;
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --text: #212529;
+      --muted: #6c757d;
+      --border: #dee2e6;
+      --code-bg: #1e1e1e;
+      --code-text: #d4d4d4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      padding: 0;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+      color: white;
+      padding: 2.5rem 1.25rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--primary);
+      color: var(--primary-dark);
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.6rem 0 0.7rem;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin: 0 0 1.2rem 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin: 1.2rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .note {
+      background: #e7f1ff;
+      border-left: 4px solid var(--primary);
+      padding: 0.9rem 1.1rem;
+      margin: 1.2rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 0.9rem 1.1rem;
+      margin: 1.2rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .success {
+      background: #d1e7dd;
+      border-left: 4px solid var(--success);
+      padding: 0.9rem 1.1rem;
+      margin: 1.2rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .error-box {
+      background: #f8d7da;
+      border-left: 4px solid #dc3545;
+      padding: 0.9rem 1.1rem;
+      margin: 1.2rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    pre {
+      background: var(--code-bg);
+      color: var(--code-text);
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0.8rem 0 1.2rem;
+    }
+
+    code {
+      font-family: "Cascadia Code", "Fira Code", Consolas, "Courier New", monospace;
+      font-size: 0.9em;
+    }
+
+    p code, li code {
+      background: #e9ecef;
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      color: #c7254e;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: #f1f3f5;
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      .container { padding: 1.5rem 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ASP.NET Core 8.0 Docker Tutorial</h1>
+  <p>Complete beginner guide – from zero to a shareable Docker image</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <strong>What you will learn</strong>
+    <ul style="margin-top: 0.6rem; margin-bottom: 0;">
+      <li>What Docker does for an ASP.NET Core project</li>
+      <li>How to create a proper Dockerfile and .dockerignore</li>
+      <li>How to build and run the image using Docker Desktop</li>
+      <li>Important .NET 8 port change (8080 instead of 80)</li>
+      <li>How we fixed real errors (Singleton, logs, environment)</li>
+      <li>How to share the image with other people</li>
+    </ul>
+  </div>
+
+  <h2>1. Do I need to build the project first?</h2>
+  <p>
+    <strong>No.</strong> You do <em>not</em> need to run <code>dotnet build</code> or <code>dotnet publish</code> on your machine first.
+    Docker will build and publish the application <strong>inside</strong> the image using a multi-stage Dockerfile.
+    The final image only contains the published app + the ASP.NET Core runtime – it is small and ready to run.
+  </p>
+
+  <h2>2. Prerequisites</h2>
+  <ul>
+    <li>An ASP.NET Core 8.0 project</li>
+    <li><strong>Docker Desktop</strong> installed and running (Windows / macOS)</li>
+    <li>Prefer <strong>Linux containers</strong> mode (the default and recommended for ASP.NET Core)</li>
+  </ul>
+
+  <div class="note">
+    You can do the entire process with Docker Desktop (GUI + terminal). No extra tools are required.
+  </div>
+
+  <h2>3. Create the Dockerfile</h2>
+  <p>
+    Create a file named exactly <code>Dockerfile</code> (no extension) next to your <code>.csproj</code> file.
+  </p>
+
+  <div class="warning">
+    <strong>Important:</strong> The file must be named <code>Dockerfile</code> (not <code>Dockerfile.txt</code>).
+    If Windows adds a <code>.txt</code> extension, rename it and remove the extension.
+  </div>
+
+  <p>Final working Dockerfile (includes the fixes we applied later):</p>
+
+<pre><code># Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copy csproj first for better layer caching
+COPY ["NecSanctionScreening.csproj", "."]
+RUN dotnet restore "NecSanctionScreening.csproj"
+
+# Copy the rest of the source
+COPY . .
+RUN dotnet publish "NecSanctionScreening.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# Runtime stage (smaller image)
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+EXPOSE 8080
+
+# Create logs directory so the app can write log files
+RUN mkdir -p /app/logs
+
+# Hardcode the environment (so the app always runs in the correct mode inside the container)
+ENV ASPNETCORE_ENVIRONMENT=Production
+ENV ASPNETCORE_URLS=http://+:8080
+
+# Copy only the published output
+COPY --from=build /app/publish .
+
+ENTRYPOINT ["dotnet", "NecSanctionScreening.dll"]
+</code></pre>
+
+  <p>
+    Replace <code>NecSanctionScreening</code> with the real name of your project
+    (the name of the <code>.csproj</code> / <code>.dll</code>).
+  </p>
+
+  <h3>Why multi-stage?</h3>
+  <ul>
+    <li>The first stage uses the large SDK image to restore, build and publish.</li>
+    <li>The second stage uses the small runtime image and only copies the published files.</li>
+    <li>Result: a much smaller final image that is safe to share.</li>
+  </ul>
+
+  <h2>4. Create the .dockerignore file</h2>
+  <p>
+    Create a file named <code>.dockerignore</code> in the same folder as the Dockerfile.
+    This prevents unnecessary files from being sent to Docker and keeps the build faster and cleaner.
+  </p>
+
+<pre><code>**/.git
+**/.vs
+**/bin
+**/obj
+**/node_modules
+**/*.user
+**/*.suo
+**/Dockerfile*
+**/.dockerignore
+</code></pre>
+
+  <h2>5. Build the Docker image</h2>
+  <p>
+    <span class="step-number">1</span> Make sure Docker Desktop is running.<br>
+    <span class="step-number">2</span> Open a terminal (PowerShell, Command Prompt, or the integrated terminal in Visual Studio / VS Code).<br>
+    <span class="step-number">3</span> Navigate to the folder that contains the <code>.csproj</code>, <code>Dockerfile</code> and <code>.dockerignore</code>:
+  </p>
+
+<pre><code>cd "C:\path\to\your\project\folder"</code></pre>
+
+  <p>Then run:</p>
+
+<pre><code>docker build -t nec-sanction-screening:latest .</code></pre>
+
+  <ul>
+    <li><code>-t nec-sanction-screening:latest</code> → gives the image a name and tag</li>
+    <li>The final <code>.</code> → means “use the current folder as the build context”</li>
+  </ul>
+
+  <div class="note">
+    The first build takes longer because Docker downloads the .NET SDK and runtime base images.
+    Subsequent builds are much faster thanks to layer caching.
+  </div>
+
+  <p>When it finishes successfully, verify the image exists:</p>
+
+<pre><code>docker images</code></pre>
+
+  <h2>6. Run the container</h2>
+  <p>Start the container with:</p>
+
+<pre><code>docker run --rm -p 8080:8080 --name nec-app nec-sanction-screening:latest</code></pre>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Flag</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>--rm</code></td>
+        <td>Automatically remove the container when it stops</td>
+      </tr>
+      <tr>
+        <td><code>-p 8080:8080</code></td>
+        <td>Map host port 8080 → container port 8080</td>
+      </tr>
+      <tr>
+        <td><code>--name nec-app</code></td>
+        <td>Give the container a friendly name</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning">
+    <strong>.NET 8 important change:</strong> Official ASP.NET Core container images now listen on port <strong>8080</strong> by default (not 80).
+    Always map to 8080 unless you deliberately change the port with environment variables.
+  </div>
+
+  <p>Open your browser and go to:</p>
+  <ul>
+    <li><strong>http://localhost:8080</strong></li>
+    <li>If you have Swagger: <strong>http://localhost:8080/swagger</strong></li>
+  </ul>
+
+  <h2>7. Problems we faced and how we fixed them</h2>
+
+  <h3>7.1 Singleton / Dependency Injection errors</h3>
+  <div class="error-box">
+    <strong>Error:</strong> The application was complaining that services registered in <code>Program.cs</code> must be registered as Singleton (or lifetime mismatch errors appeared when the container started).
+  </div>
+
+  <p><strong>What happened:</strong></p>
+  <p>
+    Inside Docker the application runs in a different hosting model. Some services that worked fine on your local machine
+    (especially ones registered as <code>Scoped</code> or <code>Transient</code>) started throwing lifetime validation errors.
+  </p>
+
+  <p><strong>How we fixed it:</strong></p>
+  <ul>
+    <li>Opened <code>Program.cs</code></li>
+    <li>Checked every <code>builder.Services.Add...</code> registration</li>
+    <li>Changed the problematic services to <code>AddSingleton</code> where it made sense for the application</li>
+    <li>Rebuilt the image after the change</li>
+  </ul>
+
+  <div class="note">
+    Example change:
+<pre style="margin:0.5rem 0 0;"><code>// Before (caused error)
+builder.Services.AddScoped&lt;IMyService, MyService&gt;();
+
+// After (fixed)
+builder.Services.AddSingleton&lt;IMyService, MyService&gt;();</code></pre>
+  </div>
+
+  <p>After fixing the registrations we ran the build command again:</p>
+<pre><code>docker build -t nec-sanction-screening:latest .</code></pre>
+
+  <h3>7.2 Adding a logs directory</h3>
+  <div class="error-box">
+    <strong>Problem:</strong> The application tried to write log files but the folder did not exist inside the container → runtime crash or silent failure.
+  </div>
+
+  <p><strong>How we fixed it:</strong></p>
+  <p>We added this line in the <strong>runtime stage</strong> of the Dockerfile (before copying the published files):</p>
+
+<pre><code>RUN mkdir -p /app/logs</code></pre>
+
+  <p>This creates the <code>/app/logs</code> folder inside the final image so the application can write log files without permission or “directory not found” errors.</p>
+
+  <h3>7.3 Hardcoding the environment in the Dockerfile</h3>
+  <div class="error-box">
+    <strong>Problem:</strong> The application was not picking up the correct environment (Development / Production) when running inside the container.
+  </div>
+
+  <p><strong>How we fixed it:</strong></p>
+  <p>We hardcoded the environment variables directly in the Dockerfile so the container always starts with the correct settings:</p>
+
+<pre><code>ENV ASPNETCORE_ENVIRONMENT=Production
+ENV ASPNETCORE_URLS=http://+:8080</code></pre>
+
+  <ul>
+    <li><code>ASPNETCORE_ENVIRONMENT=Production</code> → forces the app to run in Production mode</li>
+    <li><code>ASPNETCORE_URLS=http://+:8080</code> → makes Kestrel listen on all interfaces on port 8080 (required for Docker)</li>
+  </ul>
+
+  <div class="success">
+    After adding the logs directory + environment variables and fixing the Singleton registrations, we rebuilt the image and the container started successfully.
+  </div>
+
+  <h2>8. Useful everyday commands</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Command</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>List running containers</td>
+        <td><code>docker ps</code></td>
+      </tr>
+      <tr>
+        <td>View container logs</td>
+        <td><code>docker logs nec-app</code></td>
+      </tr>
+      <tr>
+        <td>Stop the container</td>
+        <td><code>docker stop nec-app</code></td>
+      </tr>
+      <tr>
+        <td>Rebuild after code changes</td>
+        <td><code>docker build -t nec-sanction-screening:latest .</code></td>
+      </tr>
+      <tr>
+        <td>List all images</td>
+        <td><code>docker images</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>9. Sharing the image with someone else</h2>
+
+  <h3>Option A – Push to Docker Hub (recommended)</h3>
+  <ol>
+    <li>Create a free account on <a href="https://hub.docker.com" target="_blank" rel="noopener">hub.docker.com</a></li>
+    <li>Log in from the terminal:
+<pre><code>docker login</code></pre>
+    </li>
+    <li>Tag the image with your Docker Hub username:
+<pre><code>docker tag nec-sanction-screening:latest yourusername/nec-sanction-screening:latest</code></pre>
+    </li>
+    <li>Push it:
+<pre><code>docker push yourusername/nec-sanction-screening:latest</code></pre>
+    </li>
+  </ol>
+  <p>The other person can then pull and run it:</p>
+<pre><code>docker pull yourusername/nec-sanction-screening:latest
+docker run --rm -p 8080:8080 yourusername/nec-sanction-screening:latest</code></pre>
+
+  <h3>Option B – Save as a .tar file and send it</h3>
+  <p>Save the image:</p>
+<pre><code>docker save nec-sanction-screening:latest -o nec-sanction-screening.tar</code></pre>
+  <p>Send the <code>.tar</code> file. The other person loads it with:</p>
+<pre><code>docker load -i nec-sanction-screening.tar
+docker run --rm -p 8080:8080 nec-sanction-screening:latest</code></pre>
+
+  <h2>10. Quick checklist</h2>
+  <div class="success">
+    <ol style="margin-bottom: 0;">
+      <li>Docker Desktop is installed and running (Linux containers mode)</li>
+      <li><code>Dockerfile</code> (no extension) exists next to the <code>.csproj</code></li>
+      <li><code>.dockerignore</code> exists in the same folder</li>
+      <li>Singleton / DI lifetime errors fixed in <code>Program.cs</code></li>
+      <li>Logs directory created with <code>RUN mkdir -p /app/logs</code></li>
+      <li>Environment variables hardcoded in the Dockerfile</li>
+      <li>Built with <code>docker build -t your-image-name:latest .</code></li>
+      <li>Ran with <code>-p 8080:8080</code></li>
+      <li>App opens at <code>http://localhost:8080</code></li>
+    </ol>
+  </div>
+
+  <h2>11. Optional easier method (no Dockerfile)</h2>
+  <p>
+    If you have the .NET 8 SDK installed, you can let the SDK create the image for you:
+  </p>
+<pre><code>dotnet publish -t:PublishContainer -c Release</code></pre>
+  <p>
+    This produces a local Docker image automatically. You can still use Docker Desktop to inspect, run, and export it.
+  </p>
+
+  <footer>
+    Tutorial generated from the conversation guide · ASP.NET Core 8.0 + Docker Desktop<br>
+    Includes real fixes: Singleton DI errors, logs directory, hardcoded environment<br>
+    Port note: .NET 8 containers listen on 8080 by default
+  </footer>
+
+</div>
+
+</body>
+</html>
