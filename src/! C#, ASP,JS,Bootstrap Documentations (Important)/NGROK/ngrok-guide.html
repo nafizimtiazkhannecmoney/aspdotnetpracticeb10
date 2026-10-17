@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete ngrok & ASP.NET Core Setup Guide</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --success: #22c55e;
+      --border: #334155;
+      --code-bg: #0b1120;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2.5rem 1rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .concept-box {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(30, 41, 59, 0.8));
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .concept-box h3 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      margin-bottom: 1.8rem;
+      position: relative;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-number {
+      background-color: var(--accent);
+      color: #000;
+      font-weight: 800;
+      font-size: 1rem;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .step-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 0.8rem;
+      color: #cbd5e1;
+    }
+
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #cbd5e1;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    code {
+      background-color: var(--code-bg);
+      color: var(--accent);
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      font-family: "Cascadia Code", Consolas, Monaco, monospace;
+      font-size: 0.95rem;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      font-family: "Cascadia Code", Consolas, Monaco, monospace;
+      font-size: 0.95rem;
+      color: #38bdf8;
+    }
+
+    .terminal-output {
+      color: #94a3b8;
+      border-left: 3px solid var(--success);
+    }
+
+    .tip {
+      background-color: rgba(34, 197, 94, 0.1);
+      border-left: 4px solid var(--success);
+      padding: 0.8rem 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    .tip strong {
+      color: var(--success);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>ASP.NET Core & ngrok Setup Guide</h1>
+      <p>How to expose your local ASP.NET Core API to the public internet for webhooks and testing.</p>
+    </header>
+
+    <!-- Mental Model Box -->
+    <div class="concept-box">
+      <h3>The Core Mental Model</h3>
+      <p>
+        <strong>External Service (Facebook, Stripe, etc.)</strong> sends request &rarr; 
+        <strong>ngrok Cloud URL (https://xyz.ngrok-free.dev)</strong> &rarr; 
+        <strong>ngrok Tunnel Agent (on your PC)</strong> &rarr; 
+        <strong>Localhost (http://localhost:5005)</strong> &rarr; 
+        <strong>Your ASP.NET Core Controller</strong>
+      </p>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-number">1</span>
+        <h2 class="step-title">Download ngrok & Sign Up</h2>
+      </div>
+      <ol>
+        <li>Go to <a href="https://ngrok.com" target="_blank" style="color: var(--accent);">ngrok.com</a> and sign up for a free account.</li>
+        <li>Download the Windows version (comes as a <code>.zip</code> file).</li>
+        <li>Extract the zip folder. Inside, you will see a single executable file: <code>ngrok.exe</code>.</li>
+      </ol>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-number">2</span>
+        <h2 class="step-title">Place ngrok.exe So Windows Can Find It</h2>
+      </div>
+      <p>To run <code>ngrok</code> from any Command Prompt window without PATH errors:</p>
+      <ul>
+        <li>
+          Copy <code>ngrok.exe</code> and paste it into:
+          <pre>C:\Windows\System32\</pre>
+          <em>(Because System32 is in Windows PATH by default, you can now run <code>ngrok</code> anywhere).</em>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-number">3</span>
+        <h2 class="step-title">Add Your Auth Token (First Time Only)</h2>
+      </div>
+      <ol>
+        <li>Log into your dashboard at <a href="https://dashboard.ngrok.com" target="_blank" style="color: var(--accent);">dashboard.ngrok.com</a>.</li>
+        <li>Under <strong>Getting Started</strong> &rarr; click <strong>Your Authtoken</strong> and copy your token.</li>
+        <li>Open Command Prompt (<code>cmd</code>) and execute:</li>
+      </ol>
+      <pre>ngrok config add-authtoken YOUR_AUTHTOKEN_HERE</pre>
+      <div class="tip">
+        <strong>Done!</strong> This configures ngrok once. You never need to repeat this step again on this PC.
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-number">4</span>
+        <h2 class="step-title">Check Your Local ASP.NET Core Port</h2>
+      </div>
+      <p>Inside your ASP.NET Core project, check <code>Properties/launchSettings.json</code> to find your local HTTP port:</p>
+      <pre>{
+  "applicationUrl": "https://localhost:7013;http://localhost:5005"
+}</pre>
+      <p>Run your API (Press <code>F5</code> in Visual Studio or run <code>dotnet run</code>). Verify in your browser that your local endpoint works:</p>
+      <pre>http://localhost:5005/weatherforecast</pre>
+      <div class="tip">
+        <strong>Important:</strong> Keep your ASP.NET Core API running. If your app stops, ngrok has nothing to connect to!
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-number">5</span>
+        <h2 class="step-title">Start the ngrok Tunnel</h2>
+      </div>
+      <p>Open a separate Command Prompt window and tell ngrok to forward to your HTTP port (<code>5005</code>):</p>
+      <pre>ngrok http 5005</pre>
+      <p>ngrok will launch and display a session status screen:</p>
+      <pre class="terminal-output">Session Status    online
+Account           your-email@gmail.com (Plan: Free)
+Forwarding        https://unshabby-grievedly-zella.ngrok-free.dev -> http://localhost:5005</pre>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="step-card">
+      <div class="step-header">
+        <span class="step-number">6</span>
+        <h2 class="step-title">Test Your Live Public URL</h2>
+      </div>
+      <p>Copy your public HTTPS ngrok URL and append your controller route:</p>
+      <pre>https://unshabby-grievedly-zella.ngrok-free.dev/weatherforecast</pre>
+      <ol>
+        <li>Open this link in any browser or on your phone (using cellular data off Wi-Fi).</li>
+        <li>
+          <strong>Free Tier Notice:</strong> When opened in a web browser, click the blue <strong>"Visit Site"</strong> button on ngrok's initial warning screen.
+        </li>
+        <li>You will see your local ASP.NET Core JSON output returned over the internet!</li>
+      </ol>
+      <div class="tip">
+        <strong>Webhook bonus:</strong> Automated webhook POST requests from Facebook, Stripe, or other servers bypass that browser warning screen automatically.
+      </div>
+    </div>
+
+    <!-- Daily Routine Summary -->
+    <div class="step-card" style="border-color: var(--accent);">
+      <div class="step-header">
+        <span class="step-number" style="background-color: var(--success); color: #fff;">&check;</span>
+        <h2 class="step-title">Daily Quick-Start Cheat Sheet</h2>
+      </div>
+      <p>Every time you want to test webhooks in the future, just do two things:</p>
+      <ol>
+        <li>Start your ASP.NET Core project in Visual Studio (running on port <code>5005</code>).</li>
+        <li>Open Command Prompt and run: <code>ngrok http 5005</code>.</li>
+        <li>Copy the new <code>https://....ngrok-free.dev</code> URL and paste it into Facebook / Stripe / your external service's webhook dashboard.</li>
+      </ol>
+    </div>
+
+    <footer>
+      <p>ASP.NET Core & ngrok Developer Guide &bull; Ready for Local Webhook Testing</p>
+    </footer>
+  </div>
+
+</body>
+</html>
